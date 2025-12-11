@@ -1,0 +1,14 @@
+running develop
+running egg_info
+writing fake_rplidar.egg-info/PKG-INFO
+writing dependency_links to fake_rplidar.egg-info/dependency_links.txt
+writing entry points to fake_rplidar.egg-info/entry_points.txt
+writing requirements to fake_rplidar.egg-info/requires.txt
+writing top-level names to fake_rplidar.egg-info/top_level.txt
+reading manifest file 'fake_rplidar.egg-info/SOURCES.txt'
+writing manifest file 'fake_rplidar.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages/fake-rplidar.egg-link (link to .)
+Installing fake_scan script to /home/crazy_rat/ros2_ws/install/fake_rplidar/lib/fake_rplidar
+
+Installed /home/crazy_rat/ros2_ws/build/fake_rplidar

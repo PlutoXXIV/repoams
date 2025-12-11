@@ -1,0 +1,168 @@
+# Extended Kalman Filter (EKF) Configuration for Robot Localization
+#
+# The EKF fuses data from multiple sensors (IMU + wheel encoders) to produce
+# a single, accurate estimate of the robot's position and velocity.
+#
+# WHY WE NEED THIS:
+# - Wheel encoders drift over time (wheels slip, surfaces vary)
+# - IMU has noise and bias that accumulates
+# - By combining both, we get better estimates than either sensor alone
+#
+# The EKF publishes to /odometry/filtered topic, which SLAM uses as /odom input
+#
+# Save this file as: ~/maze_robot_ws/src/maze_explorer/config/ekf_params.yaml
+
+ekf_filter_node:
+  ros__parameters:
+    
+    # =====================================================================
+    # OPERATIONAL PARAMETERS
+    # =====================================================================
+    # frequency: How often the filter updates (Hz)
+    # 50 Hz means updates every 0.02 seconds - good balance for our use case
+    frequency: 50.0
+    
+    # sensor_timeout: If no sensor data for this long, assume sensor failed
+    sensor_timeout: 0.1
+    
+    # two_d_mode: Constrain to 2D plane (ignore Z, roll, and pitch)
+    # TRUE for ground robots - we only move in X-Y plane
+    two_d_mode: true
+    
+    # =====================================================================
+    # COORDINATE FRAMES
+    # =====================================================================
+    # These must match the URDF and other configuration files
+    
+    # map_frame: Global reference (published by SLAM)
+    # odom_frame: Local reference (published by this EKF)
+    # base_link_frame: Robot's coordinate frame
+    # world_frame: Same as odom for local odometry
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_footprint
+    world_frame: odom
+    
+    # =====================================================================
+    # TRANSFORM PUBLISHING
+    # =====================================================================
+    # publish_tf: Broadcast transform from odom to base_footprint
+    publish_tf: true
+    
+    # publish_acceleration: Also publish acceleration estimates
+    publish_acceleration: false
+    
+    # =====================================================================
+    # SENSOR INPUTS
+    # =====================================================================
+    # We have two sensor sources:
+    # 1. odom0: Wheel encoder odometry (from encoder_publisher node)
+    # 2. imu0: BNO085 IMU (orientation and angular velocity)
+    
+    # ----- WHEEL ENCODER ODOMETRY (odom0) -----
+    # Topic where encoder data is published
+    odom0: /wheel_odom
+    
+    # Which parts of the odometry message to use
+    # Format: [X, Y, Z, roll, pitch, yaw, vX, vY, vZ, vRoll, vPitch, vYaw, aX, aY, aZ]
+    # true = use this measurement, false = ignore it
+    #
+    # For wheel encoders, we trust:
+    # - Position in X and Y (wheels tell us how far we've moved)
+    # - Linear velocity in X (forward speed from wheel rotation)
+    # We DO NOT trust:
+    # - Z position, roll, pitch (we're on flat ground, 2D mode handles this)
+    # - Yaw from encoders alone (wheel slip causes yaw drift)
+    odom0_config: [true,  true,  false,  # X, Y, Z position
+                   false, false, false,  # roll, pitch, yaw orientation
+                   true,  true,  false,  # vX, vY, vZ velocity
+                   false, false, false,  # vRoll, vPitch, vYaw angular velocity
+                   false, false, false]  # aX, aY, aZ acceleration
+    
+    # Differential mode: Integrate velocities rather than using absolute positions
+    # TRUE because wheel encoders measure velocity, not absolute position
+    odom0_differential: true
+    
+    # Remove gravitational acceleration from measurements
+    # FALSE for wheel odometry (it doesn't measure acceleration)
+    odom0_remove_gravitational_acceleration: false
+    
+    # ----- IMU SENSOR (imu0) -----
+    # Topic where IMU data is published (from BNO085 driver)
+    imu0: /bno08x/imu
+    
+    # Which parts of the IMU message to use
+    # IMU provides:
+    # - Orientation (yaw is most important for us)
+    # - Angular velocity (how fast we're rotating)
+    # - Linear acceleration (not very reliable on moving robots)
+    #
+    # We trust:
+    # - Yaw orientation (heading direction)
+    # - Angular velocity around Z axis (rotation rate)
+    # We DO NOT trust:
+    # - Roll and pitch (2D mode, flat ground)
+    # - Linear acceleration (too noisy from vibrations)
+    imu0_config: [false, false, false,  # X, Y, Z position (IMU doesn't measure position)
+                  false, false, true,   # roll, pitch, yaw orientation (use yaw only)
+                  false, false, false,  # vX, vY, vZ velocity (IMU doesn't measure velocity)
+                  false, false, true,   # vRoll, vPitch, vYaw angular velocity (use yaw rate)
+                  false, false, false]  # aX, aY, aZ acceleration (too noisy)
+    
+    # Differential mode for IMU
+    # FALSE because IMU gives us absolute orientation
+    imu0_differential: false
+    
+    # Remove gravity from IMU acceleration measurements
+    # TRUE because IMU measures gravity as constant acceleration
+    imu0_remove_gravitational_acceleration: true
+    
+    # =====================================================================
+    # PROCESS NOISE COVARIANCE
+    # =====================================================================
+    # How much we expect the robot's state to change between updates
+    # Higher values mean we trust the prediction model less
+    # Lower values mean we trust sensor measurements less
+    #
+    # These values are tuned for a small wheeled robot with:
+    # - Moderate acceleration
+    # - Smooth motion on flat surfaces
+    # - N20 motors with good control
+    
+    # Format: [X, Y, Z, roll, pitch, yaw, vX, vY, vZ, vRoll, vPitch, vYaw, aX, aY, aZ]
+    process_noise_covariance: [0.05, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # X
+                               0.0,  0.05, 0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # Y
+                               0.0,  0.0,  0.06, 0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # Z
+                               0.0,  0.0,  0.0,  0.03, 0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # roll
+                               0.0,  0.0,  0.0,  0.0,  0.03, 0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # pitch
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.06, 0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # yaw
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.025, 0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # vX
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.025, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # vY
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.04, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # vZ
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.01, 0.0,  0.0,  0.0,  0.0,  0.0,  # vRoll
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.01, 0.0,  0.0,  0.0,  0.0,  # vPitch
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.02, 0.0,  0.0,  0.0,  # vYaw
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  0.0,  # aX
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  # aY
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.015] # aZ
+    
+    # =====================================================================
+    # INITIAL STATE COVARIANCE
+    # =====================================================================
+    # Uncertainty in the robot's starting state
+    # Larger values mean we're less certain about initial position
+    initial_estimate_covariance: [1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,
+                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,
+                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,
+                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,
+                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,
+                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9]

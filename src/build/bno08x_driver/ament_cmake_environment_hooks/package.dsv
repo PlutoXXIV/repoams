@@ -1,0 +1,4 @@
+source;share/bno08x_driver/local_setup.bash
+source;share/bno08x_driver/local_setup.dsv
+source;share/bno08x_driver/local_setup.sh
+source;share/bno08x_driver/local_setup.zsh

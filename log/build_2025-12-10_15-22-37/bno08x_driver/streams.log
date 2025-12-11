@@ -1,0 +1,50 @@
+[0.518s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/bno08x-ros2-driver -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/bno08x_driver
+[0.545s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.126s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.157s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.238s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.292s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.356s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.448s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.681s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.690s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.868s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.029s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[2.133s] -- Found ament_cmake_gmock: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_gmock/cmake)
+[2.134s] -- Found ament_cmake_gtest: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[2.136s] -- Found gmock sources under '/opt/ros/jazzy/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[2.142s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[2.392s] -- Configuring done (1.9s)
+[2.458s] -- Generating done (0.1s)
+[2.496s] -- Build files have been written to: /home/crazy_rat/ros2_ws/build/bno08x_driver
+[2.526s] Invoked command in '/home/crazy_rat/ros2_ws/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/bno08x-ros2-driver -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/bno08x_driver
+[2.527s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/bno08x_driver -- -j4 -l4
+[2.692s] [ 27%] Built target sh2_library
+[2.712s] [ 38%] Built target gmock_main
+[2.719s] [ 55%] Built target gmock
+[2.864s] [ 66%] Built target test_watchdog
+[2.866s] [ 77%] Built target test_i2c_mock
+[2.869s] [100%] Built target bno08x_driver
+[2.897s] Invoked command in '/home/crazy_rat/ros2_ws/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/bno08x_driver -- -j4 -l4
+[2.926s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crazy_rat/ros2_ws/build/bno08x_driver
+[2.947s] -- Install configuration: ""
+[2.949s] -- Execute custom install script
+[2.950s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/lib/bno08x_driver/bno08x_driver
+[2.952s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml
+[2.953s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py
+[2.953s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver
+[2.954s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver
+[2.955s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh
+[2.956s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv
+[2.956s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/path.sh
+[2.958s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/path.dsv
+[2.958s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.bash
+[2.959s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.sh
+[2.960s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.zsh
+[2.960s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.dsv
+[2.962s] -- Symlinking: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/package.dsv
+[2.986s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver
+[2.986s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake
+[2.986s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake
+[2.986s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/package.xml
+[2.992s] Invoked command in '/home/crazy_rat/ros2_ws/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crazy_rat/ros2_ws/build/bno08x_driver

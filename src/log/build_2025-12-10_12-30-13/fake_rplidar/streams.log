@@ -1,0 +1,33 @@
+[1.434s] Invoking command in '/home/crazy_rat/ros2_ws/src/build/fake_rplidar': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crazy_rat/ros2_ws/src/build/fake_rplidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build
+[1.953s] running develop
+[2.270s] Removing /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake-rplidar.egg-link (link to .)
+[2.432s] Invoked command in '/home/crazy_rat/ros2_ws/src/build/fake_rplidar' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crazy_rat/ros2_ws/src/build/fake_rplidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build
+[2.435s] Invoking command in '/home/crazy_rat/ros2_ws/src/fake_rplidar': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crazy_rat/ros2_ws/src/build/fake_rplidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/fake_rplidar build --build-base /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build install --record /home/crazy_rat/ros2_ws/src/build/fake_rplidar/install.log --single-version-externally-managed
+[3.134s] running egg_info
+[3.183s] writing ../build/fake_rplidar/fake_rplidar.egg-info/PKG-INFO
+[3.184s] writing dependency_links to ../build/fake_rplidar/fake_rplidar.egg-info/dependency_links.txt
+[3.185s] writing entry points to ../build/fake_rplidar/fake_rplidar.egg-info/entry_points.txt
+[3.191s] writing requirements to ../build/fake_rplidar/fake_rplidar.egg-info/requires.txt
+[3.192s] writing top-level names to ../build/fake_rplidar/fake_rplidar.egg-info/top_level.txt
+[3.430s] reading manifest file '../build/fake_rplidar/fake_rplidar.egg-info/SOURCES.txt'
+[3.436s] writing manifest file '../build/fake_rplidar/fake_rplidar.egg-info/SOURCES.txt'
+[3.437s] running build
+[3.437s] running build_py
+[3.437s] creating /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build
+[3.437s] creating /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib
+[3.437s] creating /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar
+[3.441s] copying fake_rplidar/fake_scan.py -> /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar
+[3.442s] copying fake_rplidar/__init__.py -> /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar
+[3.444s] running install
+[3.467s] running install_lib
+[3.587s] creating /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar
+[3.587s] copying /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar/fake_scan.py -> /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar
+[3.587s] copying /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar/__init__.py -> /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar
+[3.592s] byte-compiling /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar/fake_scan.py to fake_scan.cpython-312.pyc
+[3.597s] byte-compiling /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar/__init__.py to __init__.cpython-312.pyc
+[3.597s] running install_egg_info
+[3.665s] Copying ../build/fake_rplidar/fake_rplidar.egg-info to /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar-0.0.1-py3.12.egg-info
+[3.667s] running install_scripts
+[4.016s] Installing fake_scan script to /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/fake_rplidar
+[4.016s] writing list of installed files to '/home/crazy_rat/ros2_ws/src/build/fake_rplidar/install.log'
+[4.197s] Invoked command in '/home/crazy_rat/ros2_ws/src/fake_rplidar' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crazy_rat/ros2_ws/src/build/fake_rplidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/fake_rplidar build --build-base /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build install --record /home/crazy_rat/ros2_ws/src/build/fake_rplidar/install.log --single-version-externally-managed

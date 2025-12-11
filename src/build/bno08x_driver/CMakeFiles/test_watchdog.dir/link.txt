@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_watchdog.dir/test/watchdog_test.cpp.o -o test_watchdog  gmock/libgmock_main.a gmock/libgmock.a -pthread 

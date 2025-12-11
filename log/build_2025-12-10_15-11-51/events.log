@@ -1,0 +1,108 @@
+[0.000000] (-) TimerEvent: {}
+[0.000371] (autonomous_exploration) JobQueued: {'identifier': 'autonomous_exploration', 'dependencies': OrderedDict()}
+[0.000427] (bno08x_driver) JobQueued: {'identifier': 'bno08x_driver', 'dependencies': OrderedDict()}
+[0.000453] (fake_rplidar) JobQueued: {'identifier': 'fake_rplidar', 'dependencies': OrderedDict()}
+[0.000472] (sllidar_ros2) JobQueued: {'identifier': 'sllidar_ros2', 'dependencies': OrderedDict()}
+[0.001477] (autonomous_exploration) JobStarted: {'identifier': 'autonomous_exploration'}
+[0.025823] (bno08x_driver) JobStarted: {'identifier': 'bno08x_driver'}
+[0.034363] (fake_rplidar) JobStarted: {'identifier': 'fake_rplidar'}
+[0.047419] (sllidar_ros2) JobStarted: {'identifier': 'sllidar_ros2'}
+[0.100079] (-) TimerEvent: {}
+[0.201329] (-) TimerEvent: {}
+[0.301650] (-) TimerEvent: {}
+[0.398731] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'cmake'}
+[0.401878] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'build'}
+[0.401932] (-) TimerEvent: {}
+[0.403565] (bno08x_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/crazy_rat/ros2_ws/build/bno08x_driver', '--', '-j4', '-l4'], 'cwd': '/home/crazy_rat/ros2_ws/build/bno08x_driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat/ros2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2158', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'crazy_rat', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/crazyrat-rpi:@/tmp/.ICE-unix/2132,unix/crazyrat-rpi:/tmp/.ICE-unix/2132', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/80867354_8da5_463a_bc74_e022314300cb', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.7SQDH3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.112', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/crazy_rat/ros2_ws/build/bno08x_driver', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600'}), 'shell': False}
+[0.502064] (-) TimerEvent: {}
+[0.602428] (-) TimerEvent: {}
+[0.702819] (-) TimerEvent: {}
+[0.803410] (-) TimerEvent: {}
+[0.805433] (sllidar_ros2) JobProgress: {'identifier': 'sllidar_ros2', 'progress': 'cmake'}
+[0.806494] (sllidar_ros2) Command: {'cmd': ['/usr/bin/cmake', '/home/crazy_rat/ros2_ws/src/sllidar_ros2', '-DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/sllidar_ros2'], 'cwd': '/home/crazy_rat/ros2_ws/build/sllidar_ros2', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat/ros2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2158', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'crazy_rat', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/crazyrat-rpi:@/tmp/.ICE-unix/2132,unix/crazyrat-rpi:/tmp/.ICE-unix/2132', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/80867354_8da5_463a_bc74_e022314300cb', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.7SQDH3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.112', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/crazy_rat/ros2_ws/build/sllidar_ros2', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600'}), 'shell': False}
+[0.850050] (bno08x_driver) StdoutLine: {'line': b'[ 27%] Built target sh2_library\n'}
+[0.865887] (bno08x_driver) StdoutLine: {'line': b'[ 38%] Built target gmock_main\n'}
+[0.871870] (bno08x_driver) StdoutLine: {'line': b'[ 55%] Built target gmock\n'}
+[0.904982] (-) TimerEvent: {}
+[0.974840] (bno08x_driver) StdoutLine: {'line': b'[ 66%] Built target test_i2c_mock\n'}
+[0.988867] (bno08x_driver) StdoutLine: {'line': b'[ 77%] Built target test_watchdog\n'}
+[1.005118] (-) TimerEvent: {}
+[1.101905] (bno08x_driver) StdoutLine: {'line': b'[100%] Built target bno08x_driver\n'}
+[1.106478] (-) TimerEvent: {}
+[1.143375] (bno08x_driver) CommandEnded: {'returncode': 0}
+[1.153740] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'install'}
+[1.174252] (bno08x_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/crazy_rat/ros2_ws/build/bno08x_driver'], 'cwd': '/home/crazy_rat/ros2_ws/build/bno08x_driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat/ros2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2158', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'crazy_rat', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/crazyrat-rpi:@/tmp/.ICE-unix/2132,unix/crazyrat-rpi:/tmp/.ICE-unix/2132', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/80867354_8da5_463a_bc74_e022314300cb', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.7SQDH3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.112', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/crazy_rat/ros2_ws/build/bno08x_driver', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600'}), 'shell': False}
+[1.190969] (bno08x_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.198944] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/lib/bno08x_driver/bno08x_driver\n'}
+[1.200274] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/config\n'}
+[1.200447] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml\n'}
+[1.200541] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/launch\n'}
+[1.200639] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py\n'}
+[1.200728] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver\n'}
+[1.200841] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver\n'}
+[1.200941] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh\n'}
+[1.201023] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv\n'}
+[1.201100] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/path.sh\n'}
+[1.201177] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/path.dsv\n'}
+[1.201251] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.bash\n'}
+[1.201348] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.sh\n'}
+[1.201422] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.zsh\n'}
+[1.201496] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.dsv\n'}
+[1.201569] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/package.dsv\n'}
+[1.201711] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver\n'}
+[1.201823] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake\n'}
+[1.201906] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake\n'}
+[1.201981] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/package.xml\n'}
+[1.206548] (-) TimerEvent: {}
+[1.225940] (bno08x_driver) CommandEnded: {'returncode': 0}
+[1.306663] (-) TimerEvent: {}
+[1.318262] (bno08x_driver) JobEnded: {'identifier': 'bno08x_driver', 'rc': 0}
+[1.406787] (-) TimerEvent: {}
+[1.477817] (sllidar_ros2) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[1.506885] (-) TimerEvent: {}
+[1.607233] (-) TimerEvent: {}
+[1.707605] (-) TimerEvent: {}
+[1.807992] (-) TimerEvent: {}
+[1.908388] (-) TimerEvent: {}
+[1.916057] (sllidar_ros2) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.963235] (sllidar_ros2) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.008617] (-) TimerEvent: {}
+[2.109183] (-) TimerEvent: {}
+[2.195889] (sllidar_ros2) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.209249] (-) TimerEvent: {}
+[2.211387] (sllidar_ros2) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.214928] (sllidar_ros2) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.218071] (sllidar_ros2) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.244334] (sllidar_ros2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.309352] (-) TimerEvent: {}
+[2.409714] (-) TimerEvent: {}
+[2.510400] (-) TimerEvent: {}
+[2.525100] (sllidar_ros2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.551375] (sllidar_ros2) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.552425] (sllidar_ros2) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.553699] (sllidar_ros2) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.566999] (sllidar_ros2) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:34 (find_package):\n'}
+[2.567453] (sllidar_ros2) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[2.567625] (sllidar_ros2) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[2.567793] (sllidar_ros2) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[2.567936] (sllidar_ros2) StderrLine: {'line': b'\n'}
+[2.568056] (sllidar_ros2) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[2.568166] (sllidar_ros2) StderrLine: {'line': b'  any of the following names:\n'}
+[2.568270] (sllidar_ros2) StderrLine: {'line': b'\n'}
+[2.568368] (sllidar_ros2) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[2.568463] (sllidar_ros2) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[2.568564] (sllidar_ros2) StderrLine: {'line': b'\n'}
+[2.568661] (sllidar_ros2) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[2.568877] (sllidar_ros2) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[2.569218] (sllidar_ros2) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[2.569352] (sllidar_ros2) StderrLine: {'line': b'  has been installed.\n'}
+[2.569453] (sllidar_ros2) StderrLine: {'line': b'\n'}
+[2.569576] (sllidar_ros2) StderrLine: {'line': b'\x1b[0m\n'}
+[2.569796] (sllidar_ros2) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.576173] (sllidar_ros2) CommandEnded: {'returncode': 1}
+[2.611266] (-) TimerEvent: {}
+[2.636534] (sllidar_ros2) JobEnded: {'identifier': 'sllidar_ros2', 'rc': 1}
+[2.711456] (-) TimerEvent: {}
+[2.750274] (autonomous_exploration) JobEnded: {'identifier': 'autonomous_exploration', 'rc': 'SIGINT'}
+[2.753845] (fake_rplidar) JobEnded: {'identifier': 'fake_rplidar', 'rc': 'SIGINT'}
+[2.754937] (-) EventReactorShutdown: {}

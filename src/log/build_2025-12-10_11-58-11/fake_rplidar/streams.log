@@ -1,0 +1,18 @@
+[2.255s] Invoking command in '/home/crazy_rat/ros2_ws/src/build/fake_rplidar': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crazy_rat/ros2_ws/src/build/fake_rplidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build --no-deps
+[2.689s] running develop
+[2.954s] running egg_info
+[2.954s] creating fake_rplidar.egg-info
+[2.979s] writing fake_rplidar.egg-info/PKG-INFO
+[2.980s] writing dependency_links to fake_rplidar.egg-info/dependency_links.txt
+[2.980s] writing entry points to fake_rplidar.egg-info/entry_points.txt
+[2.980s] writing requirements to fake_rplidar.egg-info/requires.txt
+[2.980s] writing top-level names to fake_rplidar.egg-info/top_level.txt
+[2.981s] writing manifest file 'fake_rplidar.egg-info/SOURCES.txt'
+[3.034s] reading manifest file 'fake_rplidar.egg-info/SOURCES.txt'
+[3.034s] writing manifest file 'fake_rplidar.egg-info/SOURCES.txt'
+[3.062s] running build_ext
+[3.062s] Creating /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake-rplidar.egg-link (link to .)
+[3.063s] Installing fake_scan script to /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/fake_rplidar
+[3.063s] 
+[3.063s] Installed /home/crazy_rat/ros2_ws/src/build/fake_rplidar
+[3.182s] Invoked command in '/home/crazy_rat/ros2_ws/src/build/fake_rplidar' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crazy_rat/ros2_ws/src/build/fake_rplidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build --no-deps

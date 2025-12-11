@@ -1,0 +1,372 @@
+[0.000000] (-) TimerEvent: {}
+[0.000249] (bno08x_driver) JobQueued: {'identifier': 'bno08x_driver', 'dependencies': OrderedDict()}
+[0.000293] (fake_rplidar) JobQueued: {'identifier': 'fake_rplidar', 'dependencies': OrderedDict()}
+[0.000316] (sllidar_ros2) JobQueued: {'identifier': 'sllidar_ros2', 'dependencies': OrderedDict()}
+[0.001043] (bno08x_driver) JobStarted: {'identifier': 'bno08x_driver'}
+[0.008567] (fake_rplidar) JobStarted: {'identifier': 'fake_rplidar'}
+[0.016495] (sllidar_ros2) JobStarted: {'identifier': 'sllidar_ros2'}
+[0.023400] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'cmake'}
+[0.024075] (bno08x_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/crazy_rat/ros2_ws/src/bno08x-ros2-driver', '-DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/src/install/bno08x_driver'], 'cwd': '/home/crazy_rat/ros2_ws/src/build/bno08x_driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'SSH_CLIENT': '10.11.20.121 57991 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install:/home/crazy_rat/ros2_ws/src/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/crazy_rat/ros2_ws/src/build/bno08x_driver', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.11.20.121 57991 10.11.20.150 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/crazy_rat/ros2_ws/build/fake_rplidar:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/src/build/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy'}), 'shell': False}
+[0.099744] (-) TimerEvent: {}
+[0.200183] (-) TimerEvent: {}
+[0.300547] (-) TimerEvent: {}
+[0.400640] (bno08x_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.401140] (-) TimerEvent: {}
+[0.401292] (bno08x_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.401448] (bno08x_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.404872] (sllidar_ros2) JobProgress: {'identifier': 'sllidar_ros2', 'progress': 'cmake'}
+[0.404922] (sllidar_ros2) Command: {'cmd': ['/usr/bin/cmake', '/home/crazy_rat/ros2_ws/src/sllidar_ros2', '-DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/src/install/sllidar_ros2'], 'cwd': '/home/crazy_rat/ros2_ws/src/build/sllidar_ros2', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'SSH_CLIENT': '10.11.20.121 57991 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install:/home/crazy_rat/ros2_ws/src/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/crazy_rat/ros2_ws/src/build/sllidar_ros2', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.11.20.121 57991 10.11.20.150 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/crazy_rat/ros2_ws/build/fake_rplidar:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/src/build/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy'}), 'shell': False}
+[0.421138] (bno08x_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.430101] (sllidar_ros2) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.435626] (bno08x_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.436040] (bno08x_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.436683] (bno08x_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.454154] (bno08x_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.501280] (-) TimerEvent: {}
+[0.604102] (-) TimerEvent: {}
+[0.663101] (bno08x_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.676108] (bno08x_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.676582] (bno08x_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.677399] (bno08x_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.681507] (bno08x_driver) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.704215] (-) TimerEvent: {}
+[0.806104] (-) TimerEvent: {}
+[0.852760] (sllidar_ros2) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.865306] (sllidar_ros2) StdoutLine: {'line': b'-- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.904890] (sllidar_ros2) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.906175] (-) TimerEvent: {}
+[0.922096] (sllidar_ros2) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.937388] (sllidar_ros2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.949636] (bno08x_driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.962245] (sllidar_ros2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.006299] (-) TimerEvent: {}
+[1.054673] (sllidar_ros2) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.056756] (sllidar_ros2) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.106436] (-) TimerEvent: {}
+[1.138413] (bno08x_driver) StdoutLine: {'line': b'-- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.154732] (sllidar_ros2) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.194409] (bno08x_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.206531] (-) TimerEvent: {}
+[1.215739] (bno08x_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.239164] (sllidar_ros2) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[1.240168] (bno08x_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.269260] (bno08x_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.306689] (-) TimerEvent: {}
+[1.316018] (sllidar_ros2) StdoutLine: {'line': b'-- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)\n'}
+[1.398063] (bno08x_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.398453] (bno08x_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.406817] (-) TimerEvent: {}
+[1.440895] (fake_rplidar) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--uninstall', '--editable', '--build-directory', '/home/crazy_rat/ros2_ws/src/build/fake_rplidar/build'], 'cwd': '/home/crazy_rat/ros2_ws/src/build/fake_rplidar', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'SSH_CLIENT': '10.11.20.121 57991 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install:/home/crazy_rat/ros2_ws/src/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/crazy_rat/ros2_ws/src/build/fake_rplidar', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.11.20.121 57991 10.11.20.150 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/crazy_rat/ros2_ws/src/build/fake_rplidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/build/fake_rplidar:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/src/build/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.507040] (-) TimerEvent: {}
+[1.562154] (sllidar_ros2) StdoutLine: {'line': b'-- Configuring done (1.1s)\n'}
+[1.563215] (bno08x_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[1.591669] (bno08x_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[1.601237] (sllidar_ros2) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.607056] (-) TimerEvent: {}
+[1.620917] (sllidar_ros2) StdoutLine: {'line': b'-- Build files have been written to: /home/crazy_rat/ros2_ws/src/build/sllidar_ros2\n'}
+[1.635471] (bno08x_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.641815] (sllidar_ros2) CommandEnded: {'returncode': 0}
+[1.642591] (sllidar_ros2) JobProgress: {'identifier': 'sllidar_ros2', 'progress': 'build'}
+[1.643448] (sllidar_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/crazy_rat/ros2_ws/src/build/sllidar_ros2', '--', '-j4', '-l4'], 'cwd': '/home/crazy_rat/ros2_ws/src/build/sllidar_ros2', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'SSH_CLIENT': '10.11.20.121 57991 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install:/home/crazy_rat/ros2_ws/src/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/crazy_rat/ros2_ws/src/build/sllidar_ros2', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.11.20.121 57991 10.11.20.150 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/crazy_rat/ros2_ws/build/fake_rplidar:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/src/build/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy'}), 'shell': False}
+[1.707197] (-) TimerEvent: {}
+[1.749120] (bno08x_driver) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[1.763397] (sllidar_ros2) StdoutLine: {'line': b'[ 10%] Built target sllidar_client\n'}
+[1.786184] (sllidar_ros2) StdoutLine: {'line': b'[100%] Built target sllidar_node\n'}
+[1.807509] (sllidar_ros2) CommandEnded: {'returncode': 0}
+[1.807921] (-) TimerEvent: {}
+[1.808674] (sllidar_ros2) JobProgress: {'identifier': 'sllidar_ros2', 'progress': 'install'}
+[1.826620] (sllidar_ros2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/crazy_rat/ros2_ws/src/build/sllidar_ros2'], 'cwd': '/home/crazy_rat/ros2_ws/src/build/sllidar_ros2', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'SSH_CLIENT': '10.11.20.121 57991 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install:/home/crazy_rat/ros2_ws/src/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/crazy_rat/ros2_ws/src/build/sllidar_ros2', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.11.20.121 57991 10.11.20.150 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/crazy_rat/ros2_ws/build/fake_rplidar:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/src/build/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy'}), 'shell': False}
+[1.842820] (sllidar_ros2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.843504] (sllidar_ros2) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.844282] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a1_launch.py\n'}
+[1.846091] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m12_launch .py\n'}
+[1.846272] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m7_launch.py\n'}
+[1.846386] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m8_launch.py\n'}
+[1.846476] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a3_launch.py\n'}
+[1.846560] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_c1_launch.py\n'}
+[1.846642] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_launch.py\n'}
+[1.846746] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_tcp_launch.py\n'}
+[1.846838] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2_launch.py\n'}
+[1.846927] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2e_launch.py\n'}
+[1.847030] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s3_launch.py\n'}
+[1.847113] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_t1_launch.py\n'}
+[1.847192] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a1_launch.py\n'}
+[1.847274] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m12_launch.py\n'}
+[1.847495] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m7_launch.py\n'}
+[1.847592] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m8_launch.py\n'}
+[1.847679] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a3_launch.py\n'}
+[1.847772] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_c1_launch.py\n'}
+[1.847854] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_launch.py\n'}
+[1.847938] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_tcp_launch.py\n'}
+[1.848063] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2_launch.py\n'}
+[1.848147] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2e_launch.py\n'}
+[1.848225] (bno08x_driver) StdoutLine: {'line': b'-- Found ament_cmake_gmock: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_gmock/cmake)\n'}
+[1.848398] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s3_launch.py\n'}
+[1.848506] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_t1_launch.py\n'}
+[1.848612] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/rviz/sllidar_ros2.rviz\n'}
+[1.849051] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/lib/sllidar_ros2/sllidar_node\n'}
+[1.849230] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/lib/sllidar_ros2/sllidar_client\n'}
+[1.849331] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/ament_index/resource_index/package_run_dependencies/sllidar_ros2\n'}
+[1.849429] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/ament_index/resource_index/parent_prefix_path/sllidar_ros2\n'}
+[1.849562] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.sh\n'}
+[1.852139] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.dsv\n'}
+[1.852337] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/environment/path.sh\n'}
+[1.852448] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/environment/path.dsv\n'}
+[1.852533] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/local_setup.bash\n'}
+[1.852617] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/local_setup.sh\n'}
+[1.852712] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/local_setup.zsh\n'}
+[1.852800] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/local_setup.dsv\n'}
+[1.852877] (sllidar_ros2) StdoutLine: {'line': b'-- Symlinking: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/package.dsv\n'}
+[1.854227] (bno08x_driver) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)\n'}
+[1.863252] (bno08x_driver) StdoutLine: {'line': b"-- Found gmock sources under '/opt/ros/jazzy/src/gmock_vendor': C++ tests using 'Google Mock' will be built\n"}
+[1.870039] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/ament_index/resource_index/packages/sllidar_ros2\n'}
+[1.870315] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.870412] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.870495] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config.cmake\n'}
+[1.870575] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config-version.cmake\n'}
+[1.870651] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/crazy_rat/ros2_ws/src/install/sllidar_ros2/share/sllidar_ros2/package.xml\n'}
+[1.873074] (sllidar_ros2) CommandEnded: {'returncode': 0}
+[1.873832] (bno08x_driver) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[1.904154] (sllidar_ros2) JobEnded: {'identifier': 'sllidar_ros2', 'rc': 0}
+[1.908007] (-) TimerEvent: {}
+[1.961334] (fake_rplidar) StdoutLine: {'line': b'running develop\n'}
+[2.008124] (-) TimerEvent: {}
+[2.038933] (bno08x_driver) StdoutLine: {'line': b'-- Configuring done (2.0s)\n'}
+[2.071112] (bno08x_driver) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.080684] (bno08x_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/crazy_rat/ros2_ws/src/build/bno08x_driver\n'}
+[2.105374] (bno08x_driver) CommandEnded: {'returncode': 0}
+[2.106022] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'build'}
+[2.106358] (bno08x_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/crazy_rat/ros2_ws/src/build/bno08x_driver', '--', '-j4', '-l4'], 'cwd': '/home/crazy_rat/ros2_ws/src/build/bno08x_driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'SSH_CLIENT': '10.11.20.121 57991 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install:/home/crazy_rat/ros2_ws/src/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/crazy_rat/ros2_ws/src/build/bno08x_driver', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.11.20.121 57991 10.11.20.150 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/crazy_rat/ros2_ws/build/fake_rplidar:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/src/build/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy'}), 'shell': False}
+[2.108189] (-) TimerEvent: {}
+[2.200129] (bno08x_driver) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o\x1b[0m\n'}
+[2.200730] (bno08x_driver) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object gmock/CMakeFiles/gmock.dir/opt/ros/jazzy/src/gtest_vendor/src/gtest-all.cc.o\x1b[0m\n'}
+[2.200933] (bno08x_driver) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object include/sh2/CMakeFiles/sh2_library.dir/sh2.c.o\x1b[0m\n'}
+[2.201096] (bno08x_driver) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o\x1b[0m\n'}
+[2.209721] (-) TimerEvent: {}
+[2.278416] (fake_rplidar) StdoutLine: {'line': b'Removing /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake-rplidar.egg-link (link to .)\n'}
+[2.309873] (-) TimerEvent: {}
+[2.410347] (-) TimerEvent: {}
+[2.441097] (fake_rplidar) CommandEnded: {'returncode': 0}
+[2.442528] (fake_rplidar) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/fake_rplidar', 'build', '--build-base', '/home/crazy_rat/ros2_ws/src/build/fake_rplidar/build', 'install', '--record', '/home/crazy_rat/ros2_ws/src/build/fake_rplidar/install.log', '--single-version-externally-managed'], 'cwd': '/home/crazy_rat/ros2_ws/src/fake_rplidar', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'SSH_CLIENT': '10.11.20.121 57991 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install:/home/crazy_rat/ros2_ws/src/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/crazy_rat/ros2_ws/src/build/fake_rplidar', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.11.20.121 57991 10.11.20.150 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/crazy_rat/ros2_ws/src/build/fake_rplidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/build/fake_rplidar:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/src/build/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[2.510683] (-) TimerEvent: {}
+[2.546183] (bno08x_driver) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding C object include/sh2/CMakeFiles/sh2_library.dir/sh2_SensorValue.c.o\x1b[0m\n'}
+[2.610819] (-) TimerEvent: {}
+[2.680268] (bno08x_driver) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding C object include/sh2/CMakeFiles/sh2_library.dir/sh2_util.c.o\x1b[0m\n'}
+[2.710956] (-) TimerEvent: {}
+[2.758371] (bno08x_driver) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object include/sh2/CMakeFiles/sh2_library.dir/shtp.c.o\x1b[0m\n'}
+[2.811069] (-) TimerEvent: {}
+[2.886924] (bno08x_driver) StdoutLine: {'line': b'[ 44%] \x1b[32m\x1b[1mLinking C static library libsh2_library.a\x1b[0m\n'}
+[2.912013] (-) TimerEvent: {}
+[3.012465] (-) TimerEvent: {}
+[3.013630] (bno08x_driver) StdoutLine: {'line': b'[ 44%] Built target sh2_library\n'}
+[3.114176] (bno08x_driver) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/bno08x_driver.dir/src/bno08x.cpp.o\x1b[0m\n'}
+[3.114512] (-) TimerEvent: {}
+[3.142894] (fake_rplidar) StdoutLine: {'line': b'running egg_info\n'}
+[3.191900] (fake_rplidar) StdoutLine: {'line': b'writing ../build/fake_rplidar/fake_rplidar.egg-info/PKG-INFO\n'}
+[3.193036] (fake_rplidar) StdoutLine: {'line': b'writing dependency_links to ../build/fake_rplidar/fake_rplidar.egg-info/dependency_links.txt\n'}
+[3.194279] (fake_rplidar) StdoutLine: {'line': b'writing entry points to ../build/fake_rplidar/fake_rplidar.egg-info/entry_points.txt\n'}
+[3.200104] (fake_rplidar) StdoutLine: {'line': b'writing requirements to ../build/fake_rplidar/fake_rplidar.egg-info/requires.txt\n'}
+[3.201125] (fake_rplidar) StdoutLine: {'line': b'writing top-level names to ../build/fake_rplidar/fake_rplidar.egg-info/top_level.txt\n'}
+[3.214656] (-) TimerEvent: {}
+[3.315089] (-) TimerEvent: {}
+[3.421059] (-) TimerEvent: {}
+[3.439122] (fake_rplidar) StdoutLine: {'line': b"reading manifest file '../build/fake_rplidar/fake_rplidar.egg-info/SOURCES.txt'\n"}
+[3.445018] (fake_rplidar) StdoutLine: {'line': b"writing manifest file '../build/fake_rplidar/fake_rplidar.egg-info/SOURCES.txt'\n"}
+[3.445436] (fake_rplidar) StdoutLine: {'line': b'running build\n'}
+[3.445586] (fake_rplidar) StdoutLine: {'line': b'running build_py\n'}
+[3.445825] (fake_rplidar) StdoutLine: {'line': b'creating /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build\n'}
+[3.445997] (fake_rplidar) StdoutLine: {'line': b'creating /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib\n'}
+[3.446119] (fake_rplidar) StdoutLine: {'line': b'creating /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar\n'}
+[3.449485] (fake_rplidar) StdoutLine: {'line': b'copying fake_rplidar/fake_scan.py -> /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar\n'}
+[3.450683] (fake_rplidar) StdoutLine: {'line': b'copying fake_rplidar/__init__.py -> /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar\n'}
+[3.453154] (fake_rplidar) StdoutLine: {'line': b'running install\n'}
+[3.475918] (fake_rplidar) StdoutLine: {'line': b'running install_lib\n'}
+[3.521248] (-) TimerEvent: {}
+[3.595473] (fake_rplidar) StdoutLine: {'line': b'creating /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar\n'}
+[3.595883] (fake_rplidar) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar/fake_scan.py -> /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar\n'}
+[3.596131] (fake_rplidar) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar/__init__.py -> /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar\n'}
+[3.600820] (fake_rplidar) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar/fake_scan.py to fake_scan.cpython-312.pyc\n'}
+[3.605694] (fake_rplidar) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar/__init__.py to __init__.cpython-312.pyc\n'}
+[3.606247] (fake_rplidar) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.621364] (-) TimerEvent: {}
+[3.673439] (fake_rplidar) StdoutLine: {'line': b'Copying ../build/fake_rplidar/fake_rplidar.egg-info to /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar-0.0.1-py3.12.egg-info\n'}
+[3.675872] (fake_rplidar) StdoutLine: {'line': b'running install_scripts\n'}
+[3.721496] (-) TimerEvent: {}
+[3.825301] (-) TimerEvent: {}
+[3.926069] (-) TimerEvent: {}
+[4.024681] (fake_rplidar) StdoutLine: {'line': b'Installing fake_scan script to /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/fake_rplidar\n'}
+[4.025243] (fake_rplidar) StdoutLine: {'line': b"writing list of installed files to '/home/crazy_rat/ros2_ws/src/build/fake_rplidar/install.log'\n"}
+[4.026209] (-) TimerEvent: {}
+[4.129096] (-) TimerEvent: {}
+[4.206135] (fake_rplidar) CommandEnded: {'returncode': 0}
+[4.235322] (-) TimerEvent: {}
+[4.239490] (fake_rplidar) JobEnded: {'identifier': 'fake_rplidar', 'rc': 0}
+[4.335469] (-) TimerEvent: {}
+[4.436067] (-) TimerEvent: {}
+[4.539088] (-) TimerEvent: {}
+[4.639548] (-) TimerEvent: {}
+[4.653577] (bno08x_driver) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/bno08x_driver.dir/src/bno08x_ros.cpp.o\x1b[0m\n'}
+[4.739695] (-) TimerEvent: {}
+[4.840416] (-) TimerEvent: {}
+[4.941085] (-) TimerEvent: {}
+[5.042337] (-) TimerEvent: {}
+[5.144279] (-) TimerEvent: {}
+[5.145189] (bno08x_driver) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX static library libgmock_main.a\x1b[0m\n'}
+[5.224161] (bno08x_driver) StdoutLine: {'line': b'[ 61%] Built target gmock_main\n'}
+[5.247084] (-) TimerEvent: {}
+[5.247611] (bno08x_driver) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/bno08x_driver.dir/src/ros_node.cpp.o\x1b[0m\n'}
+[5.347223] (-) TimerEvent: {}
+[5.447677] (-) TimerEvent: {}
+[5.548302] (-) TimerEvent: {}
+[5.651299] (-) TimerEvent: {}
+[5.751964] (-) TimerEvent: {}
+[5.852675] (-) TimerEvent: {}
+[5.953492] (-) TimerEvent: {}
+[6.057284] (-) TimerEvent: {}
+[6.157906] (-) TimerEvent: {}
+[6.258663] (-) TimerEvent: {}
+[6.359405] (-) TimerEvent: {}
+[6.461082] (-) TimerEvent: {}
+[6.561532] (-) TimerEvent: {}
+[6.662036] (-) TimerEvent: {}
+[6.765350] (-) TimerEvent: {}
+[6.865853] (-) TimerEvent: {}
+[6.966369] (-) TimerEvent: {}
+[7.066962] (-) TimerEvent: {}
+[7.167598] (-) TimerEvent: {}
+[7.269397] (-) TimerEvent: {}
+[7.372380] (-) TimerEvent: {}
+[7.473083] (-) TimerEvent: {}
+[7.575157] (-) TimerEvent: {}
+[7.675917] (-) TimerEvent: {}
+[7.776711] (-) TimerEvent: {}
+[7.877178] (-) TimerEvent: {}
+[7.977916] (-) TimerEvent: {}
+[8.079265] (-) TimerEvent: {}
+[8.181266] (-) TimerEvent: {}
+[8.281828] (-) TimerEvent: {}
+[8.383247] (-) TimerEvent: {}
+[8.485271] (-) TimerEvent: {}
+[8.585666] (-) TimerEvent: {}
+[8.686098] (-) TimerEvent: {}
+[8.789063] (-) TimerEvent: {}
+[8.889480] (-) TimerEvent: {}
+[8.989991] (-) TimerEvent: {}
+[9.090390] (-) TimerEvent: {}
+[9.190780] (-) TimerEvent: {}
+[9.291173] (-) TimerEvent: {}
+[9.391570] (-) TimerEvent: {}
+[9.491941] (-) TimerEvent: {}
+[9.593118] (-) TimerEvent: {}
+[9.696283] (-) TimerEvent: {}
+[9.796751] (-) TimerEvent: {}
+[9.897207] (-) TimerEvent: {}
+[9.997648] (-) TimerEvent: {}
+[10.098088] (-) TimerEvent: {}
+[10.198548] (-) TimerEvent: {}
+[10.299000] (-) TimerEvent: {}
+[10.399441] (-) TimerEvent: {}
+[10.499879] (-) TimerEvent: {}
+[10.600338] (-) TimerEvent: {}
+[10.700786] (-) TimerEvent: {}
+[10.801299] (-) TimerEvent: {}
+[10.901756] (-) TimerEvent: {}
+[11.003073] (-) TimerEvent: {}
+[11.103493] (-) TimerEvent: {}
+[11.203895] (-) TimerEvent: {}
+[11.306084] (-) TimerEvent: {}
+[11.406507] (-) TimerEvent: {}
+[11.506963] (-) TimerEvent: {}
+[11.536372] (bno08x_driver) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX static library libgmock.a\x1b[0m\n'}
+[11.608103] (-) TimerEvent: {}
+[11.708511] (-) TimerEvent: {}
+[11.804680] (bno08x_driver) StdoutLine: {'line': b'[ 72%] Built target gmock\n'}
+[11.808658] (-) TimerEvent: {}
+[11.840831] (bno08x_driver) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/test_watchdog.dir/test/watchdog_test.cpp.o\x1b[0m\n'}
+[11.841271] (bno08x_driver) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/test_i2c_mock.dir/test/i2c_interface_mock_test.cpp.o\x1b[0m\n'}
+[11.910136] (-) TimerEvent: {}
+[12.010603] (-) TimerEvent: {}
+[12.111005] (-) TimerEvent: {}
+[12.211384] (-) TimerEvent: {}
+[12.314061] (-) TimerEvent: {}
+[12.414441] (-) TimerEvent: {}
+[12.514832] (-) TimerEvent: {}
+[12.615268] (-) TimerEvent: {}
+[12.715663] (-) TimerEvent: {}
+[12.816061] (-) TimerEvent: {}
+[12.916438] (-) TimerEvent: {}
+[13.017126] (-) TimerEvent: {}
+[13.117852] (-) TimerEvent: {}
+[13.218306] (-) TimerEvent: {}
+[13.318727] (-) TimerEvent: {}
+[13.419411] (-) TimerEvent: {}
+[13.519879] (-) TimerEvent: {}
+[13.620543] (-) TimerEvent: {}
+[13.721007] (-) TimerEvent: {}
+[13.821870] (-) TimerEvent: {}
+[13.922339] (-) TimerEvent: {}
+[14.022793] (-) TimerEvent: {}
+[14.123496] (-) TimerEvent: {}
+[14.223952] (-) TimerEvent: {}
+[14.324421] (-) TimerEvent: {}
+[14.345658] (bno08x_driver) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX executable test_watchdog\x1b[0m\n'}
+[14.426098] (-) TimerEvent: {}
+[14.526547] (-) TimerEvent: {}
+[14.627022] (-) TimerEvent: {}
+[14.708365] (bno08x_driver) StdoutLine: {'line': b'[ 88%] Built target test_watchdog\n'}
+[14.727147] (-) TimerEvent: {}
+[14.827705] (-) TimerEvent: {}
+[14.928257] (-) TimerEvent: {}
+[15.028590] (-) TimerEvent: {}
+[15.129152] (-) TimerEvent: {}
+[15.229541] (-) TimerEvent: {}
+[15.336153] (-) TimerEvent: {}
+[15.436537] (-) TimerEvent: {}
+[15.537054] (-) TimerEvent: {}
+[15.637412] (-) TimerEvent: {}
+[15.737937] (-) TimerEvent: {}
+[15.838284] (-) TimerEvent: {}
+[15.938738] (-) TimerEvent: {}
+[16.018038] (bno08x_driver) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking CXX executable test_i2c_mock\x1b[0m\n'}
+[16.038835] (-) TimerEvent: {}
+[16.139196] (-) TimerEvent: {}
+[16.239621] (-) TimerEvent: {}
+[16.340016] (-) TimerEvent: {}
+[16.350669] (bno08x_driver) StdoutLine: {'line': b'[ 94%] Built target test_i2c_mock\n'}
+[16.440143] (-) TimerEvent: {}
+[16.540510] (-) TimerEvent: {}
+[16.566570] (bno08x_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable bno08x_driver\x1b[0m\n'}
+[16.640662] (-) TimerEvent: {}
+[16.741427] (-) TimerEvent: {}
+[16.841791] (-) TimerEvent: {}
+[16.942136] (-) TimerEvent: {}
+[17.031806] (bno08x_driver) StdoutLine: {'line': b'[100%] Built target bno08x_driver\n'}
+[17.042262] (-) TimerEvent: {}
+[17.052740] (bno08x_driver) CommandEnded: {'returncode': 0}
+[17.053517] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'install'}
+[17.053846] (bno08x_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/crazy_rat/ros2_ws/src/build/bno08x_driver'], 'cwd': '/home/crazy_rat/ros2_ws/src/build/bno08x_driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'SSH_CLIENT': '10.11.20.121 57991 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install:/home/crazy_rat/ros2_ws/src/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/crazy_rat/ros2_ws/src/build/bno08x_driver', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.11.20.121 57991 10.11.20.150 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/crazy_rat/ros2_ws/build/fake_rplidar:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/src/build/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/crazy_rat/ros2_ws/src/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy'}), 'shell': False}
+[17.069036] (bno08x_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[17.069649] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/lib/bno08x_driver/bno08x_driver\n'}
+[17.073492] (bno08x_driver) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/crazy_rat/ros2_ws/src/install/bno08x_driver/lib/bno08x_driver/bno08x_driver" to ""\n'}
+[17.073700] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/config\n'}
+[17.073823] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml\n'}
+[17.073983] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/launch\n'}
+[17.074109] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py\n'}
+[17.074377] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver\n'}
+[17.074621] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver\n'}
+[17.074854] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh\n'}
+[17.075035] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv\n'}
+[17.075207] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/environment/path.sh\n'}
+[17.075375] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/environment/path.dsv\n'}
+[17.075547] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/local_setup.bash\n'}
+[17.075709] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/local_setup.sh\n'}
+[17.075877] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/local_setup.zsh\n'}
+[17.076052] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/local_setup.dsv\n'}
+[17.076207] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/package.dsv\n'}
+[17.076415] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver\n'}
+[17.076628] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake\n'}
+[17.076758] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake\n'}
+[17.076909] (bno08x_driver) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/src/install/bno08x_driver/share/bno08x_driver/package.xml\n'}
+[17.080105] (bno08x_driver) CommandEnded: {'returncode': 0}
+[17.098805] (bno08x_driver) JobEnded: {'identifier': 'bno08x_driver', 'rc': 0}
+[17.099815] (-) EventReactorShutdown: {}

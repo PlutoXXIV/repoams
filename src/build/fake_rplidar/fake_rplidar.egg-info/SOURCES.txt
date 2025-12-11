@@ -1,0 +1,14 @@
+setup.cfg
+setup.py
+../build/fake_rplidar/fake_rplidar.egg-info/PKG-INFO
+../build/fake_rplidar/fake_rplidar.egg-info/SOURCES.txt
+../build/fake_rplidar/fake_rplidar.egg-info/dependency_links.txt
+../build/fake_rplidar/fake_rplidar.egg-info/entry_points.txt
+../build/fake_rplidar/fake_rplidar.egg-info/requires.txt
+../build/fake_rplidar/fake_rplidar.egg-info/top_level.txt
+../build/fake_rplidar/fake_rplidar.egg-info/zip-safe
+fake_rplidar/__init__.py
+fake_rplidar/fake_scan.py
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: fake-rplidar
+Version: 0.0.1
+Summary: Virtual RPLIDAR publisher for testing in ROS2 Jazzy
+Maintainer: crazy_rat
+Maintainer-email: your@email.com
+License: MIT

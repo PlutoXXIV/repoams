@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsh2_library.a CMakeFiles/sh2_library.dir/sh2.c.o CMakeFiles/sh2_library.dir/sh2_SensorValue.c.o CMakeFiles/sh2_library.dir/sh2_util.c.o CMakeFiles/sh2_library.dir/shtp.c.o
+/usr/bin/ranlib libsh2_library.a

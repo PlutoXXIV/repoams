@@ -1,0 +1,69 @@
+[0.029s] Invoking command in '/home/crazy_rat/ros2_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/sllidar_ros2
+[0.058s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.527s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.555s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.617s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.617s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.626s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.646s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.739s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.742s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.857s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.965s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.052s] -- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)
+[1.312s] -- Configuring done (1.3s)
+[1.372s] -- Generating done (0.0s)
+[1.400s] -- Build files have been written to: /home/crazy_rat/ros2_ws/build/sllidar_ros2
+[1.437s] Invoked command in '/home/crazy_rat/ros2_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/sllidar_ros2
+[1.438s] Invoking command in '/home/crazy_rat/ros2_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/sllidar_ros2 -- -j4 -l4
+[1.635s] [ 10%] Built target sllidar_client
+[1.662s] [100%] Built target sllidar_node
+[1.728s] Invoked command in '/home/crazy_rat/ros2_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/sllidar_ros2 -- -j4 -l4
+[1.735s] Invoking command in '/home/crazy_rat/ros2_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crazy_rat/ros2_ws/build/sllidar_ros2
+[1.765s] -- Install configuration: ""
+[1.767s] -- Execute custom install script
+[1.768s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a1_launch.py
+[1.769s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m12_launch .py
+[1.769s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m7_launch.py
+[1.774s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m8_launch.py
+[1.776s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a3_launch.py
+[1.776s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_c1_launch.py
+[1.776s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_launch.py
+[1.776s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_tcp_launch.py
+[1.776s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2_launch.py
+[1.776s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2e_launch.py
+[1.777s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s3_launch.py
+[1.777s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_t1_launch.py
+[1.777s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a1_launch.py
+[1.777s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m12_launch.py
+[1.777s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m7_launch.py
+[1.780s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m8_launch.py
+[1.780s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a3_launch.py
+[1.781s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_c1_launch.py
+[1.781s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_launch.py
+[1.781s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_tcp_launch.py
+[1.781s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2_launch.py
+[1.781s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2e_launch.py
+[1.781s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s3_launch.py
+[1.782s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_t1_launch.py
+[1.783s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/rviz/sllidar_ros2.rviz
+[1.784s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/lib/sllidar_ros2/sllidar_node
+[1.785s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/lib/sllidar_ros2/sllidar_client
+[1.785s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/ament_index/resource_index/package_run_dependencies/sllidar_ros2
+[1.785s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/ament_index/resource_index/parent_prefix_path/sllidar_ros2
+[1.786s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.sh
+[1.789s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.dsv
+[1.789s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/environment/path.sh
+[1.789s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/environment/path.dsv
+[1.789s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/local_setup.bash
+[1.789s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/local_setup.sh
+[1.791s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/local_setup.zsh
+[1.791s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/local_setup.dsv
+[1.791s] -- Symlinking: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.dsv
+[1.830s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/ament_index/resource_index/packages/sllidar_ros2
+[1.830s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.831s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.831s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config.cmake
+[1.831s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config-version.cmake
+[1.832s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.xml
+[1.842s] Invoked command in '/home/crazy_rat/ros2_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crazy_rat/ros2_ws/build/sllidar_ros2

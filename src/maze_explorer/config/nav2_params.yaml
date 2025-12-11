@@ -1,0 +1,275 @@
+# NAV2 Navigation Stack Configuration
+#
+# NAV2 handles autonomous navigation from point A to point B, including:
+# - Global path planning (finding the optimal route through the map)
+# - Local path planning (avoiding dynamic obstacles)
+# - Recovery behaviors (what to do if stuck)
+# - Controller management (executing motion commands)
+#
+# This configuration uses A* algorithm for global planning, which is exactly
+# what's required for finding the shortest path through the maze.
+#
+# Save this file as: ~/maze_robot_ws/src/maze_explorer/config/nav2_params.yaml
+
+bt_navigator:
+  ros__parameters:
+    # Use default behavior trees for navigation
+    # Behavior trees coordinate different navigation behaviors
+    use_sim_time: false
+    global_frame: map
+    robot_base_frame: base_footprint
+    odom_topic: /odometry/filtered
+    bt_loop_duration: 10
+    default_server_timeout: 20
+
+controller_server:
+  ros__parameters:
+    use_sim_time: false
+    
+    # Controller frequency: how often to recalculate velocity commands
+    # 20 Hz = every 0.05 seconds, responsive but not overwhelming
+    controller_frequency: 20.0
+    
+    # Minimum frequency before considering controller failed
+    min_x_velocity_threshold: 0.001
+    min_y_velocity_threshold: 0.001
+    min_theta_velocity_threshold: 0.001
+    
+    # Failure tolerance: how long to wait before declaring failure
+    failure_tolerance: 0.3
+    
+    # Progress checker: ensures robot is making forward progress
+    progress_checker_plugin: "progress_checker"
+    goal_checker_plugins: ["general_goal_checker"]
+    controller_plugins: ["FollowPath"]
+    
+    # Progress checker configuration
+    progress_checker:
+      plugin: "nav2_controller::SimpleProgressChecker"
+      required_movement_radius: 0.5  # Must move 0.5m within time window
+      movement_time_allowance: 10.0  # 10 second window
+    
+    # Goal checker: determines when we've reached the destination
+    general_goal_checker:
+      stateful: true
+      plugin: "nav2_controller::SimpleGoalChecker"
+      xy_goal_tolerance: 0.15   # Within 15cm of goal position
+      yaw_goal_tolerance: 0.25  # Within ~14 degrees of goal orientation
+    
+    # DWB (Dynamic Window Approach) controller
+    # This is the local planner that generates velocity commands
+    FollowPath:
+      plugin: "dwb_core::DWBLocalPlanner"
+      debug_trajectory_details: false
+      min_vel_x: 0.0
+      min_vel_y: 0.0
+      max_vel_x: 0.4     # Maximum forward speed: 0.4 m/s (conservative for maze)
+      max_vel_y: 0.4     # Maximum lateral speed (mecanum allows sideways motion)
+      max_vel_theta: 1.0  # Maximum rotation speed: 1.0 rad/s (~57 deg/s)
+      min_speed_xy: 0.0
+      max_speed_xy: 0.5   # Maximum combined X-Y speed
+      min_speed_theta: 0.0
+      
+      # Acceleration limits (prevent sudden jerky movements)
+      acc_lim_x: 1.5      # X acceleration limit (m/s²)
+      acc_lim_y: 1.5      # Y acceleration limit
+      acc_lim_theta: 2.0  # Angular acceleration limit (rad/s²)
+      decel_lim_x: -1.5   # Deceleration limits (negative acceleration)
+      decel_lim_y: -1.5
+      decel_lim_theta: -2.0
+      
+      # Velocity sampling: how many velocity combinations to test
+      vx_samples: 20   # Test 20 different forward velocities
+      vy_samples: 20   # Test 20 different lateral velocities (mecanum)
+      vtheta_samples: 20  # Test 20 different rotation rates
+      
+      # Simulation time: how far ahead to predict robot motion
+      sim_time: 1.5  # Simulate 1.5 seconds into the future
+      
+      # Footprint: robot's physical dimensions for collision checking
+      # Must match URDF dimensions
+      footprint_model_name: "point"  # Use simplified circular footprint
+      
+      # Cost function critics: how to score each potential trajectory
+      # Higher weights = more important to optimize
+      critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
+      
+      # Obstacle avoidance
+      BaseObstacle:
+        scale: 0.02  # Weight for staying away from obstacles
+        sum_scores: false
+      
+      # Path following
+      PathAlign:
+        scale: 32.0  # Weight for staying aligned with global path
+        forward_point_distance: 0.1
+      
+      PathDist:
+        scale: 32.0  # Weight for following path closely
+      
+      # Goal reaching
+      GoalAlign:
+        scale: 24.0  # Weight for aligning with goal orientation
+        forward_point_distance: 0.1
+      
+      GoalDist:
+        scale: 24.0  # Weight for reaching goal position
+      
+      # Prevent oscillation
+      Oscillation:
+        scale: 1.0
+        x_only_threshold: 0.05
+      
+      # Rotation behavior
+      RotateToGoal:
+        scale: 1.0
+        slowing_factor: 5.0
+        lookahead_time: -1.0
+
+planner_server:
+  ros__parameters:
+    use_sim_time: false
+    
+    # Planner frequency: how often to recalculate global path
+    # 1 Hz = once per second (global path doesn't need frequent updates)
+    planner_frequency: 1.0
+    
+    # Planner plugins: A* is our primary algorithm
+    planner_plugins: ["GridBased"]
+    
+    GridBased:
+      plugin: "nav2_navfn_planner/NavfnPlanner"  # NavFn uses A* algorithm
+      tolerance: 0.5       # How close path must get to goal
+      use_astar: true      # CRITICAL: Use A* algorithm (optimal path finding)
+      allow_unknown: true  # Allow planning through unexplored areas
+      use_final_approach_orientation: false
+
+behavior_server:
+  ros__parameters:
+    use_sim_time: false
+    
+    # Cost map topics for recovery behaviors
+    global_frame: map
+    robot_base_frame: base_footprint
+    transform_tolerance: 0.1
+    
+    # Recovery behaviors when robot gets stuck
+    behavior_plugins: ["spin", "backup", "wait"]
+    
+    spin:
+      plugin: "nav2_behaviors::Spin"
+    backup:
+      plugin: "nav2_behaviors::BackUp"
+    wait:
+      plugin: "nav2_behaviors::Wait"
+
+bt_navigator_navigate_through_poses_rclcpp_node:
+  ros__parameters:
+    use_sim_time: false
+
+bt_navigator_navigate_to_pose_rclcpp_node:
+  ros__parameters:
+    use_sim_time: false
+
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      # Global cost map: complete map of environment
+      update_frequency: 1.0   # Update once per second
+      publish_frequency: 1.0
+      global_frame: map
+      robot_base_frame: base_footprint
+      use_sim_time: false
+      robot_radius: 0.15  # Robot's effective radius (accounts for corners)
+      resolution: 0.05    # Match SLAM resolution
+      track_unknown_space: true
+      
+      # Layers that build up the cost map
+      plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
+      
+      # Static layer: obstacles from the saved map
+      static_layer:
+        plugin: "nav2_costmap_2d::StaticLayer"
+        map_subscribe_transient_local: true
+      
+      # Obstacle layer: dynamic obstacles from LIDAR
+      obstacle_layer:
+        plugin: "nav2_costmap_2d::ObstacleLayer"
+        enabled: true
+        observation_sources: scan
+        scan:
+          topic: /scan
+          max_obstacle_height: 2.0
+          clearing: true
+          marking: true
+          data_type: "LaserScan"
+          raytrace_max_range: 6.0
+          raytrace_min_range: 0.0
+          obstacle_max_range: 5.5
+          obstacle_min_range: 0.0
+      
+      # Inflation layer: expand obstacles to account for robot size
+      inflation_layer:
+        plugin: "nav2_costmap_2d::InflationLayer"
+        cost_scaling_factor: 3.0  # How quickly cost decreases from obstacle
+        inflation_radius: 0.55    # Inflate obstacles by robot radius + safety margin
+      
+      always_send_full_costmap: true
+
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      # Local cost map: area around robot for reactive planning
+      update_frequency: 5.0   # Update 5 times per second
+      publish_frequency: 2.0
+      global_frame: odom
+      robot_base_frame: base_footprint
+      use_sim_time: false
+      rolling_window: true    # Move with robot (not fixed to map)
+      width: 3                # 3 meter window
+      height: 3
+      resolution: 0.05
+      robot_radius: 0.15
+      
+      # Same layers as global, but updates faster
+      plugins: ["voxel_layer", "inflation_layer"]
+      
+      voxel_layer:
+        plugin: "nav2_costmap_2d::VoxelLayer"
+        enabled: true
+        publish_voxel_map: true
+        origin_z: 0.0
+        z_resolution: 0.05
+        z_voxels: 16
+        max_obstacle_height: 2.0
+        mark_threshold: 0
+        observation_sources: scan
+        scan:
+          topic: /scan
+          max_obstacle_height: 2.0
+          clearing: true
+          marking: true
+          data_type: "LaserScan"
+          raytrace_max_range: 6.0
+          raytrace_min_range: 0.0
+          obstacle_max_range: 5.5
+          obstacle_min_range: 0.0
+      
+      inflation_layer:
+        plugin: "nav2_costmap_2d::InflationLayer"
+        cost_scaling_factor: 3.0
+        inflation_radius: 0.55
+      
+      always_send_full_costmap: true
+
+map_server:
+  ros__parameters:
+    use_sim_time: false
+    yaml_filename: ""  # Will be set dynamically when loading saved map
+
+lifecycle_manager:
+  ros__parameters:
+    use_sim_time: false
+    autostart: true
+    node_names: ['controller_server', 'planner_server', 'behavior_server', 
+                 'bt_navigator', 'map_server', 'lifecycle_manager']

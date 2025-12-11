@@ -1,0 +1,29 @@
+running develop
+Removing /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake-rplidar.egg-link (link to .)
+running egg_info
+writing ../build/fake_rplidar/fake_rplidar.egg-info/PKG-INFO
+writing dependency_links to ../build/fake_rplidar/fake_rplidar.egg-info/dependency_links.txt
+writing entry points to ../build/fake_rplidar/fake_rplidar.egg-info/entry_points.txt
+writing requirements to ../build/fake_rplidar/fake_rplidar.egg-info/requires.txt
+writing top-level names to ../build/fake_rplidar/fake_rplidar.egg-info/top_level.txt
+reading manifest file '../build/fake_rplidar/fake_rplidar.egg-info/SOURCES.txt'
+writing manifest file '../build/fake_rplidar/fake_rplidar.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build
+creating /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib
+creating /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar
+copying fake_rplidar/fake_scan.py -> /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar
+copying fake_rplidar/__init__.py -> /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar
+running install
+running install_lib
+creating /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar
+copying /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar/fake_scan.py -> /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar
+copying /home/crazy_rat/ros2_ws/src/build/fake_rplidar/build/lib/fake_rplidar/__init__.py -> /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar
+byte-compiling /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar/fake_scan.py to fake_scan.cpython-312.pyc
+byte-compiling /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar/__init__.py to __init__.cpython-312.pyc
+running install_egg_info
+Copying ../build/fake_rplidar/fake_rplidar.egg-info to /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar-0.0.1-py3.12.egg-info
+running install_scripts
+Installing fake_scan script to /home/crazy_rat/ros2_ws/src/install/fake_rplidar/lib/fake_rplidar
+writing list of installed files to '/home/crazy_rat/ros2_ws/src/build/fake_rplidar/install.log'

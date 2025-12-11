@@ -1,0 +1,72 @@
+[0.014s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/bno08x-ros2-driver -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/bno08x_driver
+[0.038s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.253s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.413s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.465s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.485s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.508s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.533s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.637s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.641s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.769s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.795s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.830s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.927s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.008s] -- Found ament_cmake_gmock: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_gmock/cmake)
+[1.011s] -- Found ament_cmake_gtest: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[1.014s] -- Found gmock sources under '/opt/ros/jazzy/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[1.020s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.173s] -- Configuring done (1.1s)
+[1.206s] -- Generating done (0.0s)
+[1.216s] -- Build files have been written to: /home/crazy_rat/ros2_ws/build/bno08x_driver
+[1.234s] Invoked command in '/home/crazy_rat/ros2_ws/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/bno08x-ros2-driver -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/bno08x_driver
+[1.236s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/bno08x_driver -- -j4 -l4
+[1.325s] [ 22%] [32mBuilding C object include/sh2/CMakeFiles/sh2_library.dir/sh2.c.o[0m
+[1.326s] [ 22%] [32mBuilding C object include/sh2/CMakeFiles/sh2_library.dir/sh2_SensorValue.c.o[0m
+[1.326s] [ 22%] [32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[0m
+[1.326s] [ 22%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/opt/ros/jazzy/src/gtest_vendor/src/gtest-all.cc.o[0m
+[1.444s] [ 27%] [32mBuilding C object include/sh2/CMakeFiles/sh2_library.dir/sh2_util.c.o[0m
+[1.507s] [ 33%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[0m
+[1.541s] [ 38%] [32mBuilding C object include/sh2/CMakeFiles/sh2_library.dir/shtp.c.o[0m
+[1.671s] [ 44%] [32m[1mLinking C static library libsh2_library.a[0m
+[1.764s] [ 44%] Built target sh2_library
+[1.814s] [ 50%] [32mBuilding CXX object CMakeFiles/bno08x_driver.dir/src/bno08x.cpp.o[0m
+[2.943s] [ 55%] [32mBuilding CXX object CMakeFiles/bno08x_driver.dir/src/bno08x_ros.cpp.o[0m
+[4.019s] [ 61%] [32m[1mLinking CXX static library libgmock_main.a[0m
+[4.097s] [ 61%] Built target gmock_main
+[4.118s] [ 66%] [32mBuilding CXX object CMakeFiles/bno08x_driver.dir/src/ros_node.cpp.o[0m
+[10.141s] [ 72%] [32m[1mLinking CXX static library libgmock.a[0m
+[10.424s] [ 72%] Built target gmock
+[10.465s] [ 83%] [32mBuilding CXX object CMakeFiles/test_watchdog.dir/test/watchdog_test.cpp.o[0m
+[10.465s] [ 83%] [32mBuilding CXX object CMakeFiles/test_i2c_mock.dir/test/i2c_interface_mock_test.cpp.o[0m
+[12.999s] [ 88%] [32m[1mLinking CXX executable test_watchdog[0m
+[13.306s] [ 88%] Built target test_watchdog
+[14.730s] [ 94%] [32m[1mLinking CXX executable test_i2c_mock[0m
+[15.040s] [100%] [32m[1mLinking CXX executable bno08x_driver[0m
+[15.099s] [100%] Built target test_i2c_mock
+[15.485s] [100%] Built target bno08x_driver
+[15.506s] Invoked command in '/home/crazy_rat/ros2_ws/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/bno08x_driver -- -j4 -l4
+[15.524s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crazy_rat/ros2_ws/build/bno08x_driver
+[15.538s] -- Install configuration: ""
+[15.538s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/lib/bno08x_driver/bno08x_driver
+[15.542s] -- Set non-toolchain portion of runtime path of "/home/crazy_rat/ros2_ws/install/bno08x_driver/lib/bno08x_driver/bno08x_driver" to ""
+[15.542s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/config
+[15.542s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml
+[15.542s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/launch
+[15.543s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py
+[15.543s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver
+[15.543s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver
+[15.543s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh
+[15.543s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv
+[15.544s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/path.sh
+[15.544s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/path.dsv
+[15.544s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.bash
+[15.544s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.sh
+[15.544s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.zsh
+[15.544s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.dsv
+[15.545s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/package.dsv
+[15.545s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver
+[15.545s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake
+[15.545s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake
+[15.545s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/package.xml
+[15.549s] Invoked command in '/home/crazy_rat/ros2_ws/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/src/install/fake_rplidar:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crazy_rat/ros2_ws/build/bno08x_driver

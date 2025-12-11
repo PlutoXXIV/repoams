@@ -1,0 +1,31 @@
+[0.385s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/bno08x_driver -- -j4 -l4
+[0.824s] [ 27%] Built target sh2_library
+[0.840s] [ 38%] Built target gmock_main
+[0.846s] [ 55%] Built target gmock
+[0.949s] [ 66%] Built target test_i2c_mock
+[0.963s] [ 77%] Built target test_watchdog
+[1.076s] [100%] Built target bno08x_driver
+[1.117s] Invoked command in '/home/crazy_rat/ros2_ws/build/bno08x_driver' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/bno08x_driver -- -j4 -l4
+[1.148s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crazy_rat/ros2_ws/build/bno08x_driver
+[1.165s] -- Install configuration: ""
+[1.173s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/lib/bno08x_driver/bno08x_driver
+[1.174s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/config
+[1.174s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml
+[1.174s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/launch
+[1.174s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py
+[1.174s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver
+[1.174s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver
+[1.175s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh
+[1.175s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv
+[1.175s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/path.sh
+[1.175s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/path.dsv
+[1.175s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.bash
+[1.175s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.sh
+[1.175s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.zsh
+[1.175s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.dsv
+[1.175s] -- Installing: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/package.dsv
+[1.175s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver
+[1.175s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake
+[1.176s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake
+[1.176s] -- Up-to-date: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/package.xml
+[1.200s] Invoked command in '/home/crazy_rat/ros2_ws/build/bno08x_driver' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crazy_rat/ros2_ws/build/bno08x_driver

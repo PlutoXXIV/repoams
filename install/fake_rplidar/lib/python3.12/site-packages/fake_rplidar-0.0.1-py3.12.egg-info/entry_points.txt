@@ -1,0 +1,2 @@
+[console_scripts]
+fake_scan = fake_rplidar.fake_scan:main

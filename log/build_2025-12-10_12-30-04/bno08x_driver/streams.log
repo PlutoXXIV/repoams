@@ -1,0 +1,20 @@
+[0.012s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/bno08x-ros2-driver -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/bno08x_driver
+[0.039s] [31mCMake Error at CMakeLists.txt:19 (find_package):
+[0.039s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[0.039s]   has asked CMake to find a package configuration file provided by
+[0.039s]   "ament_cmake", but CMake did not find one.
+[0.039s] 
+[0.039s]   Could not find a package configuration file provided by "ament_cmake" with
+[0.040s]   any of the following names:
+[0.040s] 
+[0.040s]     ament_cmakeConfig.cmake
+[0.040s]     ament_cmake-config.cmake
+[0.040s] 
+[0.040s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[0.040s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[0.040s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[0.040s]   has been installed.
+[0.040s] 
+[0.040s] [0m
+[0.040s] -- Configuring incomplete, errors occurred!
+[0.043s] Invoked command in '/home/crazy_rat/ros2_ws/build/bno08x_driver' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/bno08x-ros2-driver -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/bno08x_driver

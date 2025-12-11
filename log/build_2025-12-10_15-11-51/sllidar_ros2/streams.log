@@ -1,0 +1,32 @@
+[0.763s] Invoking command in '/home/crazy_rat/ros2_ws/build/sllidar_ros2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/sllidar_ros2
+[1.431s] -- The C compiler identification is GNU 13.3.0
+[1.869s] -- The CXX compiler identification is GNU 13.3.0
+[1.916s] -- Detecting C compiler ABI info
+[2.149s] -- Detecting C compiler ABI info - done
+[2.165s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.168s] -- Detecting C compile features
+[2.171s] -- Detecting C compile features - done
+[2.197s] -- Detecting CXX compiler ABI info
+[2.478s] -- Detecting CXX compiler ABI info - done
+[2.504s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.505s] -- Detecting CXX compile features
+[2.507s] -- Detecting CXX compile features - done
+[2.520s] [31mCMake Error at CMakeLists.txt:34 (find_package):
+[2.520s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[2.520s]   has asked CMake to find a package configuration file provided by
+[2.520s]   "ament_cmake", but CMake did not find one.
+[2.520s] 
+[2.521s]   Could not find a package configuration file provided by "ament_cmake" with
+[2.521s]   any of the following names:
+[2.521s] 
+[2.521s]     ament_cmakeConfig.cmake
+[2.521s]     ament_cmake-config.cmake
+[2.521s] 
+[2.521s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[2.522s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[2.522s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[2.522s]   has been installed.
+[2.522s] 
+[2.522s] [0m
+[2.522s] -- Configuring incomplete, errors occurred!
+[2.529s] Invoked command in '/home/crazy_rat/ros2_ws/build/sllidar_ros2' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/sllidar_ros2

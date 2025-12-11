@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_i2c_mock.dir/test/i2c_interface_mock_test.cpp.o -o test_i2c_mock  gmock/libgmock_main.a gmock/libgmock.a -pthread 

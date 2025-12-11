@@ -1,0 +1,192 @@
+# ROS2 Controllers Configuration for Mecanum Drive
+#
+# This file configures the mecanum drive controller which translates
+# high-level velocity commands (cmd_vel) into individual wheel velocities.
+#
+# MECANUM DRIVE KINEMATICS:
+# Mecanum wheels have rollers at 45° angles, allowing omnidirectional movement.
+# The robot can move forward, backward, sideways, and rotate - all independently!
+#
+# Wheel arrangement (top view):
+#   Front Left (FL)    Front Right (FR)
+#         /                    \
+#        /                      \
+#   Rear Left (RL)     Rear Right (RR)
+#         \                    /
+#          \                  /
+#
+# The controller calculates each wheel's speed based on desired:
+# - Linear X velocity (forward/backward)
+# - Linear Y velocity (left/right strafe)
+# - Angular Z velocity (rotation)
+#
+# Save this file as: ~/maze_robot_ws/src/maze_explorer/config/controllers.yaml
+
+controller_manager:
+  ros__parameters:
+    # Update rate for the controller manager (Hz)
+    # This is how often the controller manager checks and updates all controllers
+    update_rate: 100  # 100 Hz = every 0.01 seconds
+    
+    # Use real hardware time (not simulation time)
+    use_sim_time: false
+    
+    # List of controllers to load and manage
+    # Each controller is a separate plugin that handles specific functionality
+    controllers:
+      - joint_state_broadcaster  # Publishes current wheel positions/velocities
+      - mecanum_drive_controller # Main controller for robot motion
+    
+    # Joint State Broadcaster Configuration
+    # Reads wheel encoder states and publishes them to /joint_states topic
+    # This is crucial for odometry calculation
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    
+    # Mecanum Drive Controller Configuration
+    # Translates cmd_vel commands to wheel velocities
+    mecanum_drive_controller:
+      type: mecanum_drive_controller/MecanumDriveController
+
+# Detailed configuration for the mecanum drive controller
+mecanum_drive_controller:
+  ros__parameters:
+    
+    # =====================================================================
+    # WHEEL JOINT NAMES
+    # =====================================================================
+    # These must exactly match the joint names in the URDF file
+    # Order matters: front-left, front-right, rear-left, rear-right
+    front_left_wheel_joint: "front_left_wheel_joint"
+    front_right_wheel_joint: "front_right_wheel_joint"
+    rear_left_wheel_joint: "rear_left_wheel_joint"
+    rear_right_wheel_joint: "rear_right_wheel_joint"
+    
+    # =====================================================================
+    # KINEMATICS PARAMETERS
+    # =====================================================================
+    # These define the physical geometry of the robot
+    # Critical for accurate movement calculations!
+    
+    # Wheel base: distance between front and rear axles (meters)
+    # Measured from center of front wheels to center of rear wheels
+    wheel_base: 0.20
+    
+    # Wheel track: distance between left and right wheels (meters)
+    # Measured from center of left wheels to center of right wheels
+    wheel_track: 0.18
+    
+    # Wheel radius: radius of each wheel (meters)
+    # Used to convert angular velocity (rad/s) to linear velocity (m/s)
+    wheel_radius: 0.035
+    
+    # =====================================================================
+    # VELOCITY LIMITS
+    # =====================================================================
+    # Safety limits prevent the robot from moving too fast
+    # These should match or be lower than the motor capabilities
+    
+    # Linear velocity limits (meters per second)
+    max_linear_velocity_x: 0.5   # Maximum forward/backward speed
+    max_linear_velocity_y: 0.5   # Maximum sideways strafe speed
+    min_linear_velocity_x: -0.5  # Maximum reverse speed
+    min_linear_velocity_y: -0.5  # Maximum reverse strafe speed
+    
+    # Angular velocity limits (radians per second)
+    max_angular_velocity_z: 1.5  # Maximum rotation speed (~86 degrees/sec)
+    min_angular_velocity_z: -1.5 # Maximum counter-rotation speed
+    
+    # Acceleration limits (m/s² and rad/s²)
+    # Limits how quickly velocity can change
+    # Prevents wheel slip and mechanical stress on N20 motors
+    max_linear_acceleration_x: 1.0
+    max_linear_acceleration_y: 1.0
+    max_angular_acceleration_z: 1.5
+    
+    # =====================================================================
+    # COMMAND INTERFACE
+    # =====================================================================
+    # Configure how the controller receives movement commands
+    
+    # Command topic: where to listen for velocity commands
+    # Navigation stack will publish Twist messages here
+    cmd_vel_topic: "cmd_vel"
+    
+    # Command timeout: if no command received for this long, stop robot
+    # Safety feature to prevent runaway if connection lost
+    cmd_vel_timeout: 0.5  # 500 milliseconds
+    
+    # =====================================================================
+    # ODOMETRY PUBLISHING
+    # =====================================================================
+    # The controller can publish odometry based on wheel encoder feedback
+    # This is "wheel odometry" - separate from the EKF filtered odometry
+    
+    # Enable odometry publishing
+    # We'll use this as input to the EKF (odom0)
+    publish_odom: true
+    
+    # Odometry topic name
+    odom_topic: "wheel_odom"
+    
+    # Coordinate frames for odometry
+    odom_frame_id: "odom"
+    base_frame_id: "base_footprint"
+    
+    # Publish odometry transform (odom -> base_footprint)
+    # Set to false because EKF will publish the authoritative transform
+    publish_odom_tf: false
+    
+    # =====================================================================
+    # FEEDBACK TYPE
+    # =====================================================================
+    # How to get wheel position/velocity data
+    # Options: "position" or "velocity"
+    # "velocity" is better for our N20 encoders which provide speed directly
+    feedback_type: "velocity"
+    
+    # =====================================================================
+    # ADVANCED PARAMETERS
+    # =====================================================================
+    
+    # Wheel separation multiplier: fine-tune if robot turns incorrectly
+    # 1.0 = use exact wheel_base and wheel_track measurements
+    # >1.0 if robot turns too little, <1.0 if robot turns too much
+    wheel_separation_multiplier: 1.0
+    
+    # Wheel radius multiplier: fine-tune if robot travels wrong distance
+    # 1.0 = use exact wheel_radius measurement
+    # >1.0 if robot travels too little, <1.0 if robot travels too far
+    wheel_radius_multiplier: 1.0
+    
+    # Covariance for odometry messages
+    # These indicate uncertainty in the measurements
+    # Format: [x, y, z, rotation_x, rotation_y, rotation_z]
+    pose_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
+    twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
+    
+    # =====================================================================
+    # CONTROL MODE
+    # =====================================================================
+    # Velocity control: send velocity commands to motors
+    # (as opposed to position or effort control)
+    control_mode: "velocity"
+
+# Joint State Broadcaster Configuration
+# This publishes the current state of all joints (wheel positions/velocities)
+# Required for robot_state_publisher to calculate transforms
+joint_state_broadcaster:
+  ros__parameters:
+    # Joints to publish state for
+    # Must match joint names in URDF
+    joints:
+      - front_left_wheel_joint
+      - front_right_wheel_joint
+      - rear_left_wheel_joint
+      - rear_right_wheel_joint
+    
+    # Publish rate (Hz)
+    publish_rate: 50.0
+    
+    # Use hardware interface to read joint states
+    use_local_topics: false

@@ -1,0 +1,2 @@
+Invoking command in '/home/crazy_rat/ros2_ws/build/sllidar_ros2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/sllidar_ros2
+Invoked command in '/home/crazy_rat/ros2_ws/build/sllidar_ros2' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/sllidar_ros2

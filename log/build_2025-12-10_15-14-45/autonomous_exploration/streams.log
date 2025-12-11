@@ -1,0 +1,24 @@
+[2.866s] Invoking command in '/home/crazy_rat/ros2_ws/build/autonomous_exploration': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crazy_rat/ros2_ws/build/autonomous_exploration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/install/autonomous_exploration/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/crazy_rat/ros2_ws/build/autonomous_exploration/build --no-deps symlink_data
+[4.102s] running develop
+[4.638s] running egg_info
+[4.639s] creating autonomous_exploration.egg-info
+[4.736s] writing autonomous_exploration.egg-info/PKG-INFO
+[4.739s] writing dependency_links to autonomous_exploration.egg-info/dependency_links.txt
+[4.740s] writing entry points to autonomous_exploration.egg-info/entry_points.txt
+[4.740s] writing requirements to autonomous_exploration.egg-info/requires.txt
+[4.741s] writing top-level names to autonomous_exploration.egg-info/top_level.txt
+[4.741s] writing manifest file 'autonomous_exploration.egg-info/SOURCES.txt'
+[4.858s] reading manifest file 'autonomous_exploration.egg-info/SOURCES.txt'
+[4.861s] writing manifest file 'autonomous_exploration.egg-info/SOURCES.txt'
+[4.933s] running build_ext
+[4.933s] Creating /home/crazy_rat/ros2_ws/install/autonomous_exploration/lib/python3.12/site-packages/autonomous-exploration.egg-link (link to .)
+[4.936s] Installing control script to /home/crazy_rat/ros2_ws/install/autonomous_exploration/lib/autonomous_exploration
+[4.941s] 
+[4.942s] Installed /home/crazy_rat/ros2_ws/build/autonomous_exploration
+[4.943s] running symlink_data
+[4.947s] creating /home/crazy_rat/ros2_ws/install/autonomous_exploration/share/ament_index
+[4.948s] creating /home/crazy_rat/ros2_ws/install/autonomous_exploration/share/ament_index/resource_index
+[4.949s] creating /home/crazy_rat/ros2_ws/install/autonomous_exploration/share/ament_index/resource_index/packages
+[4.949s] symbolically linking /home/crazy_rat/ros2_ws/build/autonomous_exploration/resource/autonomous_exploration -> /home/crazy_rat/ros2_ws/install/autonomous_exploration/share/ament_index/resource_index/packages
+[4.949s] symbolically linking /home/crazy_rat/ros2_ws/build/autonomous_exploration/package.xml -> /home/crazy_rat/ros2_ws/install/autonomous_exploration/share/autonomous_exploration
+[5.328s] Invoked command in '/home/crazy_rat/ros2_ws/build/autonomous_exploration' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crazy_rat/ros2_ws/build/autonomous_exploration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/install/autonomous_exploration/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/crazy_rat/ros2_ws/build/autonomous_exploration/build --no-deps symlink_data

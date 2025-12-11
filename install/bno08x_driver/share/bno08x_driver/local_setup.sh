@@ -1,0 +1,1 @@
+/home/crazy_rat/ros2_ws/build/bno08x_driver/ament_cmake_environment_hooks/local_setup.sh

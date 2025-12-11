@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<!--
+  URDF (Unified Robot Description Format) for Maze Explorer Robot
+  
+  This file describes the physical structure of the robot including:
+  - Chassis dimensions and mass properties
+  - Wheel positions and specifications (mecanum wheels)
+  - Sensor mounting positions (LIDAR and IMU)
+  - Visual appearance and collision geometry
+  
+  URDF uses a tree structure of links (rigid bodies) connected by joints.
+  The robot's coordinate frame follows ROS convention:
+  - X: Forward
+  - Y: Left
+  - Z: Up
+  
+  Save this file as: ~/maze_robot_ws/src/maze_explorer/urdf/maze_robot.urdf.xacro
+-->
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="maze_robot">
+
+  <!-- ====================================================================== -->
+  <!-- PROPERTIES: Define reusable parameters for easier modification        -->
+  <!-- ====================================================================== -->
+  
+  <!-- Robot dimensions (in meters) -->
+  <xacro:property name="base_length" value="0.25"/>  <!-- Front to back -->
+  <xacro:property name="base_width" value="0.20"/>   <!-- Left to right -->
+  <xacro:property name="base_height" value="0.08"/>  <!-- Bottom to top of chassis -->
+  <xacro:property name="base_mass" value="2.0"/>     <!-- Kilograms (includes battery, electronics) -->
+  
+  <!-- Wheel specifications for N20 motors with mecanum wheels -->
+  <xacro:property name="wheel_radius" value="0.035"/>     <!-- 35mm radius (70mm diameter) -->
+  <xacro:property name="wheel_width" value="0.025"/>      <!-- 25mm wide -->
+  <xacro:property name="wheel_mass" value="0.05"/>        <!-- 50 grams per wheel -->
+  <xacro:property name="wheel_separation_width" value="0.18"/>   <!-- Distance between left and right wheels -->
+  <xacro:property name="wheel_separation_length" value="0.20"/>  <!-- Distance between front and back wheels -->
+  
+  <!-- LIDAR specifications (Slamtec RP LIDAR C1M1) -->
+  <xacro:property name="lidar_radius" value="0.038"/>  <!-- 76mm diameter -->
+  <xacro:property name="lidar_height" value="0.041"/>  <!-- 41mm tall -->
+  <xacro:property name="lidar_mass" value="0.13"/>     <!-- 130 grams -->
+  
+  <!-- IMU specifications (BNO085) -->
+  <xacro:property name="imu_size" value="0.025"/>      <!-- Small sensor, 25mm cube approximation -->
+  <xacro:property name="imu_mass" value="0.01"/>       <!-- 10 grams -->
+  
+  <!-- PI value for calculations -->
+  <xacro:property name="pi" value="3.14159265359"/>
+
+  <!-- ====================================================================== -->
+  <!-- MACROS: Reusable components to reduce repetition                      -->
+  <!-- ====================================================================== -->
+  
+  <!-- Inertia matrix macro - calculates moment of inertia for boxes -->
+  <!-- This is essential for accurate physics simulation -->
+  <xacro:macro name="box_inertia" params="m x y z">
+    <inertia 
+      ixx="${m * (y*y + z*z) / 12.0}" ixy="0.0" ixz="0.0"
+      iyy="${m * (x*x + z*z) / 12.0}" iyz="0.0"
+      izz="${m * (x*x + y*y) / 12.0}"/>
+  </xacro:macro>
+  
+  <!-- Inertia matrix for cylinders (wheels, LIDAR) -->
+  <xacro:macro name="cylinder_inertia" params="m r h">
+    <inertia 
+      ixx="${m * (3*r*r + h*h) / 12.0}" ixy="0.0" ixz="0.0"
+      iyy="${m * (3*r*r + h*h) / 12.0}" iyz="0.0"
+      izz="${m * r*r / 2.0}"/>
+  </xacro:macro>
+  
+  <!-- Wheel macro - creates a complete wheel link and joint -->
+  <!-- Parameters: 
+       prefix - wheel name (front_left, front_right, rear_left, rear_right)
+       x_reflect - 1 for front, -1 for rear
+       y_reflect - 1 for left, -1 for right
+  -->
+  <xacro:macro name="wheel" params="prefix x_reflect y_reflect">
+    
+    <!-- Wheel link - the physical wheel -->
+    <link name="${prefix}_wheel_link">
+      <!-- Visual representation (what you see in RViz) -->
+      <visual>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0.2 0.2 0.2 1.0"/>
+        </material>
+      </visual>
+      
+      <!-- Collision geometry (for obstacle detection) -->
+      <collision>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+        </geometry>
+      </collision>
+      
+      <!-- Inertial properties (mass and moment of inertia) -->
+      <inertial>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+        <mass value="${wheel_mass}"/>
+        <xacro:cylinder_inertia m="${wheel_mass}" r="${wheel_radius}" h="${wheel_width}"/>
+      </inertial>
+    </link>
+    
+    <!-- Wheel joint - connects wheel to chassis -->
+    <!-- continuous joint = can rotate infinitely (wheels spin freely) -->
+    <joint name="${prefix}_wheel_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${prefix}_wheel_link"/>
+      <!-- Position wheel at corner of robot -->
+      <origin xyz="${x_reflect * wheel_separation_length/2} 
+                   ${y_reflect * (wheel_separation_width/2 + wheel_width/2)} 
+                   0" 
+              rpy="0 0 0"/>
+      <!-- Rotation axis (wheels rotate around Y-axis in their local frame) -->
+      <axis xyz="0 1 0"/>
+      <!-- Joint limits and dynamics -->
+      <limit effort="10.0" velocity="5.0"/>  <!-- N20 motors: 500 RPM ≈ 5 rad/s at wheel -->
+      <dynamics damping="0.1" friction="0.1"/>
+    </joint>
+    
+  </xacro:macro>
+
+  <!-- ====================================================================== -->
+  <!-- ROBOT BASE STRUCTURE                                                   -->
+  <!-- ====================================================================== -->
+  
+  <!-- Base footprint - virtual link at ground level for navigation -->
+  <!-- This is the reference point for the robot's position in the world -->
+  <link name="base_footprint"/>
+  
+  <!-- Joint connecting footprint to actual base -->
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <!-- Elevate base_link by wheel radius so footprint touches ground -->
+    <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0"/>
+  </joint>
+  
+  <!-- Base link - main chassis of the robot -->
+  <link name="base_link">
+    <!-- Visual representation -->
+    <visual>
+      <origin xyz="0 0 ${base_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.2 0.4 0.8 1.0"/>
+      </material>
+    </visual>
+    
+    <!-- Collision geometry -->
+    <collision>
+      <origin xyz="0 0 ${base_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}"/>
+      </geometry>
+    </collision>
+    
+    <!-- Inertial properties -->
+    <inertial>
+      <origin xyz="0 0 ${base_height/2}" rpy="0 0 0"/>
+      <mass value="${base_mass}"/>
+      <xacro:box_inertia m="${base_mass}" x="${base_length}" y="${base_width}" z="${base_height}"/>
+    </inertial>
+  </link>
+  
+  <!-- ====================================================================== -->
+  <!-- WHEELS - Create all four mecanum wheels                               -->
+  <!-- ====================================================================== -->
+  
+  <xacro:wheel prefix="front_left"  x_reflect="1"  y_reflect="1"/>
+  <xacro:wheel prefix="front_right" x_reflect="1"  y_reflect="-1"/>
+  <xacro:wheel prefix="rear_left"   x_reflect="-1" y_reflect="1"/>
+  <xacro:wheel prefix="rear_right"  x_reflect="-1" y_reflect="-1"/>
+  
+  <!-- ====================================================================== -->
+  <!-- LIDAR SENSOR                                                           -->
+  <!-- ====================================================================== -->
+  
+  <!-- LIDAR link - mounted on top center of robot -->
+  <link name="lidar_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="${lidar_radius}" length="${lidar_height}"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
+    </visual>
+    
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="${lidar_radius}" length="${lidar_height}"/>
+      </geometry>
+    </collision>
+    
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="${lidar_mass}"/>
+      <xacro:cylinder_inertia m="${lidar_mass}" r="${lidar_radius}" h="${lidar_height}"/>
+    </inertial>
+  </link>
+  
+  <!-- LIDAR joint - fixed to base, positioned on top -->
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <!-- Position: center top of chassis + half LIDAR height -->
+    <origin xyz="0 0 ${base_height + lidar_height/2}" rpy="0 0 0"/>
+  </joint>
+  
+  <!-- ====================================================================== -->
+  <!-- IMU SENSOR (BNO085)                                                    -->
+  <!-- ====================================================================== -->
+  
+  <!-- IMU link - mounted inside chassis -->
+  <link name="imu_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${imu_size} ${imu_size} ${imu_size}"/>
+      </geometry>
+      <material name="green">
+        <color rgba="0.0 0.8 0.2 1.0"/>
+      </material>
+    </visual>
+    
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${imu_size} ${imu_size} ${imu_size}"/>
+      </geometry>
+    </collision>
+    
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="${imu_mass}"/>
+      <xacro:box_inertia m="${imu_mass}" x="${imu_size}" y="${imu_size}" z="${imu_size}"/>
+    </inertial>
+  </link>
+  
+  <!-- IMU joint - fixed to base, positioned at center of mass -->
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <!-- Position at geometric center of chassis for best measurements -->
+    <origin xyz="0 0 ${base_height/2}" rpy="0 0 0"/>
+  </joint>
+  
+</robot>
