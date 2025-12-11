@@ -1,0 +1,10 @@
+-- Found ament_cmake_core: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_core/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_cmake_python: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_python/cmake)
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/crazy_rat/ros2_ws/build/nav2_common
+failed to create symbolic link '/home/crazy_rat/ros2_ws/build/nav2_common/ament_cmake_python/nav2_common/nav2_common' because existing path cannot be removed: Is a directory
+gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_nav2_common.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_nav2_common] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:138: CMakeFiles/ament_cmake_python_symlink_nav2_common.dir/all] Error 2
+gmake: *** [Makefile:124: all] Error 2

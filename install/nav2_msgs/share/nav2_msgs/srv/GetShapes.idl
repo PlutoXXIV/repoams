@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from nav2_msgs/srv/GetShapes.srv
+// generated code does not contain a copyright notice
+
+#include "nav2_msgs/msg/CircleObject.idl"
+#include "nav2_msgs/msg/PolygonObject.idl"
+
+module nav2_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Get vector objects which are now being applied on map")
+    struct GetShapes_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetShapes_Response {
+      sequence<nav2_msgs::msg::CircleObject> circles;
+
+      sequence<nav2_msgs::msg::PolygonObject> polygons;
+    };
+  };
+};

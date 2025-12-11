@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!--
+  Hardware Interface Plugin Description for ros2_control
+  
+  This file tells pluginlib (ROS2's plugin system) about our custom
+  hardware interface for the mecanum drive robot.
+  
+  WHAT IS A PLUGIN:
+  A plugin is a loadable library that implements a specific interface.
+  ros2_control uses plugins to support different hardware configurations
+  without needing to recompile the core system.
+  
+  HOW IT WORKS:
+  1. This XML file is read by pluginlib at runtime
+  2. Pluginlib registers our MecanumHardwareInterface class
+  3. When ros2_control needs hardware interface "maze_explorer_hardware/MecanumHardwareInterface"
+  4. It loads our library (libmaze_explorer_hardware.so)
+  5. And instantiates our MecanumHardwareInterface class
+  
+  CRITICAL: This file must be:
+  - Named exactly: mecanum_hardware_interface_plugin.xml
+  - Located in package root: ~/ros2_ws/src/maze_explorer/
+  - Referenced in package.xml export section
+  
+  Save this file as: ~/ros2_ws/src/maze_explorer/mecanum_hardware_interface_plugin.xml
+-->
+
+<library path="maze_explorer_hardware">
+  <!--
+    Library path:
+    - "maze_explorer_hardware" is the library name (without lib prefix and .so extension)
+    - Full library name will be: libmaze_explorer_hardware.so
+    - Located in: install/maze_explorer/lib/libmaze_explorer_hardware.so
+    - Built from: src/mecanum_hardware_interface.cpp
+  -->
+  
+  <class 
+    name="maze_explorer_hardware/MecanumHardwareInterface" 
+    type="maze_explorer_hardware::MecanumHardwareInterface" 
+    base_class_type="hardware_interface::SystemInterface">
+    
+    <!--
+      Plugin Definition:
+      
+      name: 
+        - Identifier used in URDF to reference this plugin
+        - Format: package_name/ClassName
+        - Used in URDF as: <plugin>maze_explorer_hardware/MecanumHardwareInterface</plugin>
+      
+      type:
+        - Actual C++ class name with namespace
+        - Must match exactly: namespace::ClassName
+        - From mecanum_hardware_interface.cpp: namespace maze_explorer_hardware { class MecanumHardwareInterface }
+      
+      base_class_type:
+        - Interface this plugin implements
+        - hardware_interface::SystemInterface is for complete robot systems
+        - Other options: ActuatorInterface (single actuator), SensorInterface (sensor only)
+    -->
+    
+    <description>
+      Hardware interface for mecanum drive robot with N20 motors and encoders.
+      
+      This plugin provides the interface between ros2_control and the physical
+      hardware (GPIO pins for motor control and encoder reading).
+      
+      Features:
+      - Reads encoder positions and velocities from N20 motors via GPIO
+      - Writes motor commands (velocity) to motor drivers via GPIO PWM
+      - Supports 4-wheel mecanum drive configuration
+      - Direct GPIO access using Linux GPIO character device interface
+      
+      Hardware supported:
+      - 4× N20 motors with quadrature encoders (1100 PPR)
+      - 2× L298N motor drivers (or compatible)
+      - Raspberry Pi 5 GPIO (gpiochip4)
+      
+      GPIO pins used:
+      - 8 encoder pins (4 motors × 2 channels each)
+      - 8 motor control pins (4 motors × PWM + direction)
+      
+      Publishes:
+      - /wheel_odom (nav_msgs/Odometry) - Odometry from wheel encoders
+      
+      Used by:
+      - mecanum_drive_controller (ros2_controllers)
+    </description>
+  </class>
+</library>

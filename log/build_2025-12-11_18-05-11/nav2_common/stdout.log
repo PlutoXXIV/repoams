@@ -1,0 +1,6 @@
+-- Found ament_cmake_core: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_core/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_cmake_python: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_python/cmake)
+-- Configuring done (0.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/crazy_rat/ros2_ws/build/nav2_common

@@ -211,32 +211,6 @@ bno08x_driver/fast:
 .PHONY : bno08x_driver/fast
 
 #=============================================================================
-# Target rules for targets named test_i2c_mock
-
-# Build rule for target.
-test_i2c_mock: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_i2c_mock
-.PHONY : test_i2c_mock
-
-# fast build rule for target.
-test_i2c_mock/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_i2c_mock.dir/build.make CMakeFiles/test_i2c_mock.dir/build
-.PHONY : test_i2c_mock/fast
-
-#=============================================================================
-# Target rules for targets named test_watchdog
-
-# Build rule for target.
-test_watchdog: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_watchdog
-.PHONY : test_watchdog
-
-# fast build rule for target.
-test_watchdog/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_watchdog.dir/build.make CMakeFiles/test_watchdog.dir/build
-.PHONY : test_watchdog/fast
-
-#=============================================================================
 # Target rules for targets named sh2_library
 
 # Build rule for target.
@@ -248,58 +222,6 @@ sh2_library: cmake_check_build_system
 sh2_library/fast:
 	$(MAKE) $(MAKESILENT) -f include/sh2/CMakeFiles/sh2_library.dir/build.make include/sh2/CMakeFiles/sh2_library.dir/build
 .PHONY : sh2_library/fast
-
-#=============================================================================
-# Target rules for targets named gmock
-
-# Build rule for target.
-gmock: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
-.PHONY : gmock
-
-# fast build rule for target.
-gmock/fast:
-	$(MAKE) $(MAKESILENT) -f gmock/CMakeFiles/gmock.dir/build.make gmock/CMakeFiles/gmock.dir/build
-.PHONY : gmock/fast
-
-#=============================================================================
-# Target rules for targets named gmock_main
-
-# Build rule for target.
-gmock_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
-.PHONY : gmock_main
-
-# fast build rule for target.
-gmock_main/fast:
-	$(MAKE) $(MAKESILENT) -f gmock/CMakeFiles/gmock_main.dir/build.make gmock/CMakeFiles/gmock_main.dir/build
-.PHONY : gmock_main/fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	$(MAKE) $(MAKESILENT) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
-
-#=============================================================================
-# Target rules for targets named gtest_main
-
-# Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
-.PHONY : gtest_main
-
-# fast build rule for target.
-gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
 
 src/bno08x.o: src/bno08x.cpp.o
 .PHONY : src/bno08x.o
@@ -373,54 +295,6 @@ src/ros_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bno08x_driver.dir/build.make CMakeFiles/bno08x_driver.dir/src/ros_node.cpp.s
 .PHONY : src/ros_node.cpp.s
 
-test/i2c_interface_mock_test.o: test/i2c_interface_mock_test.cpp.o
-.PHONY : test/i2c_interface_mock_test.o
-
-# target to build an object file
-test/i2c_interface_mock_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_i2c_mock.dir/build.make CMakeFiles/test_i2c_mock.dir/test/i2c_interface_mock_test.cpp.o
-.PHONY : test/i2c_interface_mock_test.cpp.o
-
-test/i2c_interface_mock_test.i: test/i2c_interface_mock_test.cpp.i
-.PHONY : test/i2c_interface_mock_test.i
-
-# target to preprocess a source file
-test/i2c_interface_mock_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_i2c_mock.dir/build.make CMakeFiles/test_i2c_mock.dir/test/i2c_interface_mock_test.cpp.i
-.PHONY : test/i2c_interface_mock_test.cpp.i
-
-test/i2c_interface_mock_test.s: test/i2c_interface_mock_test.cpp.s
-.PHONY : test/i2c_interface_mock_test.s
-
-# target to generate assembly for a file
-test/i2c_interface_mock_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_i2c_mock.dir/build.make CMakeFiles/test_i2c_mock.dir/test/i2c_interface_mock_test.cpp.s
-.PHONY : test/i2c_interface_mock_test.cpp.s
-
-test/watchdog_test.o: test/watchdog_test.cpp.o
-.PHONY : test/watchdog_test.o
-
-# target to build an object file
-test/watchdog_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_watchdog.dir/build.make CMakeFiles/test_watchdog.dir/test/watchdog_test.cpp.o
-.PHONY : test/watchdog_test.cpp.o
-
-test/watchdog_test.i: test/watchdog_test.cpp.i
-.PHONY : test/watchdog_test.i
-
-# target to preprocess a source file
-test/watchdog_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_watchdog.dir/build.make CMakeFiles/test_watchdog.dir/test/watchdog_test.cpp.i
-.PHONY : test/watchdog_test.cpp.i
-
-test/watchdog_test.s: test/watchdog_test.cpp.s
-.PHONY : test/watchdog_test.s
-
-# target to generate assembly for a file
-test/watchdog_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_watchdog.dir/build.make CMakeFiles/test_watchdog.dir/test/watchdog_test.cpp.s
-.PHONY : test/watchdog_test.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -437,13 +311,7 @@ help:
 	@echo "... bno08x_driver_uninstall"
 	@echo "... uninstall"
 	@echo "... bno08x_driver"
-	@echo "... gmock"
-	@echo "... gmock_main"
-	@echo "... gtest"
-	@echo "... gtest_main"
 	@echo "... sh2_library"
-	@echo "... test_i2c_mock"
-	@echo "... test_watchdog"
 	@echo "... src/bno08x.o"
 	@echo "... src/bno08x.i"
 	@echo "... src/bno08x.s"
@@ -453,12 +321,6 @@ help:
 	@echo "... src/ros_node.o"
 	@echo "... src/ros_node.i"
 	@echo "... src/ros_node.s"
-	@echo "... test/i2c_interface_mock_test.o"
-	@echo "... test/i2c_interface_mock_test.i"
-	@echo "... test/i2c_interface_mock_test.s"
-	@echo "... test/watchdog_test.o"
-	@echo "... test/watchdog_test.i"
-	@echo "... test/watchdog_test.s"
 .PHONY : help
 
 

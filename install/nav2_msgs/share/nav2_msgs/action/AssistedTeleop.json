@@ -1,0 +1,571 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "nav2_msgs/action/AssistedTeleop",
+      "fields": [
+        {
+          "name": "goal",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/AssistedTeleop_Goal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/AssistedTeleop_Result"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/AssistedTeleop_Feedback"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "send_goal_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/AssistedTeleop_SendGoal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "get_result_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/AssistedTeleop_GetResult"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/AssistedTeleop_FeedbackMessage"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Duration",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_Feedback",
+        "fields": [
+          {
+            "name": "current_teleop_duration",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Duration"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_FeedbackMessage",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "feedback",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_Feedback"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_GetResult",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_GetResult_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_GetResult_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_GetResult_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_GetResult_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_GetResult_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_GetResult_Response",
+        "fields": [
+          {
+            "name": "status",
+            "type": {
+              "type_id": 2,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "result",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_Result"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_Goal",
+        "fields": [
+          {
+            "name": "time_allowance",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Duration"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_Result",
+        "fields": [
+          {
+            "name": "total_elapsed_time",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Duration"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "error_code",
+            "type": {
+              "type_id": 5,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "error_msg",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_SendGoal",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_SendGoal_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_SendGoal_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_SendGoal_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_SendGoal_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_SendGoal_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "goal",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/AssistedTeleop_Goal"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/AssistedTeleop_SendGoal_Response",
+        "fields": [
+          {
+            "name": "accepted",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "unique_identifier_msgs/msg/UUID",
+        "fields": [
+          {
+            "name": "uuid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop",
+      "hash_string": "RIHS01_0db8dcd93f8f6072c806b47c8e09f6065e47261d9658db291c359b2a9854f8f4"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Duration",
+      "hash_string": "RIHS01_e8d009f659816f758b75334ee1a9ca5b5c0b859843261f14c7f937349599d93b"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_Feedback",
+      "hash_string": "RIHS01_f206973552e669e0573255ea6bcbddf8b356dcbeaf4ab21f6f76afd5859de989"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_FeedbackMessage",
+      "hash_string": "RIHS01_440e6eff945d974df81e3aa2c7ee115aaa930deb218d8a04b853e8bf2d9c2df5"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_GetResult",
+      "hash_string": "RIHS01_dd682e460cf893ec1c2cd93caf1805b40b0c08c0cb462daa6c30865e157bb1b0"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_GetResult_Event",
+      "hash_string": "RIHS01_598749b1689a29e4909a5374fc7132dcd545cf29f9cd282c0667f7d48dfe08a8"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_GetResult_Request",
+      "hash_string": "RIHS01_6c95017eb93b7d15ea1ec6f5575f1488e2b4c7ced30cab8267052043540e9499"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_GetResult_Response",
+      "hash_string": "RIHS01_3435b909465181861e06624d40a4e2504fdc051e4c2c2710e71a1abded40b7b0"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_Goal",
+      "hash_string": "RIHS01_7f15de2bf641884ed35558980c06bfb299fa509c3ee0f4f0a87c8a03ad4980f5"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_Result",
+      "hash_string": "RIHS01_94dc3582c30005fa65d2b5558c5046b2b5da199c07025af0fab2ddd3da46757c"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_SendGoal",
+      "hash_string": "RIHS01_b33119db4a7f19115ae145b7ca3a92e6c3e7767c3106da893da36639170a6b94"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_SendGoal_Event",
+      "hash_string": "RIHS01_42952ec72d87394f5fafe4957ed7bc1321861433b283d1f8ffd93d40061edb63"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_SendGoal_Request",
+      "hash_string": "RIHS01_0b5af506173445f4eb1578dfe0de46996bfeacb0c89abdaa5d80f5bfd3658cd7"
+    },
+    {
+      "type_name": "nav2_msgs/action/AssistedTeleop_SendGoal_Response",
+      "hash_string": "RIHS01_7781e634117dedcc929ea1334a5654abec734078fe85c309aa50b4eb43e2064a"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    },
+    {
+      "type_name": "unique_identifier_msgs/msg/UUID",
+      "hash_string": "RIHS01_1b8e8aca958cbea28fe6ef60bf6c19b683c97a9ef60bb34752067d0f2f7ab437"
+    }
+  ]
+}

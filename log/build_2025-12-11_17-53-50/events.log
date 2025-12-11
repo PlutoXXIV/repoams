@@ -7151,3 +7151,379 @@
 [379.193345] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/AssistedTeleop.idl\n'}
 [379.193868] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/BackUp.idl\n'}
 [379.194212] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/ComputePathToPose.idl\n'}
+[379.194572] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/ComputePathThroughPoses.idl\n'}
+[379.194912] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/DriveOnHeading.idl\n'}
+[379.195398] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/SmoothPath.idl\n'}
+[379.195763] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/FollowPath.idl\n'}
+[379.196177] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/NavigateToPose.idl\n'}
+[379.196516] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/NavigateThroughPoses.idl\n'}
+[379.197006] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/Wait.idl\n'}
+[379.197362] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/Spin.idl\n'}
+[379.197712] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/DummyBehavior.idl\n'}
+[379.198057] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/FollowWaypoints.idl\n'}
+[379.198581] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/FollowGPSWaypoints.idl\n'}
+[379.199131] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/DockRobot.idl\n'}
+[379.199407] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/UndockRobot.idl\n'}
+[379.199886] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/ComputeRoute.idl\n'}
+[379.200383] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/ComputeAndTrackRoute.idl\n'}
+[379.200737] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/FollowObject.idl\n'}
+[379.201121] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/CollisionMonitorState.msg\n'}
+[379.201471] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/CollisionDetectorState.msg\n'}
+[379.201959] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/Costmap.msg\n'}
+[379.202325] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/CostmapMetaData.msg\n'}
+[379.202699] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/CostmapUpdate.msg\n'}
+[379.203070] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/CostmapFilterInfo.msg\n'}
+[379.203578] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/SpeedLimit.msg\n'}
+[379.203838] (-) TimerEvent: {}
+[379.204044] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/VoxelGrid.msg\n'}
+[379.204464] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/BehaviorTreeStatusChange.msg\n'}
+[379.204969] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/BehaviorTreeLog.msg\n'}
+[379.208344] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/CriticsStats.msg\n'}
+[379.211506] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/Particle.msg\n'}
+[379.215434] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/ParticleCloud.msg\n'}
+[379.221801] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/WaypointStatus.msg\n'}
+[379.222454] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/Route.msg\n'}
+[379.222927] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/RouteNode.msg\n'}
+[379.223099] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/RouteEdge.msg\n'}
+[379.225169] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/EdgeCost.msg\n'}
+[379.227965] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/TrackingFeedback.msg\n'}
+[379.229389] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/Trajectory.msg\n'}
+[379.230259] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/TrajectoryPoint.msg\n'}
+[379.231272] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/GetCosts.srv\n'}
+[379.232252] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/PolygonObject.msg\n'}
+[379.233029] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/msg/CircleObject.msg\n'}
+[379.234738] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/GetCostmap.srv\n'}
+[379.235313] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/IsPathValid.srv\n'}
+[379.235496] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapExceptRegion.srv\n'}
+[379.235799] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapAroundRobot.srv\n'}
+[379.236305] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapAroundPose.srv\n'}
+[379.236801] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/ClearEntireCostmap.srv\n'}
+[379.237383] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/ManageLifecycleNodes.srv\n'}
+[379.238559] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/LoadMap.srv\n'}
+[379.238778] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/SaveMap.srv\n'}
+[379.239053] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/SetInitialPose.srv\n'}
+[379.239583] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/ReloadDockDatabase.srv\n'}
+[379.239993] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/AddShapes.srv\n'}
+[379.240410] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/RemoveShapes.srv\n'}
+[379.240837] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/GetShapes.srv\n'}
+[379.241331] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/SetRouteGraph.srv\n'}
+[379.241688] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/DynamicEdges.srv\n'}
+[379.242085] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/srv/Toggle.srv\n'}
+[379.242482] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/AssistedTeleop.action\n'}
+[379.243061] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/BackUp.action\n'}
+[379.243545] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/ComputePathToPose.action\n'}
+[379.243825] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/ComputePathThroughPoses.action\n'}
+[379.244457] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/DriveOnHeading.action\n'}
+[379.244934] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/SmoothPath.action\n'}
+[379.245303] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/FollowPath.action\n'}
+[379.245667] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/NavigateToPose.action\n'}
+[379.246065] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/NavigateThroughPoses.action\n'}
+[379.246545] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/Wait.action\n'}
+[379.246909] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/Spin.action\n'}
+[379.247253] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/DummyBehavior.action\n'}
+[379.247587] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/FollowWaypoints.action\n'}
+[379.248046] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/FollowGPSWaypoints.action\n'}
+[379.248376] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/DockRobot.action\n'}
+[379.248714] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/UndockRobot.action\n'}
+[379.249065] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/ComputeRoute.action\n'}
+[379.249513] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/ComputeAndTrackRoute.action\n'}
+[379.250062] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/action/FollowObject.action\n'}
+[379.250567] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/ament_index/resource_index/package_run_dependencies/nav2_msgs\n'}
+[379.251035] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/ament_index/resource_index/parent_prefix_path/nav2_msgs\n'}
+[379.251507] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/environment/ament_prefix_path.sh\n'}
+[379.251911] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/environment/ament_prefix_path.dsv\n'}
+[379.252260] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/environment/path.sh\n'}
+[379.252621] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/environment/path.dsv\n'}
+[379.253105] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/local_setup.bash\n'}
+[379.253569] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/local_setup.sh\n'}
+[379.253803] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/local_setup.zsh\n'}
+[379.254367] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/local_setup.dsv\n'}
+[379.254836] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/package.dsv\n'}
+[379.255320] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/ament_index/resource_index/packages/nav2_msgs\n'}
+[379.255790] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_generator_cExport.cmake\n'}
+[379.256253] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_generator_cExport-release.cmake\n'}
+[379.256765] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[379.257142] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_typesupport_fastrtps_cExport-release.cmake\n'}
+[379.257532] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_generator_cppExport.cmake\n'}
+[379.257950] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[379.258434] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_typesupport_fastrtps_cppExport-release.cmake\n'}
+[379.258802] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[379.259180] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cExport-release.cmake\n'}
+[379.259550] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cExport.cmake\n'}
+[379.260039] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cExport-release.cmake\n'}
+[379.260388] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[379.260718] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cppExport-release.cmake\n'}
+[379.261078] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[379.261537] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cppExport-release.cmake\n'}
+[379.261974] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_generator_pyExport.cmake\n'}
+[379.262191] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_generator_pyExport-release.cmake\n'}
+[379.262612] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[379.263035] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[379.263347] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[379.263674] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[379.264022] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[379.264431] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[379.264738] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[379.265091] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgsConfig.cmake\n'}
+[379.265247] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgsConfig-version.cmake\n'}
+[379.265538] (nav2_msgs) StdoutLine: {'line': b'-- Installing: /home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/package.xml\n'}
+[379.270399] (nav2_msgs) CommandEnded: {'returncode': 0}
+[379.300364] (nav2_msgs) JobEnded: {'identifier': 'nav2_msgs', 'rc': 0}
+[379.301868] (nav2_ros_common) JobStarted: {'identifier': 'nav2_ros_common'}
+[379.304200] (-) TimerEvent: {}
+[379.326328] (nav2_simple_commander) JobStarted: {'identifier': 'nav2_simple_commander'}
+[379.356633] (nav2_ros_common) JobProgress: {'identifier': 'nav2_ros_common', 'progress': 'cmake'}
+[379.361349] (nav2_ros_common) Command: {'cmd': ['/usr/bin/cmake', '/home/crazy_rat/ros2_ws/src/navigation2/nav2_ros_common', '-DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/nav2_ros_common'], 'cwd': '/home/crazy_rat/ros2_ws/build/nav2_ros_common', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/crazy_rat/ros2_ws/install/nav2_msgs/lib:/home/crazy_rat/ros2_ws/install/multirobot_map_merge/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2411', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'crazy_rat', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/crazyrat-rpi:@/tmp/.ICE-unix/2233,unix/crazyrat-rpi:/tmp/.ICE-unix/2233', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c1fb013a_c466_430e_8857_1f31a91d06b3', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.Z7VZG3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.123', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/nav2_msgs:/home/crazy_rat/ros2_ws/install/nav2_common:/home/crazy_rat/ros2_ws/install/sllidar_ros2:/home/crazy_rat/ros2_ws/install/multirobot_map_merge:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/explore_lite:/home/crazy_rat/ros2_ws/install/bno08x_driver:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/crazy_rat/ros2_ws/build/nav2_ros_common', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/crazy_rat/ros2_ws/install/nav2_msgs/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav2_common/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/autonomous_exploration/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/nav2_msgs:/home/crazy_rat/ros2_ws/install/nav2_common:/home/crazy_rat/ros2_ws/install/sllidar_ros2:/home/crazy_rat/ros2_ws/install/multirobot_map_merge:/home/crazy_rat/ros2_ws/install/explore_lite:/home/crazy_rat/ros2_ws/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy'}), 'shell': False}
+[379.406946] (-) TimerEvent: {}
+[379.507350] (-) TimerEvent: {}
+[379.545676] (nav2_ros_common) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[379.607499] (-) TimerEvent: {}
+[379.709184] (-) TimerEvent: {}
+[379.709602] (nav2_ros_common) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[379.764898] (nav2_ros_common) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[379.810900] (-) TimerEvent: {}
+[379.911342] (-) TimerEvent: {}
+[380.011997] (-) TimerEvent: {}
+[380.063995] (nav2_ros_common) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[380.080645] (nav2_ros_common) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[380.081232] (nav2_ros_common) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[380.084009] (nav2_ros_common) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[380.100007] (nav2_ros_common) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[380.112394] (-) TimerEvent: {}
+[380.214361] (-) TimerEvent: {}
+[380.318292] (-) TimerEvent: {}
+[380.418769] (-) TimerEvent: {}
+[380.460745] (nav2_ros_common) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[380.477259] (nav2_ros_common) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[380.477707] (nav2_ros_common) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[380.478477] (nav2_ros_common) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[380.487241] (nav2_ros_common) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[380.518888] (-) TimerEvent: {}
+[380.619274] (-) TimerEvent: {}
+[380.719751] (-) TimerEvent: {}
+[380.820214] (-) TimerEvent: {}
+[380.881795] (nav2_ros_common) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[380.920315] (-) TimerEvent: {}
+[381.020739] (-) TimerEvent: {}
+[381.121295] (-) TimerEvent: {}
+[381.208535] (nav2_ros_common) StdoutLine: {'line': b'-- Found bond: 4.1.2 (/opt/ros/jazzy/share/bond/cmake)\n'}
+[381.221388] (-) TimerEvent: {}
+[381.321731] (-) TimerEvent: {}
+[381.362201] (nav2_ros_common) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[381.399712] (nav2_ros_common) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[381.421873] (-) TimerEvent: {}
+[381.461359] (nav2_ros_common) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[381.507941] (nav2_ros_common) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[381.512574] (nav2_simple_commander) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../../build/nav2_simple_commander', 'build', '--build-base', '/home/crazy_rat/ros2_ws/build/nav2_simple_commander/build', 'install', '--record', '/home/crazy_rat/ros2_ws/build/nav2_simple_commander/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/crazy_rat/ros2_ws/src/navigation2/nav2_simple_commander', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/crazy_rat/ros2_ws/install/nav2_msgs/lib:/home/crazy_rat/ros2_ws/install/multirobot_map_merge/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2411', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'crazy_rat', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/crazyrat-rpi:@/tmp/.ICE-unix/2233,unix/crazyrat-rpi:/tmp/.ICE-unix/2233', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c1fb013a_c466_430e_8857_1f31a91d06b3', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.Z7VZG3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.123', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/nav2_msgs:/home/crazy_rat/ros2_ws/install/nav2_common:/home/crazy_rat/ros2_ws/install/sllidar_ros2:/home/crazy_rat/ros2_ws/install/multirobot_map_merge:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/explore_lite:/home/crazy_rat/ros2_ws/install/bno08x_driver:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/crazy_rat/ros2_ws/build/nav2_simple_commander', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/crazy_rat/ros2_ws/build/nav2_simple_commander/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav2_msgs/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav2_common/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/autonomous_exploration/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/nav2_msgs:/home/crazy_rat/ros2_ws/install/nav2_common:/home/crazy_rat/ros2_ws/install/sllidar_ros2:/home/crazy_rat/ros2_ws/install/multirobot_map_merge:/home/crazy_rat/ros2_ws/install/explore_lite:/home/crazy_rat/ros2_ws/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[381.521969] (-) TimerEvent: {}
+[381.622352] (-) TimerEvent: {}
+[381.662929] (nav2_ros_common) StdoutLine: {'line': b'-- Found bondcpp: 4.1.2 (/opt/ros/jazzy/share/bondcpp/cmake)\n'}
+[381.722438] (-) TimerEvent: {}
+[381.822775] (-) TimerEvent: {}
+[381.850478] (nav2_ros_common) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[381.864909] (nav2_ros_common) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[381.922878] (-) TimerEvent: {}
+[382.023201] (-) TimerEvent: {}
+[382.079605] (nav2_ros_common) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[382.106476] (nav2_simple_commander) StdoutLine: {'line': b'running egg_info\n'}
+[382.107103] (nav2_simple_commander) StdoutLine: {'line': b'creating ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info\n'}
+[382.111262] (nav2_ros_common) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[382.123282] (-) TimerEvent: {}
+[382.157867] (nav2_simple_commander) StdoutLine: {'line': b'writing ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/PKG-INFO\n'}
+[382.158315] (nav2_simple_commander) StdoutLine: {'line': b'writing dependency_links to ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/dependency_links.txt\n'}
+[382.158698] (nav2_simple_commander) StdoutLine: {'line': b'writing entry points to ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/entry_points.txt\n'}
+[382.158941] (nav2_simple_commander) StdoutLine: {'line': b'writing requirements to ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/requires.txt\n'}
+[382.159145] (nav2_simple_commander) StdoutLine: {'line': b'writing top-level names to ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/top_level.txt\n'}
+[382.159283] (nav2_simple_commander) StdoutLine: {'line': b"writing manifest file '../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/SOURCES.txt'\n"}
+[382.169837] (nav2_ros_common) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[382.221397] (nav2_simple_commander) StdoutLine: {'line': b"reading manifest file '../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/SOURCES.txt'\n"}
+[382.222648] (nav2_simple_commander) StdoutLine: {'line': b"writing manifest file '../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/SOURCES.txt'\n"}
+[382.222906] (nav2_simple_commander) StdoutLine: {'line': b'running build\n'}
+[382.223052] (nav2_simple_commander) StdoutLine: {'line': b'running build_py\n'}
+[382.223356] (nav2_simple_commander) StdoutLine: {'line': b'creating /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build\n'}
+[382.223487] (-) TimerEvent: {}
+[382.223654] (nav2_simple_commander) StdoutLine: {'line': b'creating /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib\n'}
+[382.223804] (nav2_simple_commander) StdoutLine: {'line': b'creating /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.228263] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/example_follow_path.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.228426] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/demo_picking.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.228525] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/example_assisted_teleop.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.228626] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/example_route.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.228723] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/example_nav_through_poses.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.228829] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/costmap_2d.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.229113] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/robot_navigator.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.229218] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/footprint_collision_checker.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.229309] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/utils.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.229407] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/demo_security.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.229497] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/demo_recoveries.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.229611] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/example_waypoint_follower.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.229787] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/__init__.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.229979] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/example_nav_to_pose.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.230085] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/line_iterator.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.230166] (nav2_simple_commander) StdoutLine: {'line': b'copying nav2_simple_commander/demo_inspection.py -> /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander\n'}
+[382.233020] (nav2_simple_commander) StdoutLine: {'line': b'running install\n'}
+[382.253586] (nav2_simple_commander) StdoutLine: {'line': b'running install_lib\n'}
+[382.284999] (nav2_simple_commander) StdoutLine: {'line': b'creating /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.285290] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/example_follow_path.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.285458] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/demo_picking.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.285617] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/example_assisted_teleop.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.285820] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/example_route.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.286000] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/example_nav_through_poses.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.286168] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/costmap_2d.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.286338] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/robot_navigator.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.286610] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/footprint_collision_checker.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.286825] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/utils.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.286995] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/demo_security.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.287164] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/demo_recoveries.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.287325] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/example_waypoint_follower.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.287495] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/__init__.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.287635] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/example_nav_to_pose.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.287799] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/line_iterator.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.287981] (nav2_simple_commander) StdoutLine: {'line': b'copying /home/crazy_rat/ros2_ws/build/nav2_simple_commander/build/lib/nav2_simple_commander/demo_inspection.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander\n'}
+[382.288929] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/example_follow_path.py to example_follow_path.cpython-312.pyc\n'}
+[382.290143] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/demo_picking.py to demo_picking.cpython-312.pyc\n'}
+[382.291633] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/example_assisted_teleop.py to example_assisted_teleop.cpython-312.pyc\n'}
+[382.292266] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/example_route.py to example_route.cpython-312.pyc\n'}
+[382.293508] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/example_nav_through_poses.py to example_nav_through_poses.cpython-312.pyc\n'}
+[382.294756] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/costmap_2d.py to costmap_2d.cpython-312.pyc\n'}
+[382.296163] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/robot_navigator.py to robot_navigator.cpython-312.pyc\n'}
+[382.313579] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/footprint_collision_checker.py to footprint_collision_checker.cpython-312.pyc\n'}
+[382.315202] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/utils.py to utils.cpython-312.pyc\n'}
+[382.316214] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/demo_security.py to demo_security.cpython-312.pyc\n'}
+[382.317209] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/demo_recoveries.py to demo_recoveries.cpython-312.pyc\n'}
+[382.318236] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/example_waypoint_follower.py to example_waypoint_follower.cpython-312.pyc\n'}
+[382.319359] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/__init__.py to __init__.cpython-312.pyc\n'}
+[382.319632] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/example_nav_to_pose.py to example_nav_to_pose.cpython-312.pyc\n'}
+[382.320518] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/line_iterator.py to line_iterator.cpython-312.pyc\n'}
+[382.322051] (nav2_simple_commander) StdoutLine: {'line': b'byte-compiling /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander/demo_inspection.py to demo_inspection.cpython-312.pyc\n'}
+[382.323213] (nav2_simple_commander) StdoutLine: {'line': b'running install_data\n'}
+[382.323376] (nav2_simple_commander) StdoutLine: {'line': b'creating /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/ament_index\n'}
+[382.323494] (nav2_simple_commander) StdoutLine: {'line': b'creating /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/ament_index/resource_index\n'}
+[382.323586] (-) TimerEvent: {}
+[382.323755] (nav2_simple_commander) StdoutLine: {'line': b'creating /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/ament_index/resource_index/packages\n'}
+[382.327193] (nav2_simple_commander) StdoutLine: {'line': b'copying resource/nav2_simple_commander -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/ament_index/resource_index/packages\n'}
+[382.328945] (nav2_simple_commander) StdoutLine: {'line': b'copying package.xml -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/nav2_simple_commander\n'}
+[382.329520] (nav2_simple_commander) StdoutLine: {'line': b'copying launch/nav_through_poses_example_launch.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/nav2_simple_commander\n'}
+[382.331066] (nav2_simple_commander) StdoutLine: {'line': b'copying launch/inspection_demo_launch.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/nav2_simple_commander\n'}
+[382.332212] (nav2_simple_commander) StdoutLine: {'line': b'copying launch/picking_demo_launch.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/nav2_simple_commander\n'}
+[382.333345] (nav2_simple_commander) StdoutLine: {'line': b'copying launch/route_example_launch.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/nav2_simple_commander\n'}
+[382.334438] (nav2_simple_commander) StdoutLine: {'line': b'copying launch/security_demo_launch.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/nav2_simple_commander\n'}
+[382.335973] (nav2_simple_commander) StdoutLine: {'line': b'copying launch/recoveries_example_launch.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/nav2_simple_commander\n'}
+[382.336850] (nav2_simple_commander) StdoutLine: {'line': b'copying launch/waypoint_follower_example_launch.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/nav2_simple_commander\n'}
+[382.337709] (nav2_simple_commander) StdoutLine: {'line': b'copying launch/nav_to_pose_example_launch.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/nav2_simple_commander\n'}
+[382.338443] (nav2_simple_commander) StdoutLine: {'line': b'copying launch/assisted_teleop_example_launch.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/nav2_simple_commander\n'}
+[382.338686] (nav2_simple_commander) StdoutLine: {'line': b'copying launch/follow_path_example_launch.py -> /home/crazy_rat/ros2_ws/install/nav2_simple_commander/share/nav2_simple_commander\n'}
+[382.338807] (nav2_simple_commander) StdoutLine: {'line': b'running install_egg_info\n'}
+[382.381274] (nav2_simple_commander) StdoutLine: {'line': b'Copying ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info to /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages/nav2_simple_commander-1.0.0-py3.12.egg-info\n'}
+[382.382669] (nav2_simple_commander) StdoutLine: {'line': b'running install_scripts\n'}
+[382.423695] (-) TimerEvent: {}
+[382.450966] (nav2_ros_common) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[382.473153] (nav2_ros_common) StdoutLine: {'line': b'-- Found nav2_common: 1.4.0 (/home/crazy_rat/ros2_ws/install/nav2_common/share/nav2_common/cmake)\n'}
+[382.474113] (nav2_ros_common) StdoutLine: {'line': b'-- Found nav2_msgs: 1.4.0 (/home/crazy_rat/ros2_ws/install/nav2_msgs/share/nav2_msgs/cmake)\n'}
+[382.523785] (-) TimerEvent: {}
+[382.624140] (-) TimerEvent: {}
+[382.656462] (nav2_simple_commander) StdoutLine: {'line': b'Installing demo_inspection script to /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[382.656905] (nav2_simple_commander) StdoutLine: {'line': b'Installing demo_picking script to /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[382.657161] (nav2_simple_commander) StdoutLine: {'line': b'Installing demo_recoveries script to /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[382.657329] (nav2_simple_commander) StdoutLine: {'line': b'Installing demo_security script to /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[382.657479] (nav2_simple_commander) StdoutLine: {'line': b'Installing example_assisted_teleop script to /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[382.657623] (nav2_simple_commander) StdoutLine: {'line': b'Installing example_follow_path script to /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[382.657761] (nav2_simple_commander) StdoutLine: {'line': b'Installing example_nav_through_poses script to /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[382.657943] (nav2_simple_commander) StdoutLine: {'line': b'Installing example_nav_to_pose script to /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[382.658111] (nav2_simple_commander) StdoutLine: {'line': b'Installing example_route script to /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[382.658270] (nav2_simple_commander) StdoutLine: {'line': b'Installing example_waypoint_follower script to /home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[382.659028] (nav2_simple_commander) StdoutLine: {'line': b"writing list of installed files to '/home/crazy_rat/ros2_ws/build/nav2_simple_commander/install.log'\n"}
+[382.724278] (-) TimerEvent: {}
+[382.784055] (nav2_ros_common) StdoutLine: {'line': b'-- Found rclcpp_action: 28.1.13 (/opt/ros/jazzy/share/rclcpp_action/cmake)\n'}
+[382.790481] (nav2_simple_commander) CommandEnded: {'returncode': 0}
+[382.799779] (nav2_simple_commander) JobEnded: {'identifier': 'nav2_simple_commander', 'rc': 0}
+[382.801369] (nav2_loopback_sim) JobStarted: {'identifier': 'nav2_loopback_sim'}
+[382.824440] (-) TimerEvent: {}
+[382.845046] (nav2_ros_common) StdoutLine: {'line': b'-- Found tf2: 0.36.16 (/opt/ros/jazzy/share/tf2/cmake)\n'}
+[382.870029] (nav2_ros_common) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.36.16 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)\n'}
+[382.917422] (nav2_ros_common) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[382.920365] (nav2_ros_common) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[382.920632] (nav2_ros_common) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[382.924479] (-) TimerEvent: {}
+[383.024788] (-) TimerEvent: {}
+[383.125206] (-) TimerEvent: {}
+[383.184895] (nav2_ros_common) StdoutLine: {'line': b'-- Found pluginlib: 5.4.3 (/opt/ros/jazzy/share/pluginlib/cmake)\n'}
+[383.198914] (nav2_ros_common) StdoutLine: {'line': b'-- Setting build type to Release as none was specified.\n'}
+[383.206880] (nav2_ros_common) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[383.215093] (nav2_ros_common) StdoutLine: {'line': b'-- Found ament_cmake_pytest: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_pytest/cmake)\n'}
+[383.225325] (-) TimerEvent: {}
+[383.325729] (-) TimerEvent: {}
+[383.426166] (-) TimerEvent: {}
+[383.526577] (-) TimerEvent: {}
+[383.626963] (-) TimerEvent: {}
+[383.644523] (nav2_ros_common) StderrLine: {'line': b'\x1b[31mCMake Error at test/CMakeLists.txt:2 (find_package):\n'}
+[383.645616] (nav2_ros_common) StderrLine: {'line': b'  By not providing "Findtest_msgs.cmake" in CMAKE_MODULE_PATH this project\n'}
+[383.646695] (nav2_ros_common) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[383.648188] (nav2_ros_common) StderrLine: {'line': b'  "test_msgs", but CMake did not find one.\n'}
+[383.649126] (nav2_ros_common) StderrLine: {'line': b'\n'}
+[383.649921] (nav2_ros_common) StderrLine: {'line': b'  Could not find a package configuration file provided by "test_msgs" with\n'}
+[383.650406] (nav2_ros_common) StderrLine: {'line': b'  any of the following names:\n'}
+[383.650710] (nav2_ros_common) StderrLine: {'line': b'\n'}
+[383.651057] (nav2_ros_common) StderrLine: {'line': b'    test_msgsConfig.cmake\n'}
+[383.651313] (nav2_ros_common) StderrLine: {'line': b'    test_msgs-config.cmake\n'}
+[383.651532] (nav2_ros_common) StderrLine: {'line': b'\n'}
+[383.651755] (nav2_ros_common) StderrLine: {'line': b'  Add the installation prefix of "test_msgs" to CMAKE_PREFIX_PATH or set\n'}
+[383.652050] (nav2_ros_common) StderrLine: {'line': b'  "test_msgs_DIR" to a directory containing one of the above files.  If\n'}
+[383.652272] (nav2_ros_common) StderrLine: {'line': b'  "test_msgs" provides a separate development package or SDK, be sure it has\n'}
+[383.652427] (nav2_ros_common) StderrLine: {'line': b'  been installed.\n'}
+[383.652574] (nav2_ros_common) StderrLine: {'line': b'\n'}
+[383.652754] (nav2_ros_common) StderrLine: {'line': b'\x1b[0m\n'}
+[383.653046] (nav2_ros_common) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[383.682043] (nav2_ros_common) CommandEnded: {'returncode': 1}
+[383.712838] (nav2_ros_common) JobEnded: {'identifier': 'nav2_ros_common', 'rc': 1}
+[383.727178] (-) TimerEvent: {}
+[383.827808] (-) TimerEvent: {}
+[383.928165] (-) TimerEvent: {}
+[384.028474] (-) TimerEvent: {}
+[384.128800] (-) TimerEvent: {}
+[384.229130] (-) TimerEvent: {}
+[384.329444] (-) TimerEvent: {}
+[384.429764] (-) TimerEvent: {}
+[384.530158] (-) TimerEvent: {}
+[384.591022] (nav2_loopback_sim) JobEnded: {'identifier': 'nav2_loopback_sim', 'rc': 'SIGINT'}
+[384.593470] (nav2_util) JobSkipped: {'identifier': 'nav2_util'}
+[384.594364] (opennav_docking_core) JobSkipped: {'identifier': 'opennav_docking_core'}
+[384.594922] (nav2_amcl) JobSkipped: {'identifier': 'nav2_amcl'}
+[384.595432] (nav2_behavior_tree) JobSkipped: {'identifier': 'nav2_behavior_tree'}
+[384.595540] (nav2_lifecycle_manager) JobSkipped: {'identifier': 'nav2_lifecycle_manager'}
+[384.595602] (nav2_map_server) JobSkipped: {'identifier': 'nav2_map_server'}
+[384.595650] (nav2_velocity_smoother) JobSkipped: {'identifier': 'nav2_velocity_smoother'}
+[384.595686] (nav_2d_utils) JobSkipped: {'identifier': 'nav_2d_utils'}
+[384.595751] (nav2_costmap_2d) JobSkipped: {'identifier': 'nav2_costmap_2d'}
+[384.595811] (slam_toolbox) JobSkipped: {'identifier': 'slam_toolbox'}
+[384.595999] (costmap_queue) JobSkipped: {'identifier': 'costmap_queue'}
+[384.596080] (explore_lite) JobSkipped: {'identifier': 'explore_lite'}
+[384.596124] (nav2_collision_monitor) JobSkipped: {'identifier': 'nav2_collision_monitor'}
+[384.596144] (nav2_core) JobSkipped: {'identifier': 'nav2_core'}
+[384.596164] (dwb_core) JobSkipped: {'identifier': 'dwb_core'}
+[384.596183] (nav2_behaviors) JobSkipped: {'identifier': 'nav2_behaviors'}
+[384.596204] (nav2_bt_navigator) JobSkipped: {'identifier': 'nav2_bt_navigator'}
+[384.596225] (nav2_constrained_smoother) JobSkipped: {'identifier': 'nav2_constrained_smoother'}
+[384.596248] (nav2_controller) JobSkipped: {'identifier': 'nav2_controller'}
+[384.596303] (nav2_mppi_controller) JobSkipped: {'identifier': 'nav2_mppi_controller'}
+[384.596355] (nav2_navfn_planner) JobSkipped: {'identifier': 'nav2_navfn_planner'}
+[384.596396] (nav2_planner) JobSkipped: {'identifier': 'nav2_planner'}
+[384.596443] (nav2_regulated_pure_pursuit_controller) JobSkipped: {'identifier': 'nav2_regulated_pure_pursuit_controller'}
+[384.596501] (nav2_route) JobSkipped: {'identifier': 'nav2_route'}
+[384.596545] (nav2_smac_planner) JobSkipped: {'identifier': 'nav2_smac_planner'}
+[384.596587] (nav2_smoother) JobSkipped: {'identifier': 'nav2_smoother'}
+[384.596629] (nav2_theta_star_planner) JobSkipped: {'identifier': 'nav2_theta_star_planner'}
+[384.596687] (nav2_waypoint_follower) JobSkipped: {'identifier': 'nav2_waypoint_follower'}
+[384.596731] (opennav_docking_bt) JobSkipped: {'identifier': 'opennav_docking_bt'}
+[384.596779] (dwb_critics) JobSkipped: {'identifier': 'dwb_critics'}
+[384.597486] (dwb_plugins) JobSkipped: {'identifier': 'dwb_plugins'}
+[384.598097] (maze_explorer) JobSkipped: {'identifier': 'maze_explorer'}
+[384.598705] (nav2_graceful_controller) JobSkipped: {'identifier': 'nav2_graceful_controller'}
+[384.599028] (nav2_rotation_shim_controller) JobSkipped: {'identifier': 'nav2_rotation_shim_controller'}
+[384.599540] (nav2_rviz_plugins) JobSkipped: {'identifier': 'nav2_rviz_plugins'}
+[384.599625] (nav2_dwb_controller) JobSkipped: {'identifier': 'nav2_dwb_controller'}
+[384.599669] (opennav_docking) JobSkipped: {'identifier': 'opennav_docking'}
+[384.599707] (opennav_following) JobSkipped: {'identifier': 'opennav_following'}
+[384.599735] (navigation2) JobSkipped: {'identifier': 'navigation2'}
+[384.599770] (nav2_bringup) JobSkipped: {'identifier': 'nav2_bringup'}
+[384.599844] (nav2_system_tests) JobSkipped: {'identifier': 'nav2_system_tests'}
+[384.599954] (-) EventReactorShutdown: {}

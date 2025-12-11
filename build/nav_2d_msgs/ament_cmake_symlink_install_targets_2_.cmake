@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/crazy_rat/ros2_ws/build/nav_2d_msgs/rosidl_generator_py/nav_2d_msgs/nav_2d_msgs_s__rosidl_typesupport_c.so" "TARGETS" "nav_2d_msgs_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.12/site-packages/nav_2d_msgs")

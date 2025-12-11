@@ -1,0 +1,14 @@
+[0.055s] Invoking command in '/home/crazy_rat/ros2_ws/build/nav2_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/nav2_simple_commander:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/navigation2/nav2_common -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/nav2_common
+[0.610s] -- Found ament_cmake_core: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_core/cmake)
+[0.611s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.611s] -- Found ament_cmake_python: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_python/cmake)
+[0.928s] -- Configuring done (0.8s)
+[0.942s] -- Generating done (0.0s)
+[0.955s] -- Build files have been written to: /home/crazy_rat/ros2_ws/build/nav2_common
+[0.965s] Invoked command in '/home/crazy_rat/ros2_ws/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/nav2_simple_commander:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/navigation2/nav2_common -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/nav2_common
+[0.966s] Invoking command in '/home/crazy_rat/ros2_ws/build/nav2_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/nav2_simple_commander:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/nav2_common -- -j4 -l4
+[1.111s] failed to create symbolic link '/home/crazy_rat/ros2_ws/build/nav2_common/ament_cmake_python/nav2_common/nav2_common' because existing path cannot be removed: Is a directory
+[1.115s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_nav2_common.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_nav2_common] Error 1
+[1.116s] gmake[1]: *** [CMakeFiles/Makefile2:138: CMakeFiles/ament_cmake_python_symlink_nav2_common.dir/all] Error 2
+[1.118s] gmake: *** [Makefile:124: all] Error 2
+[1.130s] Invoked command in '/home/crazy_rat/ros2_ws/build/nav2_common' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/nav2_simple_commander:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/nav2_common -- -j4 -l4

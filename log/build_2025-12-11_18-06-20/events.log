@@ -1,0 +1,143 @@
+[0.000000] (-) TimerEvent: {}
+[0.000369] (-) JobUnselected: {'identifier': 'autonomous_exploration'}
+[0.000683] (-) JobUnselected: {'identifier': 'bno08x_driver'}
+[0.000707] (-) JobUnselected: {'identifier': 'costmap_queue'}
+[0.000726] (-) JobUnselected: {'identifier': 'dwb_core'}
+[0.000744] (-) JobUnselected: {'identifier': 'dwb_critics'}
+[0.000761] (-) JobUnselected: {'identifier': 'dwb_msgs'}
+[0.000778] (-) JobUnselected: {'identifier': 'dwb_plugins'}
+[0.000795] (-) JobUnselected: {'identifier': 'explore_lite'}
+[0.000815] (-) JobUnselected: {'identifier': 'fake_rplidar'}
+[0.000838] (-) JobUnselected: {'identifier': 'multirobot_map_merge'}
+[0.000873] (-) JobUnselected: {'identifier': 'nav2_amcl'}
+[0.000903] (-) JobUnselected: {'identifier': 'nav2_behavior_tree'}
+[0.000931] (-) JobUnselected: {'identifier': 'nav2_behaviors'}
+[0.000956] (-) JobUnselected: {'identifier': 'nav2_bringup'}
+[0.000990] (-) JobUnselected: {'identifier': 'nav2_bt_navigator'}
+[0.001024] (-) JobUnselected: {'identifier': 'nav2_collision_monitor'}
+[0.001058] (-) JobUnselected: {'identifier': 'nav2_common'}
+[0.001088] (-) JobUnselected: {'identifier': 'nav2_constrained_smoother'}
+[0.001128] (-) JobUnselected: {'identifier': 'nav2_controller'}
+[0.001263] (-) JobUnselected: {'identifier': 'nav2_core'}
+[0.001320] (-) JobUnselected: {'identifier': 'nav2_costmap_2d'}
+[0.002393] (-) JobUnselected: {'identifier': 'nav2_dwb_controller'}
+[0.004104] (-) JobUnselected: {'identifier': 'nav2_graceful_controller'}
+[0.004251] (-) JobUnselected: {'identifier': 'nav2_lifecycle_manager'}
+[0.004272] (-) JobUnselected: {'identifier': 'nav2_loopback_sim'}
+[0.004292] (-) JobUnselected: {'identifier': 'nav2_map_server'}
+[0.004323] (-) JobUnselected: {'identifier': 'nav2_mppi_controller'}
+[0.004391] (-) JobUnselected: {'identifier': 'nav2_msgs'}
+[0.004435] (-) JobUnselected: {'identifier': 'nav2_navfn_planner'}
+[0.004487] (-) JobUnselected: {'identifier': 'nav2_planner'}
+[0.004526] (-) JobUnselected: {'identifier': 'nav2_regulated_pure_pursuit_controller'}
+[0.004571] (-) JobUnselected: {'identifier': 'nav2_ros_common'}
+[0.004608] (-) JobUnselected: {'identifier': 'nav2_rotation_shim_controller'}
+[0.004653] (-) JobUnselected: {'identifier': 'nav2_route'}
+[0.004695] (-) JobUnselected: {'identifier': 'nav2_rviz_plugins'}
+[0.004738] (-) JobUnselected: {'identifier': 'nav2_simple_commander'}
+[0.004780] (-) JobUnselected: {'identifier': 'nav2_smac_planner'}
+[0.004819] (-) JobUnselected: {'identifier': 'nav2_smoother'}
+[0.004856] (-) JobUnselected: {'identifier': 'nav2_system_tests'}
+[0.004887] (-) JobUnselected: {'identifier': 'nav2_theta_star_planner'}
+[0.004922] (-) JobUnselected: {'identifier': 'nav2_util'}
+[0.004958] (-) JobUnselected: {'identifier': 'nav2_velocity_smoother'}
+[0.004995] (-) JobUnselected: {'identifier': 'nav2_voxel_grid'}
+[0.005025] (-) JobUnselected: {'identifier': 'nav2_waypoint_follower'}
+[0.005066] (-) JobUnselected: {'identifier': 'nav_2d_msgs'}
+[0.005101] (-) JobUnselected: {'identifier': 'nav_2d_utils'}
+[0.005141] (-) JobUnselected: {'identifier': 'navigation2'}
+[0.005174] (-) JobUnselected: {'identifier': 'opennav_docking'}
+[0.005210] (-) JobUnselected: {'identifier': 'opennav_docking_bt'}
+[0.005250] (-) JobUnselected: {'identifier': 'opennav_docking_core'}
+[0.005282] (-) JobUnselected: {'identifier': 'opennav_following'}
+[0.005319] (-) JobUnselected: {'identifier': 'slam_toolbox'}
+[0.005658] (-) JobUnselected: {'identifier': 'sllidar_ros2'}
+[0.006286] (maze_explorer) JobQueued: {'identifier': 'maze_explorer', 'dependencies': OrderedDict({'nav2_common': '/home/crazy_rat/ros2_ws/install/nav2_common', 'nav2_msgs': '/home/crazy_rat/ros2_ws/install/nav2_msgs', 'nav2_voxel_grid': '/home/crazy_rat/ros2_ws/install/nav2_voxel_grid', 'nav2_ros_common': '/home/crazy_rat/ros2_ws/install/nav2_ros_common', 'nav2_util': '/home/crazy_rat/ros2_ws/install/nav2_util', 'nav2_amcl': '/home/crazy_rat/ros2_ws/install/nav2_amcl', 'nav2_behavior_tree': '/home/crazy_rat/ros2_ws/install/nav2_behavior_tree', 'nav2_lifecycle_manager': '/home/crazy_rat/ros2_ws/install/nav2_lifecycle_manager', 'nav2_map_server': '/home/crazy_rat/ros2_ws/install/nav2_map_server', 'nav2_costmap_2d': '/home/crazy_rat/ros2_ws/install/nav2_costmap_2d', 'slam_toolbox': '/home/crazy_rat/ros2_ws/install/slam_toolbox', 'explore_lite': '/home/crazy_rat/ros2_ws/install/explore_lite', 'nav2_core': '/home/crazy_rat/ros2_ws/install/nav2_core', 'nav2_bt_navigator': '/home/crazy_rat/ros2_ws/install/nav2_bt_navigator', 'nav2_controller': '/home/crazy_rat/ros2_ws/install/nav2_controller', 'nav2_planner': '/home/crazy_rat/ros2_ws/install/nav2_planner'})}
+[0.007131] (maze_explorer) JobStarted: {'identifier': 'maze_explorer'}
+[0.066441] (maze_explorer) JobProgress: {'identifier': 'maze_explorer', 'progress': 'cmake'}
+[0.067189] (maze_explorer) Command: {'cmd': ['/usr/bin/cmake', '/home/crazy_rat/ros2_ws/src/maze_explorer', '-DBUILD_TESTING=OFF', '-DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/maze_explorer'], 'cwd': '/home/crazy_rat/ros2_ws/build/maze_explorer', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'crazy_rat', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/crazy_rat/ros2_ws/install/nav2_voxel_grid/lib:/home/crazy_rat/ros2_ws/install/nav2_msgs/lib:/home/crazy_rat/ros2_ws/install/dwb_msgs/lib:/home/crazy_rat/ros2_ws/install/nav_2d_msgs/lib:/home/crazy_rat/ros2_ws/install/multirobot_map_merge/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/crazy_rat', 'OLDPWD': '/home/crazy_rat/ros2_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2411', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'crazy_rat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'crazy_rat', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/crazyrat-rpi:@/tmp/.ICE-unix/2233,unix/crazyrat-rpi:/tmp/.ICE-unix/2233', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/233e9be9_80a1_49a1_af46_36fca6fc0646', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.Z7VZG3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.123', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/sllidar_ros2:/home/crazy_rat/ros2_ws/install/dwb_msgs:/home/crazy_rat/ros2_ws/install/nav_2d_msgs:/home/crazy_rat/ros2_ws/install/nav2_voxel_grid:/home/crazy_rat/ros2_ws/install/nav2_simple_commander:/home/crazy_rat/ros2_ws/install/explore_lite:/home/crazy_rat/ros2_ws/install/nav2_msgs:/home/crazy_rat/ros2_ws/install/nav2_common:/home/crazy_rat/ros2_ws/install/multirobot_map_merge:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/bno08x_driver:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/crazy_rat/ros2_ws/build/maze_explorer', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/crazy_rat/ros2_ws/install/nav2_msgs/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav2_common/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/dwb_msgs/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav_2d_msgs/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/autonomous_exploration/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/crazy_rat/ros2_ws/install/explore_lite:/home/crazy_rat/ros2_ws/install/nav2_voxel_grid:/home/crazy_rat/ros2_ws/install/nav2_msgs:/home/crazy_rat/ros2_ws/install/nav2_common:/home/crazy_rat/ros2_ws/install/sllidar_ros2:/home/crazy_rat/ros2_ws/install/dwb_msgs:/home/crazy_rat/ros2_ws/install/nav_2d_msgs:/home/crazy_rat/ros2_ws/install/multirobot_map_merge:/home/crazy_rat/ros2_ws/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/crazy_rat/ros2_ws/install/nav2_simple_commander:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy'}), 'shell': False}
+[0.099607] (-) TimerEvent: {}
+[0.191469] (maze_explorer) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.199721] (-) TimerEvent: {}
+[0.300055] (-) TimerEvent: {}
+[0.332683] (maze_explorer) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.363859] (maze_explorer) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.400177] (-) TimerEvent: {}
+[0.500545] (-) TimerEvent: {}
+[0.572136] (maze_explorer) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.588239] (maze_explorer) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.588618] (maze_explorer) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.589187] (maze_explorer) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.600661] (-) TimerEvent: {}
+[0.611617] (maze_explorer) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.700818] (-) TimerEvent: {}
+[0.801205] (-) TimerEvent: {}
+[0.847885] (maze_explorer) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.863953] (maze_explorer) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.864391] (maze_explorer) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.865145] (maze_explorer) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.873579] (maze_explorer) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.901276] (-) TimerEvent: {}
+[1.001575] (-) TimerEvent: {}
+[1.101947] (-) TimerEvent: {}
+[1.173774] (maze_explorer) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.202034] (-) TimerEvent: {}
+[1.302336] (-) TimerEvent: {}
+[1.402716] (-) TimerEvent: {}
+[1.454813] (maze_explorer) StdoutLine: {'line': b'-- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.502812] (-) TimerEvent: {}
+[1.565063] (maze_explorer) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.599359] (maze_explorer) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.602876] (-) TimerEvent: {}
+[1.647904] (maze_explorer) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.689574] (maze_explorer) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.702956] (-) TimerEvent: {}
+[1.803211] (-) TimerEvent: {}
+[1.867907] (maze_explorer) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.877272] (maze_explorer) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.903282] (-) TimerEvent: {}
+[2.003565] (-) TimerEvent: {}
+[2.083540] (maze_explorer) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[2.103656] (-) TimerEvent: {}
+[2.127855] (maze_explorer) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[2.166495] (maze_explorer) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.203745] (-) TimerEvent: {}
+[2.304030] (-) TimerEvent: {}
+[2.330000] (maze_explorer) StdoutLine: {'line': b'-- Found rclpy: 7.1.6 (/opt/ros/jazzy/share/rclpy/cmake)\n'}
+[2.337601] (maze_explorer) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[2.364448] (maze_explorer) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[2.404122] (-) TimerEvent: {}
+[2.442179] (maze_explorer) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[2.485133] (maze_explorer) StdoutLine: {'line': b'-- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)\n'}
+[2.504219] (-) TimerEvent: {}
+[2.552619] (maze_explorer) StdoutLine: {'line': b'-- Found tf2: 0.36.16 (/opt/ros/jazzy/share/tf2/cmake)\n'}
+[2.565380] (maze_explorer) StdoutLine: {'line': b'-- Found tf2_ros: 0.36.16 (/opt/ros/jazzy/share/tf2_ros/cmake)\n'}
+[2.604297] (-) TimerEvent: {}
+[2.704582] (-) TimerEvent: {}
+[2.804132] (maze_explorer) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.36.16 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)\n'}
+[2.804645] (-) TimerEvent: {}
+[2.853646] (maze_explorer) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[2.855555] (maze_explorer) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[2.855701] (maze_explorer) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[2.904751] (-) TimerEvent: {}
+[3.005071] (-) TimerEvent: {}
+[3.069743] (maze_explorer) StdoutLine: {'line': b'-- Configuring done (3.0s)\n'}
+[3.080012] (maze_explorer) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:59 (add_executable):\n'}
+[3.080276] (maze_explorer) StderrLine: {'line': b'  Cannot find source file:\n'}
+[3.080400] (maze_explorer) StderrLine: {'line': b'\n'}
+[3.080500] (maze_explorer) StderrLine: {'line': b'    src/waypoint_detector.cpp\n'}
+[3.080590] (maze_explorer) StderrLine: {'line': b'\n'}
+[3.080678] (maze_explorer) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm\n'}
+[3.080767] (maze_explorer) StderrLine: {'line': b'  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90\n'}
+[3.080854] (maze_explorer) StderrLine: {'line': b'  .f95 .f03 .hip .ispc\n'}
+[3.080940] (maze_explorer) StderrLine: {'line': b'\n'}
+[3.081025] (maze_explorer) StderrLine: {'line': b'\x1b[0m\n'}
+[3.084575] (maze_explorer) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:59 (add_executable):\n'}
+[3.084698] (maze_explorer) StderrLine: {'line': b'  No SOURCES given to target: waypoint_detector\n'}
+[3.084773] (maze_explorer) StderrLine: {'line': b'\n'}
+[3.084844] (maze_explorer) StderrLine: {'line': b'\x1b[0m\n'}
+[3.084914] (maze_explorer) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[3.105176] (-) TimerEvent: {}
+[3.105687] (maze_explorer) CommandEnded: {'returncode': 1}
+[3.174908] (maze_explorer) JobEnded: {'identifier': 'maze_explorer', 'rc': 1}
+[3.188650] (-) EventReactorShutdown: {}

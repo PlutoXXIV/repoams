@@ -1,0 +1,53 @@
+[0.063s] Invoking command in '/home/crazy_rat/ros2_ws/build/maze_explorer': CMAKE_PREFIX_PATH=/home/crazy_rat/ros2_ws/install/explore_lite:/home/crazy_rat/ros2_ws/install/nav2_voxel_grid:/home/crazy_rat/ros2_ws/install/nav2_msgs:/home/crazy_rat/ros2_ws/install/nav2_common:/home/crazy_rat/ros2_ws/install/sllidar_ros2:/home/crazy_rat/ros2_ws/install/dwb_msgs:/home/crazy_rat/ros2_ws/install/nav_2d_msgs:/home/crazy_rat/ros2_ws/install/multirobot_map_merge:/home/crazy_rat/ros2_ws/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/crazy_rat/ros2_ws/install/nav2_simple_commander:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/crazy_rat/ros2_ws/install/nav2_voxel_grid/lib:/home/crazy_rat/ros2_ws/install/nav2_msgs/lib:/home/crazy_rat/ros2_ws/install/dwb_msgs/lib:/home/crazy_rat/ros2_ws/install/nav_2d_msgs/lib:/home/crazy_rat/ros2_ws/install/multirobot_map_merge/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/crazy_rat/ros2_ws/install/nav2_msgs/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav2_common/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/dwb_msgs/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav_2d_msgs/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/autonomous_exploration/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/crazy_rat/ros2_ws/src/maze_explorer -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/maze_explorer
+[0.184s] -- The C compiler identification is GNU 13.3.0
+[0.326s] -- The CXX compiler identification is GNU 13.3.0
+[0.357s] -- Detecting C compiler ABI info
+[0.565s] -- Detecting C compiler ABI info - done
+[0.581s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.581s] -- Detecting C compile features
+[0.582s] -- Detecting C compile features - done
+[0.606s] -- Detecting CXX compiler ABI info
+[0.841s] -- Detecting CXX compiler ABI info - done
+[0.857s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.857s] -- Detecting CXX compile features
+[0.858s] -- Detecting CXX compile features - done
+[0.866s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.167s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.448s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.558s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.592s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.641s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.682s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.861s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.870s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.077s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.121s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.159s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.323s] -- Found rclpy: 7.1.6 (/opt/ros/jazzy/share/rclpy/cmake)
+[2.331s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[2.357s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[2.435s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[2.478s] -- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[2.546s] -- Found tf2: 0.36.16 (/opt/ros/jazzy/share/tf2/cmake)
+[2.558s] -- Found tf2_ros: 0.36.16 (/opt/ros/jazzy/share/tf2_ros/cmake)
+[2.797s] -- Found tf2_geometry_msgs: 0.36.16 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[2.847s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[2.848s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.849s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[3.063s] -- Configuring done (3.0s)
+[3.073s] [31mCMake Error at CMakeLists.txt:59 (add_executable):
+[3.073s]   Cannot find source file:
+[3.073s] 
+[3.073s]     src/waypoint_detector.cpp
+[3.073s] 
+[3.073s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[3.074s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[3.074s]   .f95 .f03 .hip .ispc
+[3.074s] 
+[3.074s] [0m
+[3.077s] [31mCMake Error at CMakeLists.txt:59 (add_executable):
+[3.077s]   No SOURCES given to target: waypoint_detector
+[3.078s] 
+[3.078s] [0m
+[3.078s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[3.099s] Invoked command in '/home/crazy_rat/ros2_ws/build/maze_explorer' returned '1': CMAKE_PREFIX_PATH=/home/crazy_rat/ros2_ws/install/explore_lite:/home/crazy_rat/ros2_ws/install/nav2_voxel_grid:/home/crazy_rat/ros2_ws/install/nav2_msgs:/home/crazy_rat/ros2_ws/install/nav2_common:/home/crazy_rat/ros2_ws/install/sllidar_ros2:/home/crazy_rat/ros2_ws/install/dwb_msgs:/home/crazy_rat/ros2_ws/install/nav_2d_msgs:/home/crazy_rat/ros2_ws/install/multirobot_map_merge:/home/crazy_rat/ros2_ws/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/crazy_rat/ros2_ws/install/nav2_simple_commander:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/crazy_rat/ros2_ws/install/nav2_voxel_grid/lib:/home/crazy_rat/ros2_ws/install/nav2_msgs/lib:/home/crazy_rat/ros2_ws/install/dwb_msgs/lib:/home/crazy_rat/ros2_ws/install/nav_2d_msgs/lib:/home/crazy_rat/ros2_ws/install/multirobot_map_merge/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/crazy_rat/ros2_ws/install/nav2_msgs/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav2_common/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/dwb_msgs/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav_2d_msgs/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/nav2_simple_commander/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:/home/crazy_rat/ros2_ws/install/autonomous_exploration/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/crazy_rat/ros2_ws/src/maze_explorer -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/maze_explorer

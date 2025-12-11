@@ -1,0 +1,15 @@
+[0.581s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/nav2_simple_commander:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crazy_rat/ros2_ws/src/bno08x-ros2-driver -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/crazy_rat/ros2_ws/install/bno08x_driver
+[0.622s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.283s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.296s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.334s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.349s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.372s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.399s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.502s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.505s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.619s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.718s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[2.082s] -- Configuring done (1.5s)
+[2.130s] -- Generating done (0.0s)
+[2.152s] -- Build files have been written to: /home/crazy_rat/ros2_ws/build/bno08x_driver

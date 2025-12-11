@@ -1,0 +1,107 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-5e8bb96b7303d5455f27.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						3
+					]
+				},
+				{
+					"build" : "include/sh2",
+					"jsonFile" : "directory-include.sh2-b91f37988ce3a4c79720.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "include/sh2",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "bno08x_driver",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "bno08x_driver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bno08x_driver-672f2b8391530ddb1c7f.json",
+					"name" : "bno08x_driver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bno08x_driver_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bno08x_driver_uninstall-01ed736daf19f322747a.json",
+					"name" : "bno08x_driver_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sh2_library::@53f5862408d210fd770b",
+					"jsonFile" : "target-sh2_library-eb201bd955700233e296.json",
+					"name" : "sh2_library",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-a97c9bd324db6b078807.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/crazy_rat/ros2_ws/build/bno08x_driver",
+		"source" : "/home/crazy_rat/ros2_ws/src/bno08x-ros2-driver"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

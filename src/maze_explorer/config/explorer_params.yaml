@@ -1,0 +1,126 @@
+# SLAM Toolbox Configuration
+#
+# SLAM (Simultaneous Localization and Mapping) creates a map of the environment
+# while simultaneously tracking the robot's position within that map.
+#
+# This configuration file controls how the SLAM algorithm behaves, including:
+# - What sensor topics to listen to
+# - How to process and filter scan data
+# - Map resolution and update rates
+# - Loop closure detection (recognizing previously visited places)
+#
+# Save this file as: ~/maze_robot_ws/src/maze_explorer/config/slam_params.yaml
+
+slam_toolbox:
+  ros__parameters:
+    
+    # =====================================================================
+    # OPERATIONAL MODE
+    # =====================================================================
+    # online_async: Updates map continuously in real-time as robot moves
+    # This is essential for our exploration phase
+    mode: online_async
+    
+    # =====================================================================
+    # COORDINATE FRAMES
+    # =====================================================================
+    # These define the relationship between different coordinate systems
+    # odom_frame: Local odometry frame (drifts over time, from wheel encoders + IMU)
+    # map_frame: Global map frame (corrected by SLAM, doesn't drift)
+    # base_frame: Robot's base footprint
+    odom_frame: odom
+    map_frame: map
+    base_frame: base_footprint
+    
+    # =====================================================================
+    # INPUT TOPICS
+    # =====================================================================
+    # scan_topic: Where LIDAR data is published
+    # Our LIDAR driver will publish to /scan
+    scan_topic: /scan
+    
+    # =====================================================================
+    # MAP PARAMETERS
+    # =====================================================================
+    # resolution: Size of each grid cell in meters
+    # 0.05 means each cell is 5cm x 5cm - good balance between detail and performance
+    resolution: 0.05
+    
+    # Map update frequency in Hz (20 Hz = update every 0.05 seconds)
+    # Higher is more responsive but uses more CPU
+    map_update_interval: 0.05
+    
+    # =====================================================================
+    # SCAN MATCHING PARAMETERS
+    # =====================================================================
+    # These control how SLAM aligns new scans with the existing map
+    
+    # Maximum distance between matched points (meters)
+    # If robot moves more than this, scan matching may fail
+    max_laser_range: 6.0  # LIDAR C1M1 has 10m range, we use 6m for reliability
+    minimum_travel_distance: 0.1  # Update map after robot moves 10cm
+    minimum_travel_heading: 0.1   # Update map after robot rotates 0.1 radians (≈6°)
+    
+    # Scan matching search window
+    # How far to search for matching features (in cells and angles)
+    scan_buffer_size: 10
+    scan_buffer_maximum_scan_distance: 10.0
+    link_match_minimum_response_fine: 0.1
+    link_scan_maximum_distance: 1.5
+    
+    # =====================================================================
+    # LOOP CLOSURE DETECTION
+    # =====================================================================
+    # Loop closure: Recognizing when robot returns to a previously visited location
+    # This corrects accumulated drift and improves map consistency
+    
+    do_loop_closing: true
+    loop_search_maximum_distance: 3.0  # Search for loops within 3 meters
+    loop_match_minimum_chain_size: 10  # Need 10 consecutive matches to confirm loop
+    loop_match_maximum_variance_coarse: 3.0
+    loop_match_minimum_response_coarse: 0.35
+    loop_match_minimum_response_fine: 0.45
+    
+    # =====================================================================
+    # CORRELATION PARAMETERS
+    # =====================================================================
+    # How tightly scan matching correlates measurements
+    correlation_search_space_dimension: 0.5
+    correlation_search_space_resolution: 0.01
+    correlation_search_space_smear_deviation: 0.1
+    
+    # =====================================================================
+    # SCAN PROCESSING
+    # =====================================================================
+    # Filter out scan points that are too close or too far
+    minimum_angle: -3.14159  # -π radians = -180° (full circle)
+    maximum_angle: 3.14159   # +π radians = +180°
+    
+    # Ignore ranges outside these limits
+    minimum_range: 0.1  # Ignore readings closer than 10cm (likely noise/robot body)
+    maximum_range: 6.0  # Match max_laser_range
+    
+    # =====================================================================
+    # TRANSFORM PARAMETERS
+    # =====================================================================
+    # Transform tolerance: How much delay is acceptable in transform data
+    # Larger values are more forgiving of timing issues
+    transform_timeout: 0.2
+    tf_buffer_duration: 30.0  # Keep 30 seconds of transform history
+    
+    # =====================================================================
+    # PROCESSING PARAMETERS
+    # =====================================================================
+    # CPU throttle: Limit processing to avoid overloading Raspberry Pi
+    throttle_scans: 1  # Process every scan (no skipping)
+    
+    # =====================================================================
+    # ADVANCED SOLVER PARAMETERS
+    # =====================================================================
+    # These fine-tune the optimization algorithm
+    # Default values work well for most cases
+    coarse_search_angle_offset: 0.349  # 20 degrees in radians
+    coarse_angle_resolution: 0.0349    # 2 degrees in radians
+    minimum_angle_penalty: 0.9
+    minimum_distance_penalty: 0.5
+    use_response_expansion: true

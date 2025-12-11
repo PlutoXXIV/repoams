@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<!--
+  Package Definition for Maze Explorer Robot
+  
+  This file defines all dependencies and metadata for the maze_explorer package.
+  It tells ROS2 what libraries and packages this project needs to compile and run.
+  
+  Save this file as: ~/maze_robot_ws/src/maze_explorer/package.xml
+-->
+
+<package format="3">
+  <!-- Package name - must match the directory name -->
+  <name>maze_explorer</name>
+  <version>1.0.0</version>
+  
+  <!-- Project description -->
+  <description>
+    Complete maze exploration and solving system for ROS2 Jazzy.
+    This package integrates LIDAR, IMU, and wheel encoders to autonomously
+    explore a maze, detect start/end points, create a map, and navigate
+    optimally using A* pathfinding algorithm.
+  </description>
+  
+  <!-- Maintainer information - change to your details -->
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <!-- Build tool - always ament_cmake for C++ packages -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Core ROS2 dependencies -->
+  <depend>rclcpp</depend>        <!-- C++ ROS2 client library -->
+  <depend>rclpy</depend>         <!-- Python ROS2 client library -->
+  
+  <!-- Message and service types -->
+  <depend>std_msgs</depend>      <!-- Standard message types (Int32, String, etc.) -->
+  <depend>sensor_msgs</depend>   <!-- Sensor messages (LaserScan, Imu, JointState) -->
+  <depend>geometry_msgs</depend> <!-- Geometric messages (Twist, Pose, Transform) -->
+  <depend>nav_msgs</depend>      <!-- Navigation messages (Odometry, OccupancyGrid) -->
+  <depend>visualization_msgs</depend> <!-- Markers for RViz visualization -->
+  
+  <!-- Transform library - essential for coordinate frame management -->
+  <depend>tf2</depend>           <!-- Core transform library -->
+  <depend>tf2_ros</depend>       <!-- ROS2 bindings for tf2 -->
+  <depend>tf2_geometry_msgs</depend> <!-- Transform conversions for geometry_msgs -->
+  
+  <!-- Robot description and state management -->
+  <depend>urdf</depend>          <!-- Parse URDF robot description files -->
+  <depend>xacro</depend>         <!-- Process xacro macros in URDF -->
+  <depend>robot_state_publisher</depend> <!-- Publish robot TF tree -->
+  <depend>joint_state_publisher</depend> <!-- Publish joint states -->
+  
+  <!-- SLAM (Simultaneous Localization and Mapping) -->
+  <depend>slam_toolbox</depend>  <!-- Create and update map while exploring -->
+  
+  <!-- Navigation stack -->
+  <depend>nav2_common</depend>              <!-- Common navigation utilities -->
+  <depend>nav2_map_server</depend>          <!-- Load and serve maps -->
+  <depend>nav2_amcl</depend>                <!-- Localization on known maps -->
+  <depend>nav2_planner</depend>             <!-- Path planning (A* implementation) -->
+  <depend>nav2_controller</depend>          <!-- Path following controller -->
+  <depend>nav2_recoveries</depend>          <!-- Recovery behaviors when stuck -->
+  <depend>nav2_bt_navigator</depend>        <!-- Behavior tree navigation -->
+  <depend>nav2_lifecycle_manager</depend>   <!-- Manage node lifecycles -->
+  
+  <!-- Exploration -->
+  <depend>explore_lite</depend>  <!-- Autonomous exploration (m-explore) -->
+  
+  <!-- Sensor fusion for IMU + Encoders -->
+  <depend>robot_localization</depend> <!-- Extended Kalman Filter (EKF) -->
+  
+  <!-- Motor control -->
+  <depend>controller_manager</depend>      <!-- Manage hardware controllers -->
+  <depend>ros2_control</depend>            <!-- Control framework -->
+  <depend>ros2_controllers</depend>        <!-- Standard controllers -->
+  <depend>mecanum_drive_controller</depend> <!-- Mecanum wheel controller -->
+  <depend>joint_state_broadcaster</depend>  <!-- Broadcast joint states -->
+  
+  <!-- Additional utilities -->
+  <depend>pluginlib</depend>     <!-- Plugin loading mechanism -->
+  
+  <!-- Build-time dependencies -->
+  <build_depend>rosidl_default_generators</build_depend> <!-- Generate custom messages if needed -->
+  
+  <!-- Runtime dependencies -->
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  
+  <!-- Test dependencies (optional but recommended) -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- Export information for other packages -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

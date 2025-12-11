@@ -49,8 +49,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/crazy_rat/ros2_ws/build/bno08x_driver/include/sh2/cmake_install.cmake")
-  include("/home/crazy_rat/ros2_ws/build/bno08x_driver/gmock/cmake_install.cmake")
-  include("/home/crazy_rat/ros2_ws/build/bno08x_driver/gtest/cmake_install.cmake")
 
 endif()
 

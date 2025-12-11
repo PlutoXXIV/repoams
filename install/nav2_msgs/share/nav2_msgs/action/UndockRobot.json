@@ -1,0 +1,552 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "nav2_msgs/action/UndockRobot",
+      "fields": [
+        {
+          "name": "goal",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/UndockRobot_Goal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/UndockRobot_Result"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/UndockRobot_Feedback"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "send_goal_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/UndockRobot_SendGoal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "get_result_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/UndockRobot_GetResult"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "nav2_msgs/action/UndockRobot_FeedbackMessage"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_Feedback",
+        "fields": [
+          {
+            "name": "structure_needs_at_least_one_member",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_FeedbackMessage",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "feedback",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_Feedback"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_GetResult",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_GetResult_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_GetResult_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_GetResult_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_GetResult_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_GetResult_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_GetResult_Response",
+        "fields": [
+          {
+            "name": "status",
+            "type": {
+              "type_id": 2,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "result",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_Result"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_Goal",
+        "fields": [
+          {
+            "name": "dock_type",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "max_undocking_time",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "30.0"
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_Result",
+        "fields": [
+          {
+            "name": "success",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "True"
+          },
+          {
+            "name": "error_code",
+            "type": {
+              "type_id": 5,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": "0"
+          },
+          {
+            "name": "error_msg",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_SendGoal",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_SendGoal_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_SendGoal_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_SendGoal_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_SendGoal_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_SendGoal_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "goal",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "nav2_msgs/action/UndockRobot_Goal"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "nav2_msgs/action/UndockRobot_SendGoal_Response",
+        "fields": [
+          {
+            "name": "accepted",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "unique_identifier_msgs/msg/UUID",
+        "fields": [
+          {
+            "name": "uuid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "nav2_msgs/action/UndockRobot",
+      "hash_string": "RIHS01_fe446bf5f84bbdc08b5a1123365e3c9b1e522e50a412d64c36995f808df915a2"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_Feedback",
+      "hash_string": "RIHS01_cafb11296f8495bfdf9a773d2cdc226a906a67b466c1670a23e645334aa85996"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_FeedbackMessage",
+      "hash_string": "RIHS01_e2204b39a6cd5f0563392b37a5945130d186c5df1c457fcb23ba72b3ff02eed1"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_GetResult",
+      "hash_string": "RIHS01_116641408dd0a5bbb7f0cb61d4519061884c7fcc70ca78b0f89779459cf04263"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_GetResult_Event",
+      "hash_string": "RIHS01_745be9ff81d3cb6a17de5d445cc9714f4c37aedf775ebbbb5de0cf101ead54fa"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_GetResult_Request",
+      "hash_string": "RIHS01_7f4fcc0e04b17a147a94a96ca596a30619fe3016ce8f96adce3f6a47d873de6d"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_GetResult_Response",
+      "hash_string": "RIHS01_62d527a6c1162da1697872fd84920b8d8d4b42eddea2044daee040ea0d8da5eb"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_Goal",
+      "hash_string": "RIHS01_4161041de8368e5140d3a4af41d24a8756e30e42249e022e258a30a0e1781ccb"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_Result",
+      "hash_string": "RIHS01_df25b55a44a1b73a03fe7f32c7ba0984dd077e5315cad6f25c7354ff5de6b310"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_SendGoal",
+      "hash_string": "RIHS01_9c412dec37b7dad67b754dd860cdb03787c0924f01d4cd2b5c16506726b17dc3"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_SendGoal_Event",
+      "hash_string": "RIHS01_0acdd634f3fa33cf15b9809bd1483aeb3e35bc357186231ee87ea563fa9c9a52"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_SendGoal_Request",
+      "hash_string": "RIHS01_ec884ac27ce4373b831136ad8abfb3dc9b46f70d4e41c7448a7a8357ab02b295"
+    },
+    {
+      "type_name": "nav2_msgs/action/UndockRobot_SendGoal_Response",
+      "hash_string": "RIHS01_617d44847ffaf09a38c031a472157d986b316c87c27e1a1d2a3db940f6ab409e"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    },
+    {
+      "type_name": "unique_identifier_msgs/msg/UUID",
+      "hash_string": "RIHS01_1b8e8aca958cbea28fe6ef60bf6c19b683c97a9ef60bb34752067d0f2f7ab437"
+    }
+  ]
+}

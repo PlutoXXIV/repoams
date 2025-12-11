@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "nav2_msgs/msg/EdgeCost",
+      "fields": [
+        {
+          "name": "edgeid",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "cost",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "nav2_msgs/msg/EdgeCost",
+      "hash_string": "RIHS01_8dc1470fcd5fc0253ae48588f8f47d67214d2672d136c9f8c9d1f44220ddf56f"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from nav2_msgs/srv/AddShapes.srv
+// generated code does not contain a copyright notice
+
+#include "nav2_msgs/msg/CircleObject.idl"
+#include "nav2_msgs/msg/PolygonObject.idl"
+
+module nav2_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Add/update vector objects on map")
+    struct AddShapes_Request {
+      sequence<nav2_msgs::msg::CircleObject> circles;
+
+      sequence<nav2_msgs::msg::PolygonObject> polygons;
+    };
+    struct AddShapes_Response {
+      boolean success;
+    };
+  };
+};

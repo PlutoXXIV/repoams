@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from nav2_msgs/msg/TrackingFeedback.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "std_msgs/msg/Header.idl"
+
+module nav2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Real-time tracking error for Nav2 controller")
+    struct TrackingFeedback {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "The sign of the tracking error indicates which side of the path the robot is on" "\n"
+        "Positive sign indicates the robot is to the left of the path, negative to the right")
+      float tracking_error;
+
+      uint32 current_path_index;
+
+      geometry_msgs::msg::PoseStamped robot_pose;
+
+      float distance_to_goal;
+
+      float speed;
+
+      float remaining_path_length;
+    };
+  };
+};

@@ -1,0 +1,4 @@
+failed to create symbolic link '/home/crazy_rat/ros2_ws/build/nav2_common/ament_cmake_python/nav2_common/nav2_common' because existing path cannot be removed: Is a directory
+gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_nav2_common.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_nav2_common] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:138: CMakeFiles/ament_cmake_python_symlink_nav2_common.dir/all] Error 2
+gmake: *** [Makefile:124: all] Error 2

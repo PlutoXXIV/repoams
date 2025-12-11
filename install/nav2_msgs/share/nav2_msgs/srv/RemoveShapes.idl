@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from nav2_msgs/srv/RemoveShapes.srv
+// generated code does not contain a copyright notice
+
+#include "unique_identifier_msgs/msg/UUID.idl"
+
+module nav2_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Remove vector objects from map")
+    struct RemoveShapes_Request {
+      boolean all_objects;
+
+      sequence<unique_identifier_msgs::msg::UUID> uuids;
+    };
+    struct RemoveShapes_Response {
+      boolean success;
+    };
+  };
+};
