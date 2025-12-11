@@ -1,0 +1,46 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "nav2_msgs/srv/ClearEntireCostmap_Response",
+      "fields": [
+        {
+          "name": "response",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "std_msgs/msg/Empty"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "std_msgs/msg/Empty",
+        "fields": [
+          {
+            "name": "structure_needs_at_least_one_member",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "nav2_msgs/srv/ClearEntireCostmap_Response",
+      "hash_string": "RIHS01_a0aeab7debb4b503bf8d5edcadb896864aa3dda700452d8c9cfa6c4755956665"
+    },
+    {
+      "type_name": "std_msgs/msg/Empty",
+      "hash_string": "RIHS01_20b625256f32d5dbc0d04fee44f43c41e51c70d3502f84b4a08e7a9c26a96312"
+    }
+  ]
+}

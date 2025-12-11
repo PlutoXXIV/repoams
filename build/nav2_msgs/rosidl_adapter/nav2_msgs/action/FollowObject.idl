@@ -1,0 +1,72 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from nav2_msgs/action/FollowObject.action
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Duration.idl"
+
+module nav2_msgs {
+  module action {
+    @verbatim (language="comment", text=
+      "goal definition")
+    struct FollowObject_Goal {
+      @verbatim (language="comment", text=
+        "Topic to publish the pose of the object to follow")
+      string pose_topic;
+
+      @verbatim (language="comment", text=
+        "Target frame to follow (Optional, used if pose_topic is not set)")
+      string tracked_frame;
+
+      builtin_interfaces::msg::Duration max_duration;
+    };
+    module FollowObject_Result_Constants {
+      @verbatim (language="comment", text=
+        "Error codes" "\n"        "Note: The expected priority order of the errors should match the message order")
+      const uint16 NONE = 0;
+      const uint16 TF_ERROR = 901;
+      const uint16 FAILED_TO_DETECT_OBJECT = 902;
+      const uint16 FAILED_TO_CONTROL = 903;
+      const uint16 UNKNOWN = 999;
+    };
+    @verbatim (language="comment", text=
+      "result definition")
+    struct FollowObject_Result {
+      builtin_interfaces::msg::Duration total_elapsed_time;
+
+      @verbatim (language="comment", text=
+        "Contextual error code, if any")
+      @default (value=0)
+      uint16 error_code;
+
+      @verbatim (language="comment", text=
+        "Number of retries attempted")
+      @default (value=0)
+      uint16 num_retries;
+
+      @verbatim (language="comment", text=
+        "Error message, if any")
+      string error_msg;
+    };
+    module FollowObject_Feedback_Constants {
+      const uint16 NONE = 0;
+      const uint16 INITIAL_PERCEPTION = 1;
+      const uint16 CONTROLLING = 2;
+      const uint16 STOPPING = 3;
+      const uint16 RETRY = 4;
+    };
+    @verbatim (language="comment", text=
+      "feedback definition")
+    struct FollowObject_Feedback {
+      @verbatim (language="comment", text=
+        "Current following state")
+      uint16 state;
+
+      builtin_interfaces::msg::Duration following_time;
+
+      @verbatim (language="comment", text=
+        "Number of retries attempted")
+      @default (value=0)
+      uint16 num_retries;
+    };
+  };
+};

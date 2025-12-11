@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "nav2_msgs/action/Spin_Feedback",
+      "fields": [
+        {
+          "name": "angular_distance_traveled",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "nav2_msgs/action/Spin_Feedback",
+      "hash_string": "RIHS01_3973d0eb96c7340ba3a815ca1a623225178a882b603e0c59451ef5a5f55fee02"
+    }
+  ]
+}

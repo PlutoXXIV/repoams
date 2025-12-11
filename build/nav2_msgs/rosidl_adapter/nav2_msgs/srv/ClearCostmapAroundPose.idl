@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from nav2_msgs/srv/ClearCostmapAroundPose.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "std_msgs/msg/Empty.idl"
+
+module nav2_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Clears the costmap within a distance around a given pose")
+    struct ClearCostmapAroundPose_Request {
+      geometry_msgs::msg::PoseStamped pose;
+
+      double reset_distance;
+    };
+    struct ClearCostmapAroundPose_Response {
+      std_msgs::msg::Empty response;
+    };
+  };
+};

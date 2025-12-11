@@ -1,0 +1,30 @@
+[0.751s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/bno08x_driver -- -j4 -l4
+[1.051s] [ 27%] Built target sh2_library
+[1.116s] [ 38%] Built target gmock_main
+[1.127s] [ 55%] Built target gmock
+[1.298s] [ 66%] Built target test_i2c_mock
+[1.320s] [ 77%] Built target test_watchdog
+[1.330s] [100%] Built target bno08x_driver
+[1.424s] Invoked command in '/home/crazy_rat/ros2_ws/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crazy_rat/ros2_ws/build/bno08x_driver -- -j4 -l4
+[1.489s] Invoking command in '/home/crazy_rat/ros2_ws/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crazy_rat/ros2_ws/build/bno08x_driver
+[1.545s] -- Install configuration: ""
+[1.547s] -- Execute custom install script
+[1.551s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/lib/bno08x_driver/bno08x_driver
+[1.551s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml
+[1.551s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py
+[1.556s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver
+[1.558s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver
+[1.559s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh
+[1.559s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv
+[1.559s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/path.sh
+[1.559s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/environment/path.dsv
+[1.559s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.bash
+[1.560s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.sh
+[1.562s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.zsh
+[1.562s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/local_setup.dsv
+[1.563s] -- Symlinking: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/package.dsv
+[1.613s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver
+[1.613s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake
+[1.616s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake
+[1.624s] -- Up-to-date symlink: /home/crazy_rat/ros2_ws/install/bno08x_driver/share/bno08x_driver/package.xml
+[1.650s] Invoked command in '/home/crazy_rat/ros2_ws/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/crazy_rat/ros2_ws/install/fake_rplidar:/home/crazy_rat/ros2_ws/install/autonomous_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crazy_rat/ros2_ws/build/bno08x_driver

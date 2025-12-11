@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from nav2_msgs/msg/CriticsStats.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module nav2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Critics statistics message")
+    struct CriticsStats {
+      builtin_interfaces::msg::Time stamp;
+
+      sequence<string> critics;
+
+      sequence<boolean> changed;
+
+      sequence<float> costs_sum;
+    };
+  };
+};

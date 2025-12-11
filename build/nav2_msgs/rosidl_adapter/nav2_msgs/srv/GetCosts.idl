@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from nav2_msgs/srv/GetCosts.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+
+module nav2_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Get costmap costs at given poses")
+    struct GetCosts_Request {
+      boolean use_footprint;
+
+      sequence<geometry_msgs::msg::PoseStamped> poses;
+    };
+    struct GetCosts_Response {
+      sequence<float> costs;
+
+      boolean success;
+    };
+  };
+};

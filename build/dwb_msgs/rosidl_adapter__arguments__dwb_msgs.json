@@ -1,0 +1,14 @@
+{
+  "package_name": "dwb_msgs",
+  "non_idl_tuples": [
+    "/home/crazy_rat/ros2_ws/src/navigation2/nav2_dwb_controller/dwb_msgs:msg/CriticScore.msg",
+    "/home/crazy_rat/ros2_ws/src/navigation2/nav2_dwb_controller/dwb_msgs:msg/LocalPlanEvaluation.msg",
+    "/home/crazy_rat/ros2_ws/src/navigation2/nav2_dwb_controller/dwb_msgs:msg/Trajectory2D.msg",
+    "/home/crazy_rat/ros2_ws/src/navigation2/nav2_dwb_controller/dwb_msgs:msg/TrajectoryScore.msg",
+    "/home/crazy_rat/ros2_ws/src/navigation2/nav2_dwb_controller/dwb_msgs:srv/DebugLocalPlan.srv",
+    "/home/crazy_rat/ros2_ws/src/navigation2/nav2_dwb_controller/dwb_msgs:srv/GenerateTrajectory.srv",
+    "/home/crazy_rat/ros2_ws/src/navigation2/nav2_dwb_controller/dwb_msgs:srv/GenerateTwists.srv",
+    "/home/crazy_rat/ros2_ws/src/navigation2/nav2_dwb_controller/dwb_msgs:srv/GetCriticScore.srv",
+    "/home/crazy_rat/ros2_ws/src/navigation2/nav2_dwb_controller/dwb_msgs:srv/ScoreTrajectory.srv"
+  ]
+}

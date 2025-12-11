@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "nav2_msgs/srv/ReloadDockDatabase_Request",
+      "fields": [
+        {
+          "name": "filepath",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "nav2_msgs/srv/ReloadDockDatabase_Request",
+      "hash_string": "RIHS01_bb663832b1ffb4deeb0451077ef71a7049d86f0819d21f031c2cb75696a8b75e"
+    }
+  ]
+}

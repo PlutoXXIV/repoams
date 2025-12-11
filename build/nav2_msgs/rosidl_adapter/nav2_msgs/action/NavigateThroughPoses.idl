@@ -1,0 +1,55 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from nav2_msgs/action/NavigateThroughPoses.action
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Duration.idl"
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "nav2_msgs/msg/WaypointStatus.idl"
+#include "nav_msgs/msg/Goals.idl"
+
+module nav2_msgs {
+  module action {
+    struct NavigateThroughPoses_Goal {
+      @verbatim (language="comment", text=
+        "goal definition")
+      nav_msgs::msg::Goals poses;
+
+      string behavior_tree;
+    };
+    module NavigateThroughPoses_Result_Constants {
+      @verbatim (language="comment", text=
+        "Error codes" "\n"        "Note: The expected priority order of the errors should match the message order")
+      const uint16 NONE = 0;
+      const uint16 UNKNOWN = 9100;
+      const uint16 FAILED_TO_LOAD_BEHAVIOR_TREE = 9101;
+      const uint16 TF_ERROR = 9102;
+      const uint16 TIMEOUT = 9103;
+    };
+    @verbatim (language="comment", text=
+      "result definition")
+    struct NavigateThroughPoses_Result {
+      uint16 error_code;
+
+      string error_msg;
+
+      sequence<nav2_msgs::msg::WaypointStatus> waypoint_statuses;
+    };
+    @verbatim (language="comment", text=
+      "feedback definition")
+    struct NavigateThroughPoses_Feedback {
+      geometry_msgs::msg::PoseStamped current_pose;
+
+      builtin_interfaces::msg::Duration navigation_time;
+
+      builtin_interfaces::msg::Duration estimated_time_remaining;
+
+      int16 number_of_recoveries;
+
+      float distance_remaining;
+
+      int16 number_of_poses_remaining;
+
+      sequence<nav2_msgs::msg::WaypointStatus> waypoint_statuses;
+    };
+  };
+};

@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from dwb_msgs/srv/ScoreTrajectory.srv
+// generated code does not contain a copyright notice
+
+#include "dwb_msgs/msg/Trajectory2D.idl"
+#include "dwb_msgs/msg/TrajectoryScore.idl"
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "nav_2d_msgs/msg/Twist2D.idl"
+#include "nav_msgs/msg/Path.idl"
+
+module dwb_msgs {
+  module srv {
+    struct ScoreTrajectory_Request {
+      geometry_msgs::msg::PoseStamped pose;
+
+      nav_2d_msgs::msg::Twist2D velocity;
+
+      nav_msgs::msg::Path global_plan;
+
+      dwb_msgs::msg::Trajectory2D traj;
+    };
+    struct ScoreTrajectory_Response {
+      dwb_msgs::msg::TrajectoryScore score;
+    };
+  };
+};

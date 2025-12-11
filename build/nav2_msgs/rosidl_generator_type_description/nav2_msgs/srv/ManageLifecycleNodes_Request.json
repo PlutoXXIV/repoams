@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "nav2_msgs/srv/ManageLifecycleNodes_Request",
+      "fields": [
+        {
+          "name": "command",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "nav2_msgs/srv/ManageLifecycleNodes_Request",
+      "hash_string": "RIHS01_927841759575a5565b3d879a58fd035a5a69e9fdf3365c02b33cc9ad03a7a227"
+    }
+  ]
+}

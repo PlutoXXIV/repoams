@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "nav2_msgs/srv/SaveMap_Response",
+      "fields": [
+        {
+          "name": "result",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "nav2_msgs/srv/SaveMap_Response",
+      "hash_string": "RIHS01_bdd0b25c769f096bcde88c98b23ae612c8f70ab770f57014884412ff41fe0f88"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[4.102s] Invoking command in '/home/crazy_rat/ros2_ws/src/fake_rplidar': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crazy_rat/ros2_ws/build/fake_rplidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fake_rplidar build --build-base /home/crazy_rat/ros2_ws/build/fake_rplidar/build install --record /home/crazy_rat/ros2_ws/build/fake_rplidar/install.log --single-version-externally-managed
+[5.024s] running egg_info
+[5.081s] writing ../../build/fake_rplidar/fake_rplidar.egg-info/PKG-INFO
+[5.083s] writing dependency_links to ../../build/fake_rplidar/fake_rplidar.egg-info/dependency_links.txt
+[5.085s] writing entry points to ../../build/fake_rplidar/fake_rplidar.egg-info/entry_points.txt
+[5.090s] writing requirements to ../../build/fake_rplidar/fake_rplidar.egg-info/requires.txt
+[5.091s] writing top-level names to ../../build/fake_rplidar/fake_rplidar.egg-info/top_level.txt
+[5.259s] reading manifest file '../../build/fake_rplidar/fake_rplidar.egg-info/SOURCES.txt'
+[5.264s] writing manifest file '../../build/fake_rplidar/fake_rplidar.egg-info/SOURCES.txt'
+[5.264s] running build
+[5.264s] running build_py
+[5.271s] running install
+[5.301s] running install_lib
+[5.366s] running install_egg_info
+[5.435s] removing '/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar-0.0.1-py3.12.egg-info' (and everything under it)
+[5.436s] Copying ../../build/fake_rplidar/fake_rplidar.egg-info to /home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages/fake_rplidar-0.0.1-py3.12.egg-info
+[5.443s] running install_scripts
+[6.457s] Installing fake_scan script to /home/crazy_rat/ros2_ws/install/fake_rplidar/lib/fake_rplidar
+[6.462s] writing list of installed files to '/home/crazy_rat/ros2_ws/build/fake_rplidar/install.log'
+[6.726s] Invoked command in '/home/crazy_rat/ros2_ws/src/fake_rplidar' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crazy_rat/ros2_ws/build/fake_rplidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/crazy_rat/ros2_ws/install/fake_rplidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fake_rplidar build --build-base /home/crazy_rat/ros2_ws/build/fake_rplidar/build install --record /home/crazy_rat/ros2_ws/build/fake_rplidar/install.log --single-version-externally-managed
