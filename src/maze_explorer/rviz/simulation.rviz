@@ -1,0 +1,353 @@
+<?xml version="1.0" ?>
+<!--
+  Gazebo World File - 3x3 Meter Maze
+  
+  This creates a simple maze environment for testing the robot in simulation.
+  The maze is 3x3 meters with walls and open areas to simulate start/end points.
+  
+  FEATURES:
+  - Realistic physics (gravity, friction)
+  - Proper lighting
+  - Ground plane
+  - Maze walls (0.2m thick, 0.5m high)
+  - Open start and end areas
+  
+  Save this file as: ~/ros2_ws/src/maze_explorer/worlds/maze.world
+-->
+
+<sdf version="1.6">
+  <world name="maze_world">
+    
+    <!-- ===================================================================== -->
+    <!-- PHYSICS SETTINGS                                                      -->
+    <!-- ===================================================================== -->
+    
+    <physics name="default_physics" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      
+      <!-- Gravity (standard Earth gravity) -->
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+    
+    <!-- ===================================================================== -->
+    <!-- SCENE SETTINGS                                                        -->
+    <!-- ===================================================================== -->
+    
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+    
+    <!-- ===================================================================== -->
+    <!-- LIGHTING                                                              -->
+    <!-- ===================================================================== -->
+    
+    <!-- Sun light -->
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    
+    <!-- ===================================================================== -->
+    <!-- GROUND PLANE                                                          -->
+    <!-- ===================================================================== -->
+    
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- ===================================================================== -->
+    <!-- MAZE WALLS                                                            -->
+    <!-- ===================================================================== -->
+    
+    <!-- Wall properties -->
+    <!-- Height: 0.5m (tall enough to block LIDAR) -->
+    <!-- Thickness: 0.2m -->
+    <!-- Color: Light gray -->
+    
+    <!-- Outer boundary walls -->
+    
+    <!-- North wall -->
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 1.5 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>3.0 0.2 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>3.0 0.2 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- South wall -->
+    <model name="wall_south">
+      <static>true</static>
+      <pose>0 -1.5 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>3.0 0.2 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>3.0 0.2 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- East wall -->
+    <model name="wall_east">
+      <static>true</static>
+      <pose>1.5 0 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 3.0 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 3.0 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- West wall -->
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-1.5 0 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 3.0 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 3.0 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- Internal maze walls to create path -->
+    
+    <!-- Vertical wall 1 (left side) -->
+    <model name="wall_internal_1">
+      <static>true</static>
+      <pose>-0.5 -0.5 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 1.5 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 1.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.6 0.6 0.7 1</ambient>
+            <diffuse>0.6 0.6 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- Horizontal wall 1 (top middle) -->
+    <model name="wall_internal_2">
+      <static>true</static>
+      <pose>0.5 0.5 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1.5 0.2 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1.5 0.2 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.6 0.6 0.7 1</ambient>
+            <diffuse>0.6 0.6 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- Vertical wall 2 (right side, partial) -->
+    <model name="wall_internal_3">
+      <static>true</static>
+      <pose>0.8 -0.5 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 1.0 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 1.0 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.6 0.6 0.7 1</ambient>
+            <diffuse>0.6 0.6 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- ===================================================================== -->
+    <!-- START AND END MARKERS                                                 -->
+    <!-- ===================================================================== -->
+    
+    <!-- Start point marker (green cylinder) -->
+    <model name="start_marker">
+      <static>true</static>
+      <pose>-1.0 -1.0 0.01 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>0.02</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 1 0 0.8</ambient>
+            <diffuse>0 1 0 0.8</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- End point marker (red cylinder) -->
+    <model name="end_marker">
+      <static>true</static>
+      <pose>1.0 1.0 0.01 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>0.02</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>1 0 0 0.8</ambient>
+            <diffuse>1 0 0 0.8</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- ===================================================================== -->
+    <!-- GUI SETTINGS                                                          -->
+    <!-- ===================================================================== -->
+    
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>3.5 -3.5 3.5 0 0.5 2.35</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+    
+  </world>
+</sdf>

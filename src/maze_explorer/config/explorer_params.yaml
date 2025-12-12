@@ -1,126 +1,187 @@
-# SLAM Toolbox Configuration
+# M-Explore Parameters Configuration
 #
-# SLAM (Simultaneous Localization and Mapping) creates a map of the environment
-# while simultaneously tracking the robot's position within that map.
+# This file configures the autonomous exploration behavior using the m-explore package.
+# M-Explore (explore_lite) automatically identifies unexplored areas (frontiers) and
+# navigates to them to systematically map the entire environment.
 #
-# This configuration file controls how the SLAM algorithm behaves, including:
-# - What sensor topics to listen to
-# - How to process and filter scan data
-# - Map resolution and update rates
-# - Loop closure detection (recognizing previously visited places)
+# HOW M-EXPLORE WORKS:
+# 1. Analyzes the occupancy grid map for "frontiers" (boundaries between known and unknown)
+# 2. Evaluates each frontier based on:
+#    - Information gain (how much new area will be revealed)
+#    - Travel cost (distance to reach it)
+#    - Potential field (avoid getting stuck in corners)
+# 3. Sends navigation goals to NAV2 to reach the best frontier
+# 4. Repeats until no more frontiers exist (exploration complete)
 #
-# Save this file as: ~/maze_robot_ws/src/maze_explorer/config/slam_params.yaml
+# Save this file as: ~/maze_robot_ws/src/maze_explorer/config/explorer_params.yaml
 
-slam_toolbox:
+explore_node:
   ros__parameters:
-    
-    # =====================================================================
-    # OPERATIONAL MODE
-    # =====================================================================
-    # online_async: Updates map continuously in real-time as robot moves
-    # This is essential for our exploration phase
-    mode: online_async
     
     # =====================================================================
     # COORDINATE FRAMES
     # =====================================================================
-    # These define the relationship between different coordinate systems
-    # odom_frame: Local odometry frame (drifts over time, from wheel encoders + IMU)
-    # map_frame: Global map frame (corrected by SLAM, doesn't drift)
-    # base_frame: Robot's base footprint
-    odom_frame: odom
-    map_frame: map
-    base_frame: base_footprint
+    # Must match the frames defined in URDF and other config files
+    
+    # Robot's base frame (where robot is positioned)
+    robot_base_frame: "base_footprint"
+    
+    # Global map frame (world coordinates)
+    global_frame: "map"
     
     # =====================================================================
-    # INPUT TOPICS
+    # COSTMAP CONFIGURATION
     # =====================================================================
-    # scan_topic: Where LIDAR data is published
-    # Our LIDAR driver will publish to /scan
-    scan_topic: /scan
+    # M-Explore uses the local costmap to identify frontiers and plan paths
+    
+    # Costmap topic (published by NAV2)
+    costmap_topic: "/local_costmap/costmap"
+    
+    # Costmap updates topic (incremental updates for efficiency)
+    costmap_updates_topic: "/local_costmap/costmap_updates"
+    
+    # Use local costmap (true) or global costmap (false)
+    # Local is better for exploration as it's centered on robot
+    use_local_costmap: true
     
     # =====================================================================
-    # MAP PARAMETERS
+    # EXPLORATION BEHAVIOR
     # =====================================================================
-    # resolution: Size of each grid cell in meters
-    # 0.05 means each cell is 5cm x 5cm - good balance between detail and performance
-    resolution: 0.05
     
-    # Map update frequency in Hz (20 Hz = update every 0.05 seconds)
-    # Higher is more responsive but uses more CPU
-    map_update_interval: 0.05
+    # Planner frequency: How often to evaluate and select new frontiers (Hz)
+    # Lower values save CPU but may miss opportunities
+    # Higher values are more responsive but use more resources
+    planner_frequency: 0.5  # Re-plan every 2 seconds
     
-    # =====================================================================
-    # SCAN MATCHING PARAMETERS
-    # =====================================================================
-    # These control how SLAM aligns new scans with the existing map
+    # Progress timeout: If no progress made in this time, consider exploration stuck (seconds)
+    # Triggers re-planning or completion detection
+    progress_timeout: 30.0
     
-    # Maximum distance between matched points (meters)
-    # If robot moves more than this, scan matching may fail
-    max_laser_range: 6.0  # LIDAR C1M1 has 10m range, we use 6m for reliability
-    minimum_travel_distance: 0.1  # Update map after robot moves 10cm
-    minimum_travel_heading: 0.1   # Update map after robot rotates 0.1 radians (≈6°)
-    
-    # Scan matching search window
-    # How far to search for matching features (in cells and angles)
-    scan_buffer_size: 10
-    scan_buffer_maximum_scan_distance: 10.0
-    link_match_minimum_response_fine: 0.1
-    link_scan_maximum_distance: 1.5
+    # Visualize frontiers in RViz (true/false)
+    # Shows candidate exploration goals as markers
+    visualize: true
     
     # =====================================================================
-    # LOOP CLOSURE DETECTION
+    # FRONTIER EVALUATION
     # =====================================================================
-    # Loop closure: Recognizing when robot returns to a previously visited location
-    # This corrects accumulated drift and improves map consistency
+    # These parameters control how frontiers are scored and selected
     
-    do_loop_closing: true
-    loop_search_maximum_distance: 3.0  # Search for loops within 3 meters
-    loop_match_minimum_chain_size: 10  # Need 10 consecutive matches to confirm loop
-    loop_match_maximum_variance_coarse: 3.0
-    loop_match_minimum_response_coarse: 0.35
-    loop_match_minimum_response_fine: 0.45
+    # Potential scale: Weight for potential field
+    # Potential field pushes robot away from obstacles and toward open space
+    # Higher = prefer safer, more open areas
+    potential_scale: 3.0
     
-    # =====================================================================
-    # CORRELATION PARAMETERS
-    # =====================================================================
-    # How tightly scan matching correlates measurements
-    correlation_search_space_dimension: 0.5
-    correlation_search_space_resolution: 0.01
-    correlation_search_space_smear_deviation: 0.1
+    # Orientation scale: Weight for maintaining current orientation
+    # Higher = prefer frontiers that don't require much rotation
+    # Set to 0 for mecanum drive (can move sideways, rotation not costly)
+    orientation_scale: 0.0
     
-    # =====================================================================
-    # SCAN PROCESSING
-    # =====================================================================
-    # Filter out scan points that are too close or too far
-    minimum_angle: -3.14159  # -π radians = -180° (full circle)
-    maximum_angle: 3.14159   # +π radians = +180°
-    
-    # Ignore ranges outside these limits
-    minimum_range: 0.1  # Ignore readings closer than 10cm (likely noise/robot body)
-    maximum_range: 6.0  # Match max_laser_range
+    # Gain scale: Weight for information gain
+    # Higher = prefer frontiers that reveal more unknown area
+    # Lower = care more about travel cost
+    gain_scale: 1.0
     
     # =====================================================================
-    # TRANSFORM PARAMETERS
+    # FRONTIER DETECTION
     # =====================================================================
-    # Transform tolerance: How much delay is acceptable in transform data
-    # Larger values are more forgiving of timing issues
-    transform_timeout: 0.2
-    tf_buffer_duration: 30.0  # Keep 30 seconds of transform history
+    
+    # Minimum frontier size: Smallest frontier to consider (meters)
+    # Smaller frontiers are likely noise or dead ends
+    # Larger values speed up planning but may miss small unexplored areas
+    min_frontier_size: 0.75
     
     # =====================================================================
-    # PROCESSING PARAMETERS
+    # TRANSFORM HANDLING
     # =====================================================================
-    # CPU throttle: Limit processing to avoid overloading Raspberry Pi
-    throttle_scans: 1  # Process every scan (no skipping)
+    
+    # Transform tolerance: How much delay acceptable in transform data (seconds)
+    # Larger values tolerate more timing jitter but may use stale data
+    transform_tolerance: 0.3
     
     # =====================================================================
-    # ADVANCED SOLVER PARAMETERS
+    # GOAL MANAGEMENT
     # =====================================================================
-    # These fine-tune the optimization algorithm
-    # Default values work well for most cases
-    coarse_search_angle_offset: 0.349  # 20 degrees in radians
-    coarse_angle_resolution: 0.0349    # 2 degrees in radians
-    minimum_angle_penalty: 0.9
-    minimum_distance_penalty: 0.5
-    use_response_expansion: true
+    
+    # Goal tolerance: How close robot must get to exploration goal (meters)
+    # Smaller = more precise but may get stuck
+    # Larger = more forgiving but may not explore thoroughly
+    goal_tolerance: 0.3
+    
+    # =====================================================================
+    # RECOVERY BEHAVIOR
+    # =====================================================================
+    
+    # Retry count: How many times to retry if goal fails
+    # Helps handle temporary obstacles or planning failures
+    retry_count: 3
+    
+    # Blacklist timeout: How long to avoid a failed frontier (seconds)
+    # After timeout, failed frontiers can be reconsidered
+    blacklist_timeout: 60.0
+    
+    # =====================================================================
+    # ADVANCED PARAMETERS
+    # =====================================================================
+    
+    # Search for frontiers in a specific region (optional)
+    # Set to empty for full map exploration
+    # Format: [min_x, min_y, max_x, max_y]
+    # Example: search_region: [-5.0, -5.0, 5.0, 5.0]
+    search_region: []
+    
+    # Use boundary exploration: Stay near known areas (true/false)
+    # True = explore edges of known space first
+    # False = can explore anywhere
+    boundary_exploration: false
+    
+    # =====================================================================
+    # PERFORMANCE TUNING
+    # =====================================================================
+    
+    # Enable multithreading for frontier detection
+    # Speeds up planning on multi-core processors like RPi 5
+    multithreading: true
+    
+    # Number of threads (0 = auto-detect)
+    # RPi 5 has 4 cores, so up to 4 threads beneficial
+    num_threads: 4
+    
+    # =====================================================================
+    # MAZE-SPECIFIC TUNING
+    # =====================================================================
+    # These values are optimized for 3x3m maze exploration
+    
+    # For smaller mazes, you might want:
+    # - Lower planner_frequency (0.33 Hz) - less frequent re-planning
+    # - Smaller min_frontier_size (0.5m) - catch smaller unexplored areas
+    # - Higher gain_scale (1.5) - prioritize coverage over travel cost
+    
+    # For larger mazes, you might want:
+    # - Higher planner_frequency (1.0 Hz) - more responsive
+    # - Larger min_frontier_size (1.0m) - ignore tiny gaps
+    # - Lower gain_scale (0.8) - prioritize efficiency
+    
+    # =====================================================================
+    # DEBUGGING
+    # =====================================================================
+    
+    # Enable detailed logging (true/false)
+    # Useful for troubleshooting but creates large log files
+    debug_logging: false
+    
+    # Publish frontier markers for visualization
+    # These appear in RViz on /explore/frontiers topic
+    publish_frontiers: true
+    
+    # =====================================================================
+    # INTEGRATION WITH CUSTOM NODES
+    # =====================================================================
+    
+    # M-Explore works with:
+    # - start_end_detector.py: Waypoint detector monitors exploration progress
+    # - completion_led.py: LED blinks when m-explore finds no more frontiers
+    # - slam_toolbox: Provides the map that m-explore analyzes
+    # - nav2: Executes the navigation goals that m-explore generates
+    
+    # No direct configuration needed here - integration is automatic via topics
+

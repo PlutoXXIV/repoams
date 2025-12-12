@@ -1,64 +1,61 @@
 #!/usr/bin/env python3
 """
-Complete Maze Explorer System Launch File
+Exploration Phase Launch File
 
-This launch file starts ALL components needed for the maze exploration
-and navigation system. It's the single entry point for running the entire project.
+This launch file starts only the components needed for autonomous maze exploration.
+It's a subset of the complete_system.launch.py, focused on mapping and exploration.
 
 WHAT THIS LAUNCHES:
-1. Hardware drivers (LIDAR, IMU, encoders)
-2. Robot description and transforms
+1. Hardware drivers (LIDAR, IMU, motor control)
+2. Robot state publishing (URDF → TF tree)
 3. Sensor fusion (EKF)
-4. SLAM for mapping
-5. Navigation stack (NAV2)
-6. Exploration controller
-7. Custom waypoint detection and navigation nodes
-8. Completion indicator
+4. SLAM for real-time mapping
+5. Navigation stack (for exploration movement)
+6. M-Explore (autonomous exploration)
+7. Waypoint detector (finds start/end points)
+8. Completion indicator (LED blinks when done)
 
-LAUNCH SEQUENCE:
-The order matters! We start low-level components first, then build up:
-- Hardware → State publishing → Sensor fusion → SLAM → Navigation → Application logic
+NOT INCLUDED (Navigation phase only):
+- Position identifier (not needed until manual repositioning)
+- A* navigator (not needed until goal-directed navigation)
+
+USE CASE:
+First phase of operation - robot explores unknown maze, builds map,
+detects waypoints, and signals completion.
 
 USAGE:
-    ros2 launch maze_explorer complete_system.launch.py
+    ros2 launch maze_explorer exploration.launch.py
 
-PARAMETERS:
-    use_sim_time:=false  (default: real hardware)
-    slam_params_file:=/path/to/slam_params.yaml  (optional: custom params)
+AFTER COMPLETION:
+1. Save map: ros2 run nav2_map_server map_saver_cli -f maps/maze_map
+2. Move robot to waypoint manually
+3. Run navigation.launch.py for goal-directed navigation
 
-Save this file as: ~/maze_robot_ws/src/maze_explorer/launch/complete_system.launch.py
+Save this file as: ~/maze_robot_ws/src/maze_explorer/launch/exploration.launch.py
 """
 
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     """
-    Generate the complete launch description for the maze explorer system.
-    
-    Returns:
-        LaunchDescription: Complete launch configuration
+    Generate launch description for exploration phase.
     """
     
     # =========================================================================
-    # GET PACKAGE DIRECTORIES
+    # PACKAGE DIRECTORIES
     # =========================================================================
     
-    # Get the directory where our package is installed
     pkg_maze_explorer = get_package_share_directory('maze_explorer')
     
     # =========================================================================
-    # DECLARE LAUNCH ARGUMENTS
+    # LAUNCH ARGUMENTS
     # =========================================================================
-    
-    # These can be overridden from command line
-    # Example: ros2 launch maze_explorer complete_system.launch.py use_sim_time:=true
     
     use_sim_time_arg = DeclareLaunchArgument(
         'use_sim_time',
@@ -70,21 +67,19 @@ def generate_launch_description():
     # CONFIGURATION FILE PATHS
     # =========================================================================
     
-    # Build paths to all configuration files
     slam_params_file = os.path.join(pkg_maze_explorer, 'config', 'slam_params.yaml')
     nav2_params_file = os.path.join(pkg_maze_explorer, 'config', 'nav2_params.yaml')
     ekf_params_file = os.path.join(pkg_maze_explorer, 'config', 'ekf_params.yaml')
     controllers_file = os.path.join(pkg_maze_explorer, 'config', 'controllers.yaml')
+    explorer_params_file = os.path.join(pkg_maze_explorer, 'config', 'explorer_params.yaml')
     
-    # Robot description (URDF)
     urdf_file = os.path.join(pkg_maze_explorer, 'urdf', 'maze_robot.urdf.xacro')
     
     # =========================================================================
-    # LAYER 1: HARDWARE DRIVERS
+    # HARDWARE DRIVERS
     # =========================================================================
     
-    # LIDAR Driver (Slamtec RP LIDAR C1M1)
-    # Publishes: /scan (sensor_msgs/LaserScan)
+    # LIDAR Driver
     lidar_node = Node(
         package='sllidar_ros2',
         executable='sllidar_node',
@@ -92,7 +87,7 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'channel_type': 'serial',
-            'serial_port': '/dev/ttyUSB0',  # Default USB serial port
+            'serial_port': '/dev/ttyUSB0',
             'serial_baudrate': 115200,
             'frame_id': 'lidar_link',
             'inverted': False,
@@ -100,37 +95,25 @@ def generate_launch_description():
         }]
     )
     
-    # IMU Driver (BNO085)
-    # Publishes: /bno08x/imu (sensor_msgs/Imu)
+    # IMU Driver
     imu_node = Node(
         package='bno08x_ros2_driver',
         executable='bno08x_ros2_driver_node',
         name='bno08x_imu',
         output='screen',
         parameters=[{
-            'i2c_bus': 1,  # Raspberry Pi I2C bus (usually 1)
-            'i2c_address': 0x4A,  # Default BNO085 I2C address
+            'i2c_bus': 1,
+            'i2c_address': 0x4A,
             'frame_id': 'imu_link',
-            'publish_rate': 50.0,  # 50 Hz publishing rate
+            'publish_rate': 50.0,
         }]
     )
     
-    # Wheel Encoder Publisher (N20 motors)
-    # Publishes: /joint_states (sensor_msgs/JointState)
-    encoder_node = Node(
-        package='maze_explorer',
-        executable='encoder_publisher',
-        name='encoder_publisher',
-        output='screen'
-    )
-    
     # =========================================================================
-    # LAYER 2: ROBOT STATE PUBLISHING
+    # ROBOT DESCRIPTION AND STATE PUBLISHING
     # =========================================================================
     
     # Robot State Publisher
-    # Publishes TF transforms from URDF
-    # Converts joint_states into transform tree
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -143,12 +126,52 @@ def generate_launch_description():
     )
     
     # =========================================================================
-    # LAYER 3: SENSOR FUSION
+    # ROS2_CONTROL - MOTOR CONTROL
     # =========================================================================
     
-    # Extended Kalman Filter (EKF)
-    # Fuses IMU + wheel encoders → /odometry/filtered
-    # This is critical for accurate localization
+    # Controller Manager
+    controller_manager = Node(
+        package='controller_manager',
+        executable='ros2_control_node',
+        output='screen',
+        parameters=[
+            {'robot_description': open(urdf_file).read()},
+            controllers_file,
+            {'use_sim_time': LaunchConfiguration('use_sim_time')}
+        ]
+    )
+    
+    # Joint State Broadcaster (with delay to ensure controller_manager is ready)
+    joint_state_broadcaster_spawner = TimerAction(
+        period=2.0,
+        actions=[
+            Node(
+                package='controller_manager',
+                executable='spawner',
+                arguments=['joint_state_broadcaster'],
+                output='screen'
+            )
+        ]
+    )
+    
+    # Mecanum Drive Controller (with delay)
+    mecanum_controller_spawner = TimerAction(
+        period=3.0,
+        actions=[
+            Node(
+                package='controller_manager',
+                executable='spawner',
+                arguments=['mecanum_drive_controller'],
+                output='screen'
+            )
+        ]
+    )
+    
+    # =========================================================================
+    # SENSOR FUSION
+    # =========================================================================
+    
+    # Extended Kalman Filter
     ekf_node = Node(
         package='robot_localization',
         executable='ekf_node',
@@ -160,12 +183,10 @@ def generate_launch_description():
     )
     
     # =========================================================================
-    # LAYER 4: SLAM (MAPPING)
+    # SLAM - MAPPING
     # =========================================================================
     
-    # SLAM Toolbox (Online Async mode)
-    # Creates map while exploring
-    # Publishes: /map (nav_msgs/OccupancyGrid)
+    # SLAM Toolbox (Online Async mode for real-time mapping)
     slam_node = Node(
         package='slam_toolbox',
         executable='async_slam_toolbox_node',
@@ -177,11 +198,10 @@ def generate_launch_description():
     )
     
     # =========================================================================
-    # LAYER 5: NAVIGATION STACK (NAV2)
+    # NAVIGATION STACK
     # =========================================================================
     
-    # Navigation2 Launch
-    # Includes: controller, planner, behavior server, bt_navigator
+    # NAV2 Navigation Stack
     nav2_bringup_dir = get_package_share_directory('nav2_bringup')
     nav2_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -195,86 +215,45 @@ def generate_launch_description():
     )
     
     # =========================================================================
-    # LAYER 6: EXPLORATION
+    # AUTONOMOUS EXPLORATION
     # =========================================================================
     
-    # M-Explore (Autonomous Exploration)
-    # Explores unknown areas automatically
+    # M-Explore Node
     explore_node = Node(
         package='explore_lite',
         executable='explore',
-        name='explore',
+        name='explore_node',
         output='screen',
-        parameters=[{
-            'use_sim_time': LaunchConfiguration('use_sim_time'),
-            'robot_base_frame': 'base_footprint',
-            'costmap_topic': '/local_costmap/costmap',
-            'costmap_updates_topic': '/local_costmap/costmap_updates',
-            'visualize': True,
-            'planner_frequency': 0.33,
-            'progress_timeout': 30.0,
-            'potential_scale': 3.0,
-            'orientation_scale': 0.0,
-            'gain_scale': 1.0,
-            'transform_tolerance': 0.3,
-            'min_frontier_size': 0.75,
+        parameters=[explorer_params_file, {
+            'use_sim_time': LaunchConfiguration('use_sim_time')
         }]
     )
     
     # =========================================================================
-    # LAYER 7: CUSTOM APPLICATION NODES
+    # CUSTOM APPLICATION NODES - EXPLORATION SPECIFIC
     # =========================================================================
     
-    # Start/End Point Detector
-    # Finds waypoints based on long LIDAR ranges (>5m)
+    # Waypoint Detector (finds start/end points during exploration)
     waypoint_detector = Node(
         package='maze_explorer',
         executable='start_end_detector.py',
         name='start_end_detector',
-        output='screen'
+        output='screen',
+        parameters=[{
+            'use_sim_time': LaunchConfiguration('use_sim_time')
+        }]
     )
     
-    # Position Identifier
-    # Determines which waypoint robot is currently at
-    position_identifier = Node(
-        package='maze_explorer',
-        executable='position_identifier.py',
-        name='position_identifier',
-        output='screen'
-    )
-    
-    # A* Navigator
-    # Handles navigation between waypoints using A* algorithm
-    astar_navigator = Node(
-        package='maze_explorer',
-        executable='astar_navigator.py',
-        name='astar_navigator',
-        output='screen'
-    )
-    
-    # Completion LED Controller
-    # Blinks LED when exploration is 100% complete
+    # Completion LED Controller (signals when exploration done)
     led_controller = Node(
         package='maze_explorer',
         executable='completion_led.py',
         name='completion_led',
-        output='screen'
+        output='screen',
+        parameters=[{
+            'use_sim_time': LaunchConfiguration('use_sim_time')
+        }]
     )
-    
-    # =========================================================================
-    # LAYER 8: VISUALIZATION (OPTIONAL)
-    # =========================================================================
-    
-    # RViz for visualization (optional, can be started separately)
-    # Uncomment to auto-launch RViz with system
-    # rviz_config = os.path.join(pkg_maze_explorer, 'rviz', 'maze_explorer.rviz')
-    # rviz_node = Node(
-    #     package='rviz2',
-    #     executable='rviz2',
-    #     name='rviz2',
-    #     arguments=['-d', rviz_config],
-    #     output='screen'
-    # )
     
     # =========================================================================
     # BUILD LAUNCH DESCRIPTION
@@ -287,10 +266,14 @@ def generate_launch_description():
         # Hardware drivers
         lidar_node,
         imu_node,
-        encoder_node,
         
-        # State publishing
+        # Robot description and state
         robot_state_publisher,
+        
+        # Motor control (ros2_control)
+        controller_manager,
+        joint_state_broadcaster_spawner,
+        mecanum_controller_spawner,
         
         # Sensor fusion
         ekf_node,
@@ -301,15 +284,11 @@ def generate_launch_description():
         # Navigation
         nav2_launch,
         
-        # Exploration
+        # Autonomous exploration
         explore_node,
         
-        # Custom application nodes
+        # Custom nodes
         waypoint_detector,
-        position_identifier,
-        astar_navigator,
         led_controller,
-        
-        # Visualization (if uncommented)
-        # rviz_node,
     ])
+

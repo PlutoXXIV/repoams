@@ -1,64 +1,67 @@
 #!/usr/bin/env python3
 """
-Complete Maze Explorer System Launch File
+Navigation Phase Launch File
 
-This launch file starts ALL components needed for the maze exploration
-and navigation system. It's the single entry point for running the entire project.
+This launch file starts components needed for autonomous navigation between
+detected waypoints using A* pathfinding after exploration is complete.
 
 WHAT THIS LAUNCHES:
-1. Hardware drivers (LIDAR, IMU, encoders)
-2. Robot description and transforms
+1. Hardware drivers (LIDAR, IMU, motor control)
+2. Robot state publishing (URDF → TF tree)
 3. Sensor fusion (EKF)
-4. SLAM for mapping
-5. Navigation stack (NAV2)
-6. Exploration controller
-7. Custom waypoint detection and navigation nodes
-8. Completion indicator
+4. Map server (loads saved map from exploration)
+5. Localization (AMCL - robot localization on known map)
+6. Navigation stack (for A* path planning and execution)
+7. Position identifier (detects current waypoint)
+8. A* navigator (plans and executes path to goal)
 
-LAUNCH SEQUENCE:
-The order matters! We start low-level components first, then build up:
-- Hardware → State publishing → Sensor fusion → SLAM → Navigation → Application logic
+NOT INCLUDED (Exploration phase only):
+- SLAM (map already created)
+- M-Explore (exploration already done)
+- Waypoint detector (waypoints already found and saved)
+
+USE CASE:
+Second phase of operation - robot uses saved map to navigate from one
+waypoint to another using optimal A* pathfinding.
+
+PREREQUISITES:
+1. Exploration phase completed
+2. Map saved to maps/maze_map.yaml and maps/maze_map.pgm
+3. Waypoints saved to ~/.ros/maze_waypoints.yaml
+4. Robot manually positioned at one of the waypoints
 
 USAGE:
-    ros2 launch maze_explorer complete_system.launch.py
+    ros2 launch maze_explorer navigation.launch.py map_file:=/path/to/map.yaml
 
 PARAMETERS:
-    use_sim_time:=false  (default: real hardware)
-    slam_params_file:=/path/to/slam_params.yaml  (optional: custom params)
+    map_file: Path to saved map file (default: package maps/maze_map.yaml)
+    use_sim_time: Use simulation time (default: false)
 
-Save this file as: ~/maze_robot_ws/src/maze_explorer/launch/complete_system.launch.py
+Save this file as: ~/maze_robot_ws/src/maze_explorer/launch/navigation.launch.py
 """
 
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     """
-    Generate the complete launch description for the maze explorer system.
-    
-    Returns:
-        LaunchDescription: Complete launch configuration
+    Generate launch description for navigation phase.
     """
     
     # =========================================================================
-    # GET PACKAGE DIRECTORIES
+    # PACKAGE DIRECTORIES
     # =========================================================================
     
-    # Get the directory where our package is installed
     pkg_maze_explorer = get_package_share_directory('maze_explorer')
     
     # =========================================================================
-    # DECLARE LAUNCH ARGUMENTS
+    # LAUNCH ARGUMENTS
     # =========================================================================
-    
-    # These can be overridden from command line
-    # Example: ros2 launch maze_explorer complete_system.launch.py use_sim_time:=true
     
     use_sim_time_arg = DeclareLaunchArgument(
         'use_sim_time',
@@ -66,25 +69,28 @@ def generate_launch_description():
         description='Use simulation time if true'
     )
     
+    # Map file argument (user can specify custom map location)
+    map_file_arg = DeclareLaunchArgument(
+        'map_file',
+        default_value=os.path.join(pkg_maze_explorer, 'maps', 'maze_map.yaml'),
+        description='Full path to map YAML file'
+    )
+    
     # =========================================================================
     # CONFIGURATION FILE PATHS
     # =========================================================================
     
-    # Build paths to all configuration files
-    slam_params_file = os.path.join(pkg_maze_explorer, 'config', 'slam_params.yaml')
     nav2_params_file = os.path.join(pkg_maze_explorer, 'config', 'nav2_params.yaml')
     ekf_params_file = os.path.join(pkg_maze_explorer, 'config', 'ekf_params.yaml')
     controllers_file = os.path.join(pkg_maze_explorer, 'config', 'controllers.yaml')
     
-    # Robot description (URDF)
     urdf_file = os.path.join(pkg_maze_explorer, 'urdf', 'maze_robot.urdf.xacro')
     
     # =========================================================================
-    # LAYER 1: HARDWARE DRIVERS
+    # HARDWARE DRIVERS
     # =========================================================================
     
-    # LIDAR Driver (Slamtec RP LIDAR C1M1)
-    # Publishes: /scan (sensor_msgs/LaserScan)
+    # LIDAR Driver
     lidar_node = Node(
         package='sllidar_ros2',
         executable='sllidar_node',
@@ -92,7 +98,7 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'channel_type': 'serial',
-            'serial_port': '/dev/ttyUSB0',  # Default USB serial port
+            'serial_port': '/dev/ttyUSB0',
             'serial_baudrate': 115200,
             'frame_id': 'lidar_link',
             'inverted': False,
@@ -100,37 +106,25 @@ def generate_launch_description():
         }]
     )
     
-    # IMU Driver (BNO085)
-    # Publishes: /bno08x/imu (sensor_msgs/Imu)
+    # IMU Driver
     imu_node = Node(
         package='bno08x_ros2_driver',
         executable='bno08x_ros2_driver_node',
         name='bno08x_imu',
         output='screen',
         parameters=[{
-            'i2c_bus': 1,  # Raspberry Pi I2C bus (usually 1)
-            'i2c_address': 0x4A,  # Default BNO085 I2C address
+            'i2c_bus': 1,
+            'i2c_address': 0x4A,
             'frame_id': 'imu_link',
-            'publish_rate': 50.0,  # 50 Hz publishing rate
+            'publish_rate': 50.0,
         }]
     )
     
-    # Wheel Encoder Publisher (N20 motors)
-    # Publishes: /joint_states (sensor_msgs/JointState)
-    encoder_node = Node(
-        package='maze_explorer',
-        executable='encoder_publisher',
-        name='encoder_publisher',
-        output='screen'
-    )
-    
     # =========================================================================
-    # LAYER 2: ROBOT STATE PUBLISHING
+    # ROBOT DESCRIPTION AND STATE PUBLISHING
     # =========================================================================
     
     # Robot State Publisher
-    # Publishes TF transforms from URDF
-    # Converts joint_states into transform tree
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -143,12 +137,52 @@ def generate_launch_description():
     )
     
     # =========================================================================
-    # LAYER 3: SENSOR FUSION
+    # ROS2_CONTROL - MOTOR CONTROL
     # =========================================================================
     
-    # Extended Kalman Filter (EKF)
-    # Fuses IMU + wheel encoders → /odometry/filtered
-    # This is critical for accurate localization
+    # Controller Manager
+    controller_manager = Node(
+        package='controller_manager',
+        executable='ros2_control_node',
+        output='screen',
+        parameters=[
+            {'robot_description': open(urdf_file).read()},
+            controllers_file,
+            {'use_sim_time': LaunchConfiguration('use_sim_time')}
+        ]
+    )
+    
+    # Joint State Broadcaster (with delay)
+    joint_state_broadcaster_spawner = TimerAction(
+        period=2.0,
+        actions=[
+            Node(
+                package='controller_manager',
+                executable='spawner',
+                arguments=['joint_state_broadcaster'],
+                output='screen'
+            )
+        ]
+    )
+    
+    # Mecanum Drive Controller (with delay)
+    mecanum_controller_spawner = TimerAction(
+        period=3.0,
+        actions=[
+            Node(
+                package='controller_manager',
+                executable='spawner',
+                arguments=['mecanum_drive_controller'],
+                output='screen'
+            )
+        ]
+    )
+    
+    # =========================================================================
+    # SENSOR FUSION
+    # =========================================================================
+    
+    # Extended Kalman Filter
     ekf_node = Node(
         package='robot_localization',
         executable='ekf_node',
@@ -160,28 +194,94 @@ def generate_launch_description():
     )
     
     # =========================================================================
-    # LAYER 4: SLAM (MAPPING)
+    # MAP SERVER - LOAD SAVED MAP
     # =========================================================================
     
-    # SLAM Toolbox (Online Async mode)
-    # Creates map while exploring
-    # Publishes: /map (nav_msgs/OccupancyGrid)
-    slam_node = Node(
-        package='slam_toolbox',
-        executable='async_slam_toolbox_node',
-        name='slam_toolbox',
+    # Map Server (loads the map created during exploration)
+    map_server_node = Node(
+        package='nav2_map_server',
+        executable='map_server',
+        name='map_server',
         output='screen',
-        parameters=[slam_params_file, {
+        parameters=[{
+            'yaml_filename': LaunchConfiguration('map_file'),
+            'use_sim_time': LaunchConfiguration('use_sim_time')
+        }]
+    )
+    
+    # Lifecycle manager for map server
+    map_lifecycle_manager = Node(
+        package='nav2_lifecycle_manager',
+        executable='lifecycle_manager',
+        name='map_lifecycle_manager',
+        output='screen',
+        parameters=[{
+            'autostart': True,
+            'node_names': ['map_server'],
             'use_sim_time': LaunchConfiguration('use_sim_time')
         }]
     )
     
     # =========================================================================
-    # LAYER 5: NAVIGATION STACK (NAV2)
+    # LOCALIZATION - AMCL
     # =========================================================================
     
-    # Navigation2 Launch
-    # Includes: controller, planner, behavior server, bt_navigator
+    # AMCL (Adaptive Monte Carlo Localization)
+    # Estimates robot's position on the known map
+    amcl_node = Node(
+        package='nav2_amcl',
+        executable='amcl',
+        name='amcl',
+        output='screen',
+        parameters=[{
+            'use_sim_time': LaunchConfiguration('use_sim_time'),
+            'alpha1': 0.2,  # Rotation noise from rotation
+            'alpha2': 0.2,  # Rotation noise from translation
+            'alpha3': 0.2,  # Translation noise from translation
+            'alpha4': 0.2,  # Translation noise from rotation
+            'base_frame_id': 'base_footprint',
+            'beam_skip_distance': 0.5,
+            'beam_skip_error_threshold': 0.9,
+            'beam_skip_threshold': 0.3,
+            'do_beamskip': False,
+            'global_frame_id': 'map',
+            'lambda_short': 0.1,
+            'laser_likelihood_max_dist': 2.0,
+            'laser_max_range': 12.0,
+            'laser_min_range': 0.15,
+            'laser_model_type': 'likelihood_field',
+            'max_beams': 60,
+            'max_particles': 2000,
+            'min_particles': 500,
+            'odom_frame_id': 'odom',
+            'pf_err': 0.05,
+            'pf_z': 0.99,
+            'recovery_alpha_fast': 0.0,
+            'recovery_alpha_slow': 0.0,
+            'resample_interval': 1,
+            'robot_model_type': 'nav2_amcl::DifferentialMotionModel',
+            'save_pose_rate': 0.5,
+            'sigma_hit': 0.2,
+            'tf_broadcast': True,
+            'transform_tolerance': 1.0,
+            'update_min_a': 0.2,
+            'update_min_d': 0.25,
+            'z_hit': 0.5,
+            'z_max': 0.05,
+            'z_rand': 0.5,
+            'z_short': 0.05,
+            'scan_topic': '/scan',
+            'map_topic': '/map',
+            'set_initial_pose': False,  # Robot starts at unknown position
+            'always_reset_initial_pose': False,
+        }]
+    )
+    
+    # =========================================================================
+    # NAVIGATION STACK
+    # =========================================================================
+    
+    # NAV2 Navigation Stack (uses A* planner)
     nav2_bringup_dir = get_package_share_directory('nav2_bringup')
     nav2_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -195,86 +295,49 @@ def generate_launch_description():
     )
     
     # =========================================================================
-    # LAYER 6: EXPLORATION
+    # CUSTOM APPLICATION NODES - NAVIGATION SPECIFIC
     # =========================================================================
     
-    # M-Explore (Autonomous Exploration)
-    # Explores unknown areas automatically
-    explore_node = Node(
-        package='explore_lite',
-        executable='explore',
-        name='explore',
-        output='screen',
-        parameters=[{
-            'use_sim_time': LaunchConfiguration('use_sim_time'),
-            'robot_base_frame': 'base_footprint',
-            'costmap_topic': '/local_costmap/costmap',
-            'costmap_updates_topic': '/local_costmap/costmap_updates',
-            'visualize': True,
-            'planner_frequency': 0.33,
-            'progress_timeout': 30.0,
-            'potential_scale': 3.0,
-            'orientation_scale': 0.0,
-            'gain_scale': 1.0,
-            'transform_tolerance': 0.3,
-            'min_frontier_size': 0.75,
-        }]
-    )
-    
-    # =========================================================================
-    # LAYER 7: CUSTOM APPLICATION NODES
-    # =========================================================================
-    
-    # Start/End Point Detector
-    # Finds waypoints based on long LIDAR ranges (>5m)
-    waypoint_detector = Node(
-        package='maze_explorer',
-        executable='start_end_detector.py',
-        name='start_end_detector',
-        output='screen'
-    )
-    
-    # Position Identifier
-    # Determines which waypoint robot is currently at
+    # Position Identifier (detects which waypoint robot is at)
     position_identifier = Node(
         package='maze_explorer',
         executable='position_identifier.py',
         name='position_identifier',
-        output='screen'
+        output='screen',
+        parameters=[{
+            'use_sim_time': LaunchConfiguration('use_sim_time')
+        }]
     )
     
-    # A* Navigator
-    # Handles navigation between waypoints using A* algorithm
+    # A* Navigator (plans and executes optimal path)
     astar_navigator = Node(
         package='maze_explorer',
         executable='astar_navigator.py',
         name='astar_navigator',
-        output='screen'
+        output='screen',
+        parameters=[{
+            'use_sim_time': LaunchConfiguration('use_sim_time')
+        }]
     )
     
-    # Completion LED Controller
-    # Blinks LED when exploration is 100% complete
-    led_controller = Node(
+    # =========================================================================
+    # HELPER NODE - INITIAL POSE ESTIMATOR
+    # =========================================================================
+    
+    # This node helps AMCL by providing an initial pose estimate
+    # when robot is placed at a waypoint
+    initial_pose_publisher = Node(
         package='maze_explorer',
-        executable='completion_led.py',
-        name='completion_led',
-        output='screen'
+        executable='initial_pose_helper.py',
+        name='initial_pose_helper',
+        output='screen',
+        parameters=[{
+            'use_sim_time': LaunchConfiguration('use_sim_time')
+        }],
+        # Only if you create this helper script (optional)
+        # Otherwise, AMCL will localize naturally after a few movements
+        condition=None  # Remove this node if script not created
     )
-    
-    # =========================================================================
-    # LAYER 8: VISUALIZATION (OPTIONAL)
-    # =========================================================================
-    
-    # RViz for visualization (optional, can be started separately)
-    # Uncomment to auto-launch RViz with system
-    # rviz_config = os.path.join(pkg_maze_explorer, 'rviz', 'maze_explorer.rviz')
-    # rviz_node = Node(
-    #     package='rviz2',
-    #     executable='rviz2',
-    #     name='rviz2',
-    #     arguments=['-d', rviz_config],
-    #     output='screen'
-    # )
     
     # =========================================================================
     # BUILD LAUNCH DESCRIPTION
@@ -283,33 +346,38 @@ def generate_launch_description():
     return LaunchDescription([
         # Launch arguments
         use_sim_time_arg,
+        map_file_arg,
         
         # Hardware drivers
         lidar_node,
         imu_node,
-        encoder_node,
         
-        # State publishing
+        # Robot description and state
         robot_state_publisher,
+        
+        # Motor control (ros2_control)
+        controller_manager,
+        joint_state_broadcaster_spawner,
+        mecanum_controller_spawner,
         
         # Sensor fusion
         ekf_node,
         
-        # SLAM
-        slam_node,
+        # Map server
+        map_server_node,
+        map_lifecycle_manager,
+        
+        # Localization
+        amcl_node,
         
         # Navigation
         nav2_launch,
         
-        # Exploration
-        explore_node,
-        
-        # Custom application nodes
-        waypoint_detector,
+        # Custom navigation nodes
         position_identifier,
         astar_navigator,
-        led_controller,
         
-        # Visualization (if uncommented)
-        # rviz_node,
+        # Helper (optional - comment out if not created)
+        # initial_pose_publisher,
     ])
+
